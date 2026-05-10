@@ -63,11 +63,26 @@ lemma TBPEnergy (E : ℝ → ℝ) : TBPConfiguration.energy E =
   simp only [Finset.sum_singleton, Finset.sum_insert, Finset.mem_singleton,
     Finset.mem_insert, Finset.sum_empty]
   ring
-
   simp [configuration.energy, TBPConfiguration, Fin.sum_univ_succ]
-
   sorry
 
+
+-- The anipodal points
+lemma p40 : ‖p 4 - p 0‖ = 2 := by sorry
+
+
+-- An antipodal point and one on the equator
+lemma p10 : ‖p 1 - p 0‖ = Real.sqrt 2 := by sorry
+lemma p20 : ‖p 2 - p 0‖ = Real.sqrt 2 := by sorry
+lemma p30 : ‖p 3 - p 0‖ = Real.sqrt 2 := by sorry
+lemma p41 : ‖p 4 - p 1‖ = Real.sqrt 2 := by sorry
+lemma p42 : ‖p 4 - p 2‖ = Real.sqrt 2 := by sorry
+lemma p43 : ‖p 4 - p 3‖ = Real.sqrt 2 := by sorry
+
+-- both points on the equator
+lemma p21 : ‖p 2 - p 1‖ = Real.sqrt 3 := by sorry
+lemma p31 : ‖p 3 - p 1‖ = Real.sqrt 3 := by sorry
+lemma p32 : ‖p 3 - p 2‖ = Real.sqrt 3 := by sorry
 
 
 
