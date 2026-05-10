@@ -11,17 +11,15 @@ open NNReal
 structure configuration (n : ℕ) where
   points : Fin n → Metric.sphere (0 : EuclideanSpace ℝ (Fin 3)) 1
 
-notation "ℝ>0" => {r : ℝ // 0 < r}
+-- we use ℝ rather than ℝ>0 or similar since we will always be taking values of things in ℝ>0 anyway
+variable (E : ℝ → ℝ)
 
-variable (E : ℝ>0 → ℝ>0)
-
-#check PiLp.normedAddCommGroup -- is noncomputable
 /- maybe there is a better way to take finite sums. This is also not correct since it doesn't
 take into account `i < j`. -/
 def configuration.energy {n : ℕ} (cf : configuration n) : ℝ :=
-  ∑ i : Fin n, ∑ j ∈ Finset.Iio i, E ⟨‖(cf.points i : EuclideanSpace ℝ (Fin 3)) - cf.points j‖,
-    by sorry ⟩
+  ∑ i : Fin n, ∑ j ∈ Finset.Iio i, E ‖(cf.points i : EuclideanSpace ℝ (Fin 3)) - cf.points j‖
 
+--
 
 
 -- need to define the coulomb potential also
@@ -38,15 +36,15 @@ def tetrahedronFun : Fin 4 → Metric.sphere (0 : EuclideanSpace ℝ (Fin 3)) 1
   | 3 => ⟨(EuclideanSpace.equiv _ ℝ).symm ![-Real.sqrt 2 / 3, -Real.sqrt 6 / 3, -1/3], by
       simp [EuclideanSpace.norm_eq, Fin.sum_univ_three]; ring_nf; simp [Real.sq_sqrt]; ring⟩
 
-
 def tetrahedronConfiguration : configuration 4 where
   points := tetrahedronFun
 
-def coulombPotential : ℝ>0 → ℝ>0 := fun r ↦ ⟨1 / r.val, by
-  simp_all only [one_div, inv_pos]
-  obtain ⟨val, property⟩ := r
-  simp_all only⟩
+-- In Lean, `1 / 0 = 0`, but this is okay since we only work with `r > 0`.
+def coulombPotential : ℝ → ℝ:= fun r ↦ 1 / r
 
 /- A configuration of `n` points has minimal energy with respect to `E`.  -/
-def configuration.IsMinimal (n : ℕ) (cf : configuration n) : Prop :=
+def configuration.IsMinimal {n : ℕ} (cf : configuration n) : Prop :=
   ∀ cf' : configuration n, cf'.energy ≤ cf.energy
+
+
+theorem tetrahedron_is_coulomb_minimal : tetrahedronConfiguration.IsMinimal := by sorry
