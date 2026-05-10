@@ -48,8 +48,26 @@ def p (n : Fin 5) := TBPConfiguration.points n
 -- then prove each distance size. because then the lemmas have a concrete goal from the start.
 -- the kernel does not need to check which case we are in in an application of the `∀ i j` approach
 
-lemma TBPEnergy (E : ℝ → ℝ) : TBPConfiguration.energy E = by sorry
---  E ‖p 0 - p 1‖
+lemma TBPEnergy (E : ℝ → ℝ) : TBPConfiguration.energy E =
+    E ‖p 1 - p 0‖ + E ‖p 2 - p 0‖ + E ‖p 2 - p 1‖ +
+    E ‖p 3 - p 0‖ + E ‖p 3 - p 1‖ + E ‖p 3 - p 2‖ +
+    E ‖p 4 - p 0‖ + E ‖p 4 - p 1‖ + E ‖p 4 - p 2‖ +
+    E ‖p 4 - p 3‖ := by
+  simp only [configuration.energy, p]
+  simp only [Fin.sum_univ_succ, Finset.sum_empty]
+  simp only [show Finset.Iio (0 : Fin 5) = ∅ from by decide]
+  --simp only [show Finset.Iio (1 : Fin 5) = {0} from by decide]
+  --simp only [show Finset.Iio (2 : Fin 5) = {0, 1} from by decide]
+  ---simp only [show Finset.Iio (3 : Fin 5) = {0, 1, 2} from by decide]
+  --simp only [show Finset.Iio (4 : Fin 5) = {0, 1, 2, 3} from by decide]
+  simp only [Finset.sum_singleton, Finset.sum_insert, Finset.mem_singleton,
+    Finset.mem_insert, Finset.sum_empty]
+  ring
+
+  simp [configuration.energy, TBPConfiguration, Fin.sum_univ_succ]
+
+  sorry
+
 
 
 
