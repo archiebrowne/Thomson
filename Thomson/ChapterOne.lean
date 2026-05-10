@@ -70,7 +70,6 @@ lemma TBPEnergy (E : ℝ → ℝ) : TBPConfiguration.energy E =
 -- The anipodal points
 lemma p40 : ‖p 4 - p 0‖ = 2 := by sorry
 
-
 -- An antipodal point and one on the equator
 lemma p10 : ‖p 1 - p 0‖ = Real.sqrt 2 := by sorry
 lemma p20 : ‖p 2 - p 0‖ = Real.sqrt 2 := by sorry
@@ -83,6 +82,14 @@ lemma p43 : ‖p 4 - p 3‖ = Real.sqrt 2 := by sorry
 lemma p21 : ‖p 2 - p 1‖ = Real.sqrt 3 := by sorry
 lemma p31 : ‖p 3 - p 1‖ = Real.sqrt 3 := by sorry
 lemma p32 : ‖p 3 - p 2‖ = Real.sqrt 3 := by sorry
+
+attribute [simp] p40 p10 p20 p30 p41 p42 p43 p21 p31 p32
+
+theorem TBP_energy_formula (E : ℝ → ℝ) :
+    TBPConfiguration.energy E = E (1 / 2) + 3 * E (Real.sqrt 3) + 6 * E (Real.sqrt 2) := by
+  rw [TBPEnergy]
+  simp
+  sorry
 
 
 
