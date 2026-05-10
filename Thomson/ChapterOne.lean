@@ -5,8 +5,6 @@ import Mathlib.Geometry.Manifold.Instances.Sphere
 
 noncomputable section
 
-open NNReal
-
 /- A configuration is a set of `n` points on `S² ⊆ ℝ³`. Do we want to use `Sphere` instead? -/
 structure configuration (n : ℕ) where
   points : Fin n → Metric.sphere (0 : EuclideanSpace ℝ (Fin 3)) 1
@@ -18,9 +16,6 @@ variable (E : ℝ → ℝ)
 take into account `i < j`. -/
 def configuration.energy {n : ℕ} (cf : configuration n) : ℝ :=
   ∑ i : Fin n, ∑ j ∈ Finset.Iio i, E ‖(cf.points i : EuclideanSpace ℝ (Fin 3)) - cf.points j‖
-
---
-
 
 -- need to define the coulomb potential also
 
@@ -39,8 +34,23 @@ def tetrahedronFun : Fin 4 → Metric.sphere (0 : EuclideanSpace ℝ (Fin 3)) 1
 def tetrahedronConfiguration : configuration 4 where
   points := tetrahedronFun
 
+def TBPFun : Fin 5 → Metric.sphere (0 : EuclideanSpace ℝ (Fin 3)) 1
+  | 0 => ⟨(EuclideanSpace.equiv _ ℝ).symm ![0, 0, 1], by
+    simp [EuclideanSpace.norm_eq, Fin.sum_univ_three]⟩
+  | 1 => ⟨(EuclideanSpace.equiv _ ℝ).symm ![0, 1, 0], by
+    simp [EuclideanSpace.norm_eq, Fin.sum_univ_three]⟩
+  | 2 => ⟨(EuclideanSpace.equiv _ ℝ).symm ![Real.sqrt 3 / 2, -1 / 2, 0], by
+    simp [EuclideanSpace.norm_eq, Fin.sum_univ_three]; ring_nf; simp [Real.sq_sqrt]; ring⟩
+  | 3 => ⟨(EuclideanSpace.equiv _ ℝ).symm ![-Real.sqrt 3 / 2, -1 / 2, 0], by
+    simp [EuclideanSpace.norm_eq, Fin.sum_univ_three]; ring_nf; simp [Real.sq_sqrt]; ring⟩
+  | 4 => ⟨(EuclideanSpace.equiv _ ℝ).symm ![0, 0, -1], by
+    simp [EuclideanSpace.norm_eq, Fin.sum_univ_three]⟩
+
+def TBPConfiguration : configuration 5 where
+  points := TBPFun
+
 -- In Lean, `1 / 0 = 0`, but this is okay since we only work with `r > 0`.
-def coulombPotential : ℝ → ℝ:= fun r ↦ 1 / r
+def coulombPotential : ℝ → ℝ := fun r ↦ 1 / r
 
 /- A configuration of `n` points has minimal energy with respect to `E`.  -/
 def configuration.IsMinimal {n : ℕ} (cf : configuration n) : Prop :=
