@@ -18,22 +18,33 @@ take into account `i < j`. -/
 def configuration.energy (E : ℝ → ℝ) (cf : configuration n) : ℝ :=
   ∑ i : Fin n, ∑ j ∈ Finset.Iio i, E ‖cf.points i - cf.points j‖
 
+-- can the 1, 2, 3 cases be unified?
 def tetrahedronConfiguration : configuration 4 where
   points
    | 0 => (equiv _ ℝ).symm ![0, 0, 1]
    | 1 => (equiv _ ℝ).symm ![2 * Real.sqrt 2 / 3, 0, -1 / 3]
    | 2 => (equiv _ ℝ).symm ![-Real.sqrt 2 / 3, Real.sqrt 6 / 3, -1 / 3]
    | 3 => (equiv _ ℝ).symm ![-Real.sqrt 2 / 3, -Real.sqrt 6 / 3, -1 / 3]
-  on_sphere i := by sorry
+  on_sphere i := by
+    match i with
+    | 0 => simp [EuclideanSpace.norm_eq, Fin.sum_univ_three]
+    | 1 => simp [EuclideanSpace.norm_eq, Fin.sum_univ_three]; grind only [usr Real.sq_sqrt',
+      = max_def]
+    | 2 => simp [EuclideanSpace.norm_eq, Fin.sum_univ_three]; grind only [usr Real.sq_sqrt',
+      = max_def]
+    | 3 => simp [EuclideanSpace.norm_eq, Fin.sum_univ_three]; grind only [usr Real.sq_sqrt',
+      = max_def]
 
+@[simp]
+def TBPPoints : Fin 5 → EuclideanSpace ℝ (Fin 3)
+  | 0 => (equiv _ ℝ).symm ![0, 0, 1]
+  | 1 => (equiv _ ℝ).symm ![0, 1, 0]
+  | 2 => (equiv _ ℝ).symm ![Real.sqrt 3 / 2, -1 / 2, 0]
+  | 3 => (equiv _ ℝ).symm ![-Real.sqrt 3 / 2, -1 / 2, 0]
+  | 4 => (equiv _ ℝ).symm ![0, 0, -1]
 
 def TBPConfiguration : configuration 5 where
-  points
-    | 0 => (equiv _ ℝ).symm ![0, 0, 1]
-    | 1 => (equiv _ ℝ).symm ![0, 1, 0]
-    | 2 => (equiv _ ℝ).symm ![Real.sqrt 3 / 2, -1 / 2, 0]
-    | 3 => (equiv _ ℝ).symm ![-Real.sqrt 3 / 2, -1 / 2, 0]
-    | 4 => (equiv _ ℝ).symm ![0, 0, -1]
+  points := TBPPoints
   on_sphere i := by
     fin_cases i
     <;> simp [EuclideanSpace.norm_eq, Fin.sum_univ_three]
@@ -64,31 +75,59 @@ lemma TBPEnergy (E : ℝ → ℝ) : TBPConfiguration.energy E =
     Finset.mem_insert, Finset.sum_empty]
   ring
   simp [configuration.energy, TBPConfiguration, Fin.sum_univ_succ]
+
   sorry
 
 
--- The anipodal points
-lemma p40 : ‖p 4 - p 0‖ = 2 := by sorry
+
+lemma p40 : ‖p 4 - p 0‖ = 2 := by
+  simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
+  norm_num
 
 -- An antipodal point and one on the equator
-lemma p10 : ‖p 1 - p 0‖ = Real.sqrt 2 := by sorry
-lemma p20 : ‖p 2 - p 0‖ = Real.sqrt 2 := by sorry
-lemma p30 : ‖p 3 - p 0‖ = Real.sqrt 2 := by sorry
-lemma p41 : ‖p 4 - p 1‖ = Real.sqrt 2 := by sorry
-lemma p42 : ‖p 4 - p 2‖ = Real.sqrt 2 := by sorry
-lemma p43 : ‖p 4 - p 3‖ = Real.sqrt 2 := by sorry
+lemma p10 : ‖p 1 - p 0‖ = Real.sqrt 2 := by
+  simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
+  grind
+
+lemma p20 : ‖p 2 - p 0‖ = Real.sqrt 2 := by
+  simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
+  grind
+lemma p30 : ‖p 3 - p 0‖ = Real.sqrt 2 := by
+  simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
+  grind
+
+lemma p41 : ‖p 4 - p 1‖ = Real.sqrt 2 := by
+  simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
+  grind
+
+lemma p42 : ‖p 4 - p 2‖ = Real.sqrt 2 := by
+  simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
+  grind
+lemma p43 : ‖p 4 - p 3‖ = Real.sqrt 2 := by
+  simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
+  grind
 
 -- both points on the equator
-lemma p21 : ‖p 2 - p 1‖ = Real.sqrt 3 := by sorry
-lemma p31 : ‖p 3 - p 1‖ = Real.sqrt 3 := by sorry
-lemma p32 : ‖p 3 - p 2‖ = Real.sqrt 3 := by sorry
+lemma p21 : ‖p 2 - p 1‖ = Real.sqrt 3 := by
+  simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
+  grind
+
+lemma p31 : ‖p 3 - p 1‖ = Real.sqrt 3 := by
+  simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
+  grind
+
+lemma p32 : ‖p 3 - p 2‖ = Real.sqrt 3 := by
+  simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
+  grind
 
 attribute [simp] p40 p10 p20 p30 p41 p42 p43 p21 p31 p32
 
 theorem TBP_energy_formula (E : ℝ → ℝ) :
     TBPConfiguration.energy E = E (1 / 2) + 3 * E (Real.sqrt 3) + 6 * E (Real.sqrt 2) := by
+
   rw [TBPEnergy]
   simp
+  ring
   sorry
 
 
