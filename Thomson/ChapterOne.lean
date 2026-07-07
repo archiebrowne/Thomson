@@ -21,6 +21,22 @@ def TBPConfiguration : configuration 5 where
     <;> ring_nf
     <;> simp [Real.sq_sqrt (by norm_num : (3 : ℝ) ≥ 0)]
     <;> ring
+  injective := by
+    have hinj : Function.Injective ((EuclideanSpace.equiv (Fin 3) ℝ).symm) :=
+      (EuclideanSpace.equiv (Fin 3) ℝ).symm.injective
+    have h3 : (0 : ℝ) < Real.sqrt 3 := Real.sqrt_pos.mpr (by norm_num)
+    intro i j h
+    fin_cases i <;> fin_cases j <;>
+      first
+        | rfl
+        | (exfalso
+           simp only [TBPPoints] at h
+           replace h := hinj h
+           have e0 := congrFun h 0
+           have e1 := congrFun h 1
+           have e2 := congrFun h 2
+           simp only [Matrix.cons_val_zero, Matrix.cons_val_one, Matrix.cons_val] at e0 e1 e2
+           nlinarith [e0, e1, e2, h3])
 
 -- parametrise the points on the TBPConfiguration
 def p (n : Fin 5) := TBPConfiguration.points n
@@ -94,50 +110,3 @@ theorem TBP_energy_formula (E : ℝ → ℝ) :
   simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
   norm_num
   grind
-
-
-
-
--- -- Computing distances between points in the TBP configuration:
--- lemma TBP_distances : ∀ i j : Fin 5, i < j → ‖(TBPConfiguration.points i : EuclideanSpace ℝ (Fin 3)) - TBPConfiguration.points j‖ =
---   if (i = 0 ∧ j = 4) then 2 else if (0 < i ∧ j < 4) then Real.sqrt 3 else Real.sqrt 2 := by
---   intros i j h
---   simp only [TBPConfiguration, TBPFun]
---   split_ifs with hi hj
---   · -- there is one case here
---     simp only [hi, Fin.isValue, PiLp.continuousLinearEquiv_symm_apply,
---       EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply, Matrix.cons_val]
---     norm_num
---   · -- there are three cases here
---     obtain ⟨hi1, hi2⟩ := hj
---     simp only [PiLp.continuousLinearEquiv_symm_apply]
---     obtain ⟨rfl, rfl⟩ | ⟨rfl, rfl⟩ | ⟨rfl, rfl⟩ :
---       (i = 1 ∧ j = 2) ∨ (i = 1 ∧ j = 3) ∨ (i = 2 ∧ j = 3) := by sorry
---     · simp only [Fin.isValue, EuclideanSpace.norm_eq, Fin.sum_univ_three,
---         PiLp.sub_apply, Matrix.cons_val]
---       congr 1
---       norm_num
---       rw [div_pow, show |Real.sqrt 3| = Real.sqrt 3 by simp only [abs_eq_self, Real.sqrt_nonneg],
---         Real.sq_sqrt (by norm_num)]
---       norm_num
---     · simp only [Fin.isValue, EuclideanSpace.norm_eq, Fin.sum_univ_three,
---         PiLp.sub_apply, Matrix.cons_val]
---       congr 1
---       norm_num
---       rw [div_pow, show |Real.sqrt 3| = Real.sqrt 3 by simp only [abs_eq_self, Real.sqrt_nonneg],
---         Real.sq_sqrt (by norm_num)]
---       norm_num
---     · simp only
---       simp only [Fin.isValue, EuclideanSpace.norm_eq, Fin.sum_univ_three,
---         PiLp.sub_apply, Matrix.cons_val]
---       congr 1
---       norm_num
---       rw [@sub_pow_two]
---       rw [div_pow,
---         Real.sq_sqrt (by norm_num)]
---       norm_num
---       sorry
---   · -- there are six cases here
---     push_neg at hi hj
---     simp
---     sorry

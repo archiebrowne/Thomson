@@ -15,6 +15,9 @@ open EuclideanSpace
 structure configuration (n : ℕ) where
   points : Fin n → EuclideanSpace ℝ (Fin 3)
   on_sphere : ∀ i, ‖points i‖ = 1
+  -- the points are genuinely a *set*: distinct. Without this, coincident points give distance `0`,
+  -- and `coulombPotential 0 = 1 / 0 = 0` in Lean would make `IsMinimal` false.
+  injective : Function.Injective points
 
 -- we use ℝ rather than ℝ>0 or similar since we will always be taking values of things in ℝ>0 anyway
 /- maybe there is a better way to take finite sums. This is also not correct since it doesn't
