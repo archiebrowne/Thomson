@@ -1,44 +1,9 @@
-import Mathlib.Tactic
-import Mathlib.Geometry.Euclidean.Sphere.Basic
-import Mathlib.Geometry.Manifold.Instances.Sphere
-/-
-
-Need that the tetrahedron is the energy minimiser for the coulomb potential on four
-points. This is a known result, but I don't know if it has been formalised in Lean yet.
-
--/
+import Thomson.Configuration
 
 noncomputable section
 
 open EuclideanSpace
 
-/- A configuration is a set of `n` points on `S² ⊆ ℝ³`. Do we want to use `Sphere` instead? -/
-structure configuration (n : ℕ) where
-  points : Fin n → EuclideanSpace ℝ (Fin 3)
-  on_sphere : ∀ i, ‖points i‖ = 1
-
--- we use ℝ rather than ℝ>0 or similar since we will always be taking values of things in ℝ>0 anyway
-/- maybe there is a better way to take finite sums. This is also not correct since it doesn't
-take into account `i < j`. -/
-def configuration.energy (E : ℝ → ℝ) (cf : configuration n) : ℝ :=
-  ∑ i : Fin n, ∑ j ∈ Finset.Iio i, E ‖cf.points i - cf.points j‖
-
--- can the 1, 2, 3 cases be unified?
-def tetrahedronConfiguration : configuration 4 where
-  points
-   | 0 => (equiv _ ℝ).symm ![0, 0, 1]
-   | 1 => (equiv _ ℝ).symm ![2 * Real.sqrt 2 / 3, 0, -1 / 3]
-   | 2 => (equiv _ ℝ).symm ![-Real.sqrt 2 / 3, Real.sqrt 6 / 3, -1 / 3]
-   | 3 => (equiv _ ℝ).symm ![-Real.sqrt 2 / 3, -Real.sqrt 6 / 3, -1 / 3]
-  on_sphere i := by
-    match i with
-    | 0 => simp [EuclideanSpace.norm_eq, Fin.sum_univ_three]
-    | 1 => simp [EuclideanSpace.norm_eq, Fin.sum_univ_three]; grind only [usr Real.sq_sqrt',
-      = max_def]
-    | 2 => simp [EuclideanSpace.norm_eq, Fin.sum_univ_three]; grind only [usr Real.sq_sqrt',
-      = max_def]
-    | 3 => simp [EuclideanSpace.norm_eq, Fin.sum_univ_three]; grind only [usr Real.sq_sqrt',
-      = max_def]
 
 @[simp]
 def TBPPoints : Fin 5 → EuclideanSpace ℝ (Fin 3)
@@ -176,15 +141,3 @@ theorem TBP_energy_formula (E : ℝ → ℝ) :
 --     push_neg at hi hj
 --     simp
 --     sorry
-
-
--- In Lean, `1 / 0 = 0`, but this is okay since we only work with `r > 0`.
-def coulombPotential : ℝ → ℝ := fun r ↦ 1 / r
-
-/- A configuration of `n` points has minimal energy with respect to `E`.  -/
-def configuration.IsMinimal {n : ℕ} (E : ℝ → ℝ) (cf : configuration n) : Prop :=
-  ∀ cf' : configuration n, cf'.energy E ≤ cf.energy E
-
-/- The tetrahedron is the energy minimiser for the coulomb potential on four points.  -/
-theorem tetrahedron_is_coulomb_minimal : tetrahedronConfiguration.IsMinimal coulombPotential := by
-  sorry
