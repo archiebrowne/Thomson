@@ -27,4 +27,4 @@ def coulombPotential : ℝ → ℝ := fun r ↦ 1 / r
 
 /- A configuration of `n` points has minimal energy with respect to `E`.  -/
 def configuration.IsMinimal {n : ℕ} (E : ℝ → ℝ) (cf : configuration n) : Prop :=
-  ∀ cf' : configuration n, cf'.energy E ≤ cf.energy E
+  ∀ cf' : configuration n, cf.energy E ≤ cf'.energy E
