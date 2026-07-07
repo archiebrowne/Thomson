@@ -1,7 +1,12 @@
 import Mathlib.Tactic
 import Mathlib.Geometry.Euclidean.Sphere.Basic
 import Mathlib.Geometry.Manifold.Instances.Sphere
+/-
 
+Need that the tetrahedron is the energy minimiser for the coulomb potential on four
+points. This is a known result, but I don't know if it has been formalised in Lean yet.
+
+-/
 
 noncomputable section
 
@@ -64,71 +69,67 @@ lemma TBPEnergy (E : ℝ → ℝ) : TBPConfiguration.energy E =
     E ‖p 3 - p 0‖ + E ‖p 3 - p 1‖ + E ‖p 3 - p 2‖ +
     E ‖p 4 - p 0‖ + E ‖p 4 - p 1‖ + E ‖p 4 - p 2‖ +
     E ‖p 4 - p 3‖ := by
-  simp only [configuration.energy, p]
-  simp only [Fin.sum_univ_succ, Finset.sum_empty]
-  simp only [show Finset.Iio (0 : Fin 5) = ∅ from by decide]
-  --simp only [show Finset.Iio (1 : Fin 5) = {0} from by decide]
-  --simp only [show Finset.Iio (2 : Fin 5) = {0, 1} from by decide]
-  ---simp only [show Finset.Iio (3 : Fin 5) = {0, 1, 2} from by decide]
-  --simp only [show Finset.Iio (4 : Fin 5) = {0, 1, 2, 3} from by decide]
-  simp only [Finset.sum_singleton, Finset.sum_insert, Finset.mem_singleton,
-    Finset.mem_insert, Finset.sum_empty]
+  simp [configuration.energy, p, Fin.sum_univ_five,
+    show Finset.Iio (0 : Fin 5) = ∅ from by decide,
+    show Finset.Iio (1 : Fin 5) = {0} from by decide,
+    show Finset.Iio (2 : Fin 5) = {0, 1} from by decide,
+    show Finset.Iio (3 : Fin 5) = {0, 1, 2} from by decide,
+    show Finset.Iio (4 : Fin 5) = {0, 1, 2, 3} from by decide,
+    Finset.sum_insert, Finset.mem_insert, Finset.mem_singleton]
   ring
-  simp [configuration.energy, TBPConfiguration, Fin.sum_univ_succ]
-
-  sorry
 
 
+-- **might not need these explicitly**
+-- lemma p40 : ‖p 4 - p 0‖ = 2 := by
+--   simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
+--   norm_num
 
-lemma p40 : ‖p 4 - p 0‖ = 2 := by
-  simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
-  norm_num
+-- -- An antipodal point and one on the equator
+-- lemma p10 : ‖p 1 - p 0‖ = Real.sqrt 2 := by
+--   simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
+--   grind
 
--- An antipodal point and one on the equator
-lemma p10 : ‖p 1 - p 0‖ = Real.sqrt 2 := by
-  simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
-  grind
+-- lemma p20 : ‖p 2 - p 0‖ = Real.sqrt 2 := by
+--   simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
+--   grind
+-- lemma p30 : ‖p 3 - p 0‖ = Real.sqrt 2 := by
+--   simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
+--   grind
 
-lemma p20 : ‖p 2 - p 0‖ = Real.sqrt 2 := by
-  simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
-  grind
-lemma p30 : ‖p 3 - p 0‖ = Real.sqrt 2 := by
-  simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
-  grind
+-- lemma p41 : ‖p 4 - p 1‖ = Real.sqrt 2 := by
+--   simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
+--   grind
 
-lemma p41 : ‖p 4 - p 1‖ = Real.sqrt 2 := by
-  simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
-  grind
+-- lemma p42 : ‖p 4 - p 2‖ = Real.sqrt 2 := by
+--   simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
+--   grind
 
-lemma p42 : ‖p 4 - p 2‖ = Real.sqrt 2 := by
-  simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
-  grind
-lemma p43 : ‖p 4 - p 3‖ = Real.sqrt 2 := by
-  simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
-  grind
+-- lemma p43 : ‖p 4 - p 3‖ = Real.sqrt 2 := by
+--   simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
+--   grind
 
--- both points on the equator
-lemma p21 : ‖p 2 - p 1‖ = Real.sqrt 3 := by
-  simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
-  grind
+-- -- both points on the equator
+-- lemma p21 : ‖p 2 - p 1‖ = Real.sqrt 3 := by
+--   simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
+--   grind
 
-lemma p31 : ‖p 3 - p 1‖ = Real.sqrt 3 := by
-  simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
-  grind
+-- lemma p31 : ‖p 3 - p 1‖ = Real.sqrt 3 := by
+--   simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
+--   grind
 
-lemma p32 : ‖p 3 - p 2‖ = Real.sqrt 3 := by
-  simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
-  grind
+-- lemma p32 : ‖p 3 - p 2‖ = Real.sqrt 3 := by
+--   simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
+--   grind
 
-attribute [simp] p40 p10 p20 p30 p41 p42 p43 p21 p31 p32
+--attribute [simp] p40 p10 p20 p30 p41 p42 p43 p21 p31 p32
 
 theorem TBP_energy_formula (E : ℝ → ℝ) :
-    TBPConfiguration.energy E = E (1 / 2) + 3 * E (Real.sqrt 3) + 6 * E (Real.sqrt 2) := by
-
+    TBPConfiguration.energy E = E 2 + 3 * E (Real.sqrt 3) + 6 * E (Real.sqrt 2) := by
   rw [TBPEnergy]
-  simp
-  ring
-  sorry
+  simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
+  norm_num
+  grind
+
 
 
 
@@ -175,10 +176,6 @@ theorem TBP_energy_formula (E : ℝ → ℝ) :
 --     push_neg at hi hj
 --     simp
 --     sorry
-
-
-
-
 
 
 -- In Lean, `1 / 0 = 0`, but this is okay since we only work with `r > 0`.
