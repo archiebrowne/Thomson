@@ -97,10 +97,10 @@ lemma energy_lb (cf : configuration 4) :
       + coulombPotential ‖x 3 - x 0‖ + coulombPotential ‖x 3 - x 1‖
       + coulombPotential ‖x 3 - x 2‖ := by
     simp [configuration.energy, ← hx, Fin.sum_univ_four,
-      show Finset.Iio (0 : Fin 4) = ∅ from by decide,
-      show Finset.Iio (1 : Fin 4) = {0} from by decide,
-      show Finset.Iio (2 : Fin 4) = {0, 1} from by decide,
-      show Finset.Iio (3 : Fin 4) = {0, 1, 2} from by decide,
+      show Finset.Iio (0 : Fin 4) = ∅ by decide,
+      show Finset.Iio (1 : Fin 4) = {0} by decide,
+      show Finset.Iio (2 : Fin 4) = {0, 1} by decide,
+      show Finset.Iio (3 : Fin 4) = {0, 1, 2} by decide,
       Finset.sum_insert, Finset.mem_insert, Finset.mem_singleton]
     ring
   rw [hE]
@@ -144,10 +144,10 @@ lemma tetrahedron_config_energy_eq :
       + coulombPotential ‖tetrahedronConfiguration.points 3 - tetrahedronConfiguration.points 1‖
       + coulombPotential ‖tetrahedronConfiguration.points 3 - tetrahedronConfiguration.points 2‖ := by
     simp [configuration.energy, Fin.sum_univ_four,
-      show Finset.Iio (0 : Fin 4) = ∅ from by decide,
-      show Finset.Iio (1 : Fin 4) = {0} from by decide,
-      show Finset.Iio (2 : Fin 4) = {0, 1} from by decide,
-      show Finset.Iio (3 : Fin 4) = {0, 1, 2} from by decide,
+      show Finset.Iio (0 : Fin 4) = ∅ by decide,
+      show Finset.Iio (1 : Fin 4) = {0} by decide,
+      show Finset.Iio (2 : Fin 4) = {0, 1} by decide,
+      show Finset.Iio (3 : Fin 4) = {0, 1, 2} by decide,
       Finset.sum_insert, Finset.mem_insert, Finset.mem_singleton]
     ring
   rw [hE, tetrahedron_edge_dist 1 0 (by decide), tetrahedron_edge_dist 2 0 (by decide),
