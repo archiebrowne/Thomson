@@ -17,12 +17,9 @@ def tetrahedronConfiguration : configuration 4 where
   on_sphere i := by
     match i with
     | 0 => simp [EuclideanSpace.norm_eq, Fin.sum_univ_three]
-    | 1 => simp [EuclideanSpace.norm_eq, Fin.sum_univ_three]; grind only [Real.sq_sqrt',
-      = max_def]
-    | 2 => simp [EuclideanSpace.norm_eq, Fin.sum_univ_three]; grind only [Real.sq_sqrt',
-      = max_def]
-    | 3 => simp [EuclideanSpace.norm_eq, Fin.sum_univ_three]; grind only [Real.sq_sqrt',
-      = max_def]
+    | 1 => simp [EuclideanSpace.norm_eq, Fin.sum_univ_three]; grind only [Real.sq_sqrt', = max_def]
+    | 2 => simp [EuclideanSpace.norm_eq, Fin.sum_univ_three]; grind only [Real.sq_sqrt', = max_def]
+    | 3 => simp [EuclideanSpace.norm_eq, Fin.sum_univ_three]; grind only [Real.sq_sqrt', = max_def]
 
 lemma tetrahedron_config_energy_eq :
     tetrahedronConfiguration.energy coulombPotential = (3 * Real.sqrt 6) / 2 := by
