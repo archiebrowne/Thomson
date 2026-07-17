@@ -23,7 +23,7 @@ def TBPConfiguration : configuration 5 where
     <;> ring
 
 -- parametrise the points on the TBPConfiguration
-def p (n : Fin 5) := TBPConfiguration.points n
+abbrev p (n : Fin 5) := TBPConfiguration.points n
 
 -- it will be computationally more efficient to split the TBP energy into the sum of the distances,
 -- then prove each distance size. because then the lemmas have a concrete goal from the start.
@@ -34,7 +34,7 @@ lemma TBPEnergy (E : ℝ → ℝ) : TBPConfiguration.energy E =
     E ‖p 3 - p 0‖ + E ‖p 3 - p 1‖ + E ‖p 3 - p 2‖ +
     E ‖p 4 - p 0‖ + E ‖p 4 - p 1‖ + E ‖p 4 - p 2‖ +
     E ‖p 4 - p 3‖ := by
-  simp [configuration.energy, p, Fin.sum_univ_five,
+  simp [configuration.energy, Fin.sum_univ_five,
     show Finset.Iio (0 : Fin 5) = ∅ by decide,
     show Finset.Iio (1 : Fin 5) = {0} by decide,
     show Finset.Iio (2 : Fin 5) = {0, 1} by decide,
@@ -43,6 +43,12 @@ lemma TBPEnergy (E : ℝ → ℝ) : TBPConfiguration.energy E =
     Finset.sum_insert, Finset.mem_insert, Finset.mem_singleton]
   ring
 
+theorem TBP_energy_formula (E : ℝ → ℝ) :
+    TBPConfiguration.energy E = E 2 + 3 * E (Real.sqrt 3) + 6 * E (Real.sqrt 2) := by
+  rw [TBPEnergy]
+  simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
+  norm_num
+  grind
 
 -- **might not need these explicitly**
 -- lemma p40 : ‖p 4 - p 0‖ = 2 := by
@@ -88,12 +94,7 @@ lemma TBPEnergy (E : ℝ → ℝ) : TBPConfiguration.energy E =
 
 --attribute [simp] p40 p10 p20 p30 p41 p42 p43 p21 p31 p32
 
-theorem TBP_energy_formula (E : ℝ → ℝ) :
-    TBPConfiguration.energy E = E 2 + 3 * E (Real.sqrt 3) + 6 * E (Real.sqrt 2) := by
-  rw [TBPEnergy]
-  simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
-  norm_num
-  grind
+
 
 
 
