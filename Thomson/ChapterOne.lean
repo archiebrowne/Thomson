@@ -35,11 +35,11 @@ lemma TBPEnergy (E : ℝ → ℝ) : TBPConfiguration.energy E =
     E ‖p 4 - p 0‖ + E ‖p 4 - p 1‖ + E ‖p 4 - p 2‖ +
     E ‖p 4 - p 3‖ := by
   simp [configuration.energy, p, Fin.sum_univ_five,
-    show Finset.Iio (0 : Fin 5) = ∅ from by decide,
-    show Finset.Iio (1 : Fin 5) = {0} from by decide,
-    show Finset.Iio (2 : Fin 5) = {0, 1} from by decide,
-    show Finset.Iio (3 : Fin 5) = {0, 1, 2} from by decide,
-    show Finset.Iio (4 : Fin 5) = {0, 1, 2, 3} from by decide,
+    show Finset.Iio (0 : Fin 5) = ∅ by decide,
+    show Finset.Iio (1 : Fin 5) = {0} by decide,
+    show Finset.Iio (2 : Fin 5) = {0, 1} by decide,
+    show Finset.Iio (3 : Fin 5) = {0, 1, 2} by decide,
+    show Finset.Iio (4 : Fin 5) = {0, 1, 2, 3} by decide,
     Finset.sum_insert, Finset.mem_insert, Finset.mem_singleton]
   ring
 
