@@ -13,7 +13,7 @@ def TBPPoints : Fin 5 → EuclideanSpace ℝ (Fin 3)
   | 3 => (equiv _ ℝ).symm ![-Real.sqrt 3 / 2, -1 / 2, 0]
   | 4 => (equiv _ ℝ).symm ![0, 0, -1]
 
-def TBPConfiguration : configuration 5 where
+def TBPConfiguration : Configuration 5 where
   points := TBPPoints
   on_sphere i := by
     fin_cases i
@@ -29,12 +29,12 @@ abbrev p (n : Fin 5) := TBPConfiguration.points n
 -- then prove each distance size. because then the lemmas have a concrete goal from the start.
 -- the kernel does not need to check which case we are in in an application of the `∀ i j` approach
 
-lemma TBPEnergy (E : ℝ → ℝ) : TBPConfiguration.energy E =
+lemma TBPEnergy (E : ℝ → ℝ) : TBPConfiguration.Energy E =
     E ‖p 1 - p 0‖ + E ‖p 2 - p 0‖ + E ‖p 2 - p 1‖ +
     E ‖p 3 - p 0‖ + E ‖p 3 - p 1‖ + E ‖p 3 - p 2‖ +
     E ‖p 4 - p 0‖ + E ‖p 4 - p 1‖ + E ‖p 4 - p 2‖ +
     E ‖p 4 - p 3‖ := by
-  simp [configuration.energy, Fin.sum_univ_five,
+  simp [Configuration.Energy, Fin.sum_univ_five,
     show Finset.Iio (0 : Fin 5) = ∅ by decide,
     show Finset.Iio (1 : Fin 5) = {0} by decide,
     show Finset.Iio (2 : Fin 5) = {0, 1} by decide,
@@ -44,7 +44,7 @@ lemma TBPEnergy (E : ℝ → ℝ) : TBPConfiguration.energy E =
   ring
 
 theorem TBP_energy_formula (E : ℝ → ℝ) :
-    TBPConfiguration.energy E = E 2 + 3 * E (Real.sqrt 3) + 6 * E (Real.sqrt 2) := by
+    TBPConfiguration.Energy E = E 2 + 3 * E (Real.sqrt 3) + 6 * E (Real.sqrt 2) := by
   rw [TBPEnergy]
   simp [p, TBPConfiguration, EuclideanSpace.norm_eq, Fin.sum_univ_three, PiLp.sub_apply]
   norm_num
