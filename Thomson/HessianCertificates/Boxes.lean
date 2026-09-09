@@ -1,5 +1,10 @@
-import Thomson.LocalRegions
-import Thomson.IntervalBounds
+module
+
+public import Thomson.LocalRegions
+public import Thomson.IntervalBounds
+
+@[expose] public section
+
 
 /-! Exact rational coordinate boxes enclosing the twelve local neighborhoods. -/
 

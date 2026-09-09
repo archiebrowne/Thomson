@@ -1,0 +1,121 @@
+{
+  "format": "THOMSON_KERNEL_GRADIENT_BATCH_V1",
+  "binary": "/private/tmp/probe_global_cover_symmetry_vertex_24.bin",
+  "binary_sha256": "6626a818d355868776501e252bbdafb97029a5a9ebe31122f3509e3e359020a4",
+  "module": "Thomson.GlobalCertificates.GradientBatches.Smoke000",
+  "namespace": "Thomson.Five.GlobalCertificates.GradientBatches.Smoke000",
+  "bridge_module": "Thomson.GlobalCertificates.GradientBatches.Smoke000Bridge",
+  "bridge_namespace": "Thomson.Five.GlobalCertificates.GradientBatches.Smoke000Bridge",
+  "source": "Thomson/GlobalCertificates/GradientBatches/Smoke000.lean",
+  "source_sha256": "01f1d2b9a6ee6cea4fa3e9569560f06a6ac6f970daa2159c3a7bd8b26a1fa7dd",
+  "source_bytes": 20188,
+  "bridge_source": "Thomson/GlobalCertificates/GradientBatches/Smoke000Bridge.lean",
+  "bridge_sha256": "367bb1903476fd24b7edfb2b9640230ac743c9e1199ed6ca27c1b17484ffd010",
+  "bridge_source_bytes": 1482,
+  "reference_topology_sha256": "58c374fbc03eab01d7423cf8888185f1410a0c20be14044aa309678ec2e4216c",
+  "bits": 40,
+  "count": 2,
+  "node_ids": [
+    586,
+    671
+  ],
+  "leaves": [
+    {
+      "node": 586,
+      "leaf": 6,
+      "depth": 20,
+      "operations": 298,
+      "choice": 3,
+      "exact_margin_scaled": "80188576797",
+      "box_after_scaled": [
+        1597497212928,
+        1887734267904,
+        0,
+        170183557120,
+        1236867219456,
+        1549796769792,
+        0,
+        170183557120,
+        0,
+        170183557120,
+        170183491584,
+        340367048704,
+        -680734031872,
+        -510550474752
+      ],
+      "packing_bits": [
+        45,
+        44,
+        44
+      ]
+    },
+    {
+      "node": 671,
+      "leaf": 6,
+      "depth": 21,
+      "operations": 298,
+      "choice": 3,
+      "exact_margin_scaled": "79508165966",
+      "box_after_scaled": [
+        1597497212928,
+        1971156484096,
+        0,
+        170183557120,
+        1030722682880,
+        1236867219456,
+        0,
+        170183557120,
+        0,
+        170183557120,
+        340366983168,
+        680734031872,
+        -510550540288,
+        -340366983168
+      ],
+      "packing_bits": [
+        45,
+        45,
+        45
+      ]
+    }
+  ],
+  "generation_seconds": 0.5830616250168532,
+  "heartbeats": "default",
+  "compiler_threads": 1,
+  "compiler_memory_limit_mib": 2048,
+  "kernel_status": "passed",
+  "static_sources": {
+    "Thomson/FixedIntervalChecker.lean": "0ebfa40825496c38266ff88ac50ce744e5e3d6372644dc7b9cf9c4081b640f6b",
+    "Thomson/GlobalCertificates/GradientTemplate.lean": "4c3cd9549948dad580edf9a671a4476cc8c8300c929dee1d05a22912a4c199b4",
+    "Thomson/GlobalCertificates/PackedRanges.lean": "11c1a5edc4585cd4c0eaa2a05a0e37665d48ce994042be88ccb1c42d1e859a7a"
+  },
+  "numeric_compile": {
+    "exit_code": 0,
+    "wall_seconds": 3.324122834019363,
+    "peak_rss_bytes": 700416000,
+    "audit_count": 2,
+    "axiom_sets": [
+      [
+        "propext"
+      ]
+    ],
+    "sizes": {
+      "Smoke000.olean.server": 10632,
+      "Smoke000.olean.private": 56888,
+      "Smoke000.olean": 13104
+    },
+    "compiler_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j",
+      "1",
+      "-M",
+      "2048",
+      "-o",
+      "/Users/archiebrowne/source/Thomson/.lake/build/lib/lean/Thomson/GlobalCertificates/GradientBatches/Smoke000.olean",
+      "/Users/archiebrowne/source/Thomson/Thomson/GlobalCertificates/GradientBatches/Smoke000.lean"
+    ],
+    "compiler_log": "Thomson/GlobalCertificates/GradientBatches/Smoke000.log"
+  }
+}

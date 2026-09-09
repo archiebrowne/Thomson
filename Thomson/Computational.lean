@@ -1,11 +1,16 @@
-import Thomson.EnergyExpression
-import Thomson.LocalRegions
-import Thomson.LocalSeparation
-import Thomson.Stationarity
-import Thomson.LocalHessian
-import Thomson.PositiveHessian
-import Thomson.Search
-import Mathlib.Tactic.Inclusion.Extension.IntervalDyadicReal.Tactic
+module
+
+public import Thomson.EnergyExpression
+public import Thomson.LocalRegions
+public import Thomson.LocalSeparation
+public import Thomson.Stationarity
+public import Thomson.LocalHessian
+public import Thomson.PositiveHessian
+public import Thomson.Search
+public import Mathlib.Tactic.Inclusion.Extension.IntervalDyadicReal.Tactic
+
+@[expose] public section
+
 
 /-!
 # The computational obligations

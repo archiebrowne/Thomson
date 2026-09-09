@@ -1,6 +1,11 @@
-import Thomson.Normalization
-import Thomson.LocalRegions
-import Thomson.Certificates
+module
+
+public import Thomson.Normalization
+public import Thomson.LocalRegions
+public import Thomson.Certificates
+
+@[expose] public section
+
 
 /-!
 # Concrete finite certificates for global confinement

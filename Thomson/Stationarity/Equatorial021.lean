@@ -1,4 +1,10 @@
-import Thomson.Stationarity.Arithmetic
+module
+
+public import Thomson.Stationarity.Arithmetic
+import all Thomson.Stationarity.Arithmetic
+
+@[expose] public section
+
 
 noncomputable section
 namespace Thomson.Five

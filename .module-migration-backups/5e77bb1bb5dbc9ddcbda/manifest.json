@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "root": "/Users/archiebrowne/source/Thomson",
+  "files": [
+    {
+      "path": "Solution.lean",
+      "mode": 420,
+      "before_sha256": "0564bb083061856e004e772e2b01b1966b6d194a6267134bcd374ed44d46dea2",
+      "after_sha256": "42f9446d8441f29250a21878aa5a85a32014d3b2077c8beb9aacd421337a2dd9"
+    },
+    {
+      "path": "Thomson.lean",
+      "mode": 420,
+      "before_sha256": "80aafef28921e70d639b30ca8260d336822ba06585ccafe01aad5a17a987681e",
+      "after_sha256": "0d05ac86b7245ddaaafa048665c0b3e1be8654a2d819d682ad89dc66827cd241"
+    },
+    {
+      "path": "Thomson/Computational.lean",
+      "mode": 420,
+      "before_sha256": "8c161430d5126de1792b1cd688060a0bfe7b43c951a541b66d1f34fb991d5a2a",
+      "after_sha256": "30c24295f64d1bd4a782c9f0e0ca08ce7af7c465b0f79747deea4995a3bef086"
+    },
+    {
+      "path": "Thomson/Formalization.lean",
+      "mode": 420,
+      "before_sha256": "006f4dddc4748badf812741ef494b4232722555252889b9590400e9354e9c6a4",
+      "after_sha256": "935d324f04cf328623a9a9c551a7d1b19bc4283b2c336d1e999902c71efcc5c6"
+    },
+    {
+      "path": "Thomson/Global.lean",
+      "mode": 420,
+      "before_sha256": "ea32a7954935c49abd1151b615a3606a957c085c89d75eb8f064c49f6a0ec733",
+      "after_sha256": "d910090aa34247981e4fc1421f53205413e8526bb657f879a6199ec9873b7bb0"
+    },
+    {
+      "path": "Thomson/Local.lean",
+      "mode": 420,
+      "before_sha256": "f57f4584e5fbe69e9430d35b05380ef138f8cd9dbcd9b7d082d6fc48e0f921b2",
+      "after_sha256": "eb77a06a317c594289161e2e69bb39893268428359aa14337b33a150703ae71f"
+    }
+  ]
+}

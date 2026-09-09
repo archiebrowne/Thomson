@@ -1,0 +1,82 @@
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377566.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377567.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377568.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377572.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377573.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377574.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377578.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377579.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377580.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377591.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377592.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377605.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377606.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377607.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377608.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377612.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377613.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377614.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377620.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377622.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377626.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377628.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377633.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377637.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377638.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377657.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377672.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377678.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377680.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377693.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377694.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.VertexCore.Leaf3377712.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377565.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377571.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377577.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377587.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377588.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377589.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377590.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377594.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377595.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377596.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377611.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377619.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377621.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377625.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377627.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377635.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377636.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377641.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377642.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377643.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377644.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377649.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377651.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377653.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377654.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377659.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377660.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377661.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377662.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377665.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377669.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377670.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377671.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377673.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377677.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377679.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377689.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377696.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377703.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377704.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377706.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377709.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.GradientCore.Leaf3377710.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.PairCore.Leaf3377685.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.PairCore.Leaf3377686.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.PairCore.Leaf3377691.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.PairCore.Leaf3377695.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.PairCore.Leaf3377701.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.PairCore.Leaf3377705.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3377413.PairCore.Leaf3377711.exists_checked' depends on axioms: [propext]

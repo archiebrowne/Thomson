@@ -1,5 +1,10 @@
-import Thomson.Problem
-import Mathlib.Tactic
+module
+
+public import Thomson.Problem
+public import Mathlib.Tactic
+
+@[expose] public section
+
 
 /-!
 # Exact geometry of the triangular bipyramid

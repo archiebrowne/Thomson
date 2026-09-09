@@ -1,5 +1,10 @@
-import Thomson.HessianCertificates.Equatorial102.Bounds11
-import Thomson.MatrixBounds
+module
+
+public import Thomson.HessianCertificates.Equatorial102.Bounds11
+public import Thomson.MatrixBounds
+
+@[expose] public section
+
 
 /-! Scalar Schur-complement certificates checked with exact rational arithmetic. -/
 

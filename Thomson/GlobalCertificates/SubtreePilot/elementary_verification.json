@@ -1,0 +1,57 @@
+{
+  "kernel_checked_modules": [
+    "NearCore",
+    "RejectionCore",
+    "ContractionCore",
+    "RejectionBridge",
+    "ContractionBridge",
+    "NearBridge",
+    "Assembled"
+  ],
+  "audited_real_theorems": 150,
+  "axioms": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "near_bridge_status": "compiled",
+  "heartbeats": "default",
+  "compiler_memory_limit_mb": 3072,
+  "artifacts": {
+    "NearCore": {
+      "olean_bytes": 27376,
+      "private_bytes": 145304
+    },
+    "RejectionCore": {
+      "olean_bytes": 52864,
+      "private_bytes": 173568
+    },
+    "ContractionCore": {
+      "olean_bytes": 277048,
+      "private_bytes": 731376
+    },
+    "RejectionBridge": {
+      "olean_bytes": 30952,
+      "private_bytes": 118472
+    },
+    "ContractionBridge": {
+      "olean_bytes": 245040,
+      "private_bytes": 656720
+    },
+    "NearBridge": {
+      "olean_bytes": 25744,
+      "private_bytes": 82136
+    },
+    "Assembled": {
+      "olean_bytes": 9432,
+      "private_bytes": 181600
+    }
+  },
+  "privacy_checks": {
+    "ContractionCore": "absent from downstream environment",
+    "RejectionCore": "absent from downstream environment",
+    "Assembled": "all numerical cores and elementary leaf bridges absent downstream"
+  },
+  "assembled_status": "compiled with standard axioms",
+  "compiler_threads": 1
+}

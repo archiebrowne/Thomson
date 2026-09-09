@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "root": "/Users/archiebrowne/source/Thomson",
+  "files": [
+    {
+      "path": "Thomson/Stationarity/Equatorial012.lean",
+      "mode": 420,
+      "before_sha256": "168c7dd21d569b994d921474c2bb8d647532d3221577ee3f53c04204485ef35a",
+      "after_sha256": "6f3c05c92298ec7aab812d2c6a7f64a38812ec42f96e660255dd100e0b33064c"
+    },
+    {
+      "path": "Thomson/Stationarity/Equatorial021.lean",
+      "mode": 420,
+      "before_sha256": "895ca82536c655901b628cec10b456ac8ad2b4b700abfbdc1e606745673b92b1",
+      "after_sha256": "e27dd70a7df2de7ef84d0880d375d4f0729a509fa88173a8dbf6acbb24a7712d"
+    },
+    {
+      "path": "Thomson/Stationarity/Equatorial102.lean",
+      "mode": 420,
+      "before_sha256": "ab1a14f7a7415e20582e4ec7947ae8e63038dbdf6a9594e3a6ead88bef391450",
+      "after_sha256": "04572e2e73d94011a85ff19d27fa441ba878088e7e1da672ceb9022c5793e31e"
+    },
+    {
+      "path": "Thomson/Stationarity/Equatorial120.lean",
+      "mode": 420,
+      "before_sha256": "0b56a8456540b09824912c0b23db1004e7d107c8a6eb3c10ab77474ced80e9ba",
+      "after_sha256": "5dbd4f01dc44d6ced6c3a3e964c692c498c8ac78d1c6314beca5fcebc1a112dd"
+    },
+    {
+      "path": "Thomson/Stationarity/Equatorial201.lean",
+      "mode": 420,
+      "before_sha256": "cdb6483d5b948bf932750c1631d681773f36bda6b700ad4a5e6843f98bb6b145",
+      "after_sha256": "386008701a18ff030ba918043ed04b63a26ce4437672aa879472f28211ce7007"
+    },
+    {
+      "path": "Thomson/Stationarity/Equatorial210.lean",
+      "mode": 420,
+      "before_sha256": "b952a7fd06877c8e1e45ef747f8b79320cbafc45bcd564d3d803086c1a45e55f",
+      "after_sha256": "45e21e540e1734b05e9ee8675e41dbaa0777eb5be26a03d16665cdf9062c7b7b"
+    },
+    {
+      "path": "Thomson/Stationarity/Polar012.lean",
+      "mode": 420,
+      "before_sha256": "322cf561b068366a0f5df8f9008beecc224e8de26373eae18f48b37da8504e5c",
+      "after_sha256": "a194a8e6d3f41e88e0662881754f73aac499a17f05ff6346eb347ec8eb3cf1f7"
+    },
+    {
+      "path": "Thomson/Stationarity/Polar021.lean",
+      "mode": 420,
+      "before_sha256": "bce4801522899aa6600da263eab551301031e8565afd5beab06f06804bf44071",
+      "after_sha256": "0c72285a5010350fcf92e5cea17eda1e4707429bfa7d54c6ee3db5ebf47f5bf6"
+    },
+    {
+      "path": "Thomson/Stationarity/Polar102.lean",
+      "mode": 420,
+      "before_sha256": "b18da4c99ac32ee63a6260a1863e2ada860a02f7d58900a110aa89b7b767a442",
+      "after_sha256": "f8bce0d2db587e0534517277bfe06ca590e6df731911f8d48cc8a45df746bb6d"
+    },
+    {
+      "path": "Thomson/Stationarity/Polar120.lean",
+      "mode": 420,
+      "before_sha256": "b2804a8ef6b4e625094998ae0d724dabd12fdcdd9e30ffde64aad865ab1cba3c",
+      "after_sha256": "e9508098280f11ba2d4c59a3f3139cba73c0100ccd2e61bcec49a16703091443"
+    },
+    {
+      "path": "Thomson/Stationarity/Polar201.lean",
+      "mode": 420,
+      "before_sha256": "8302250a77ca3e1d505d77f2fbca94ca34a6207eb9c9dccd1e2a1274c2cfc958",
+      "after_sha256": "00e399aa4548092c9e7b5389e3943a107720353909d54e96ce8fe4cf12550fad"
+    },
+    {
+      "path": "Thomson/Stationarity/Polar210.lean",
+      "mode": 420,
+      "before_sha256": "4771bc81f5631aaec838a7fc479d846cbe6d2a3672483e3bb13c540c33556ee1",
+      "after_sha256": "e13697e4d809e2da2817535066466ca7400e85366100872132428a1782de3825"
+    }
+  ]
+}

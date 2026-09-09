@@ -1,5 +1,10 @@
-import Thomson.Jet
-import Thomson.Stereographic
+module
+
+public import Thomson.Jet
+public import Thomson.Stereographic
+
+@[expose] public section
+
 
 /-!
 # The Coulomb energy as a differentiable arithmetic expression

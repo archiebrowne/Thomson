@@ -1,4 +1,9 @@
-import Thomson.Stereographic
+module
+
+public import Thomson.Stereographic
+
+@[expose] public section
+
 
 /-!
 # The twelve normalized triangular bipyramids

@@ -1,15 +1,20 @@
-import Thomson.Stationarity.Polar012
-import Thomson.Stationarity.Polar021
-import Thomson.Stationarity.Polar102
-import Thomson.Stationarity.Polar120
-import Thomson.Stationarity.Polar201
-import Thomson.Stationarity.Polar210
-import Thomson.Stationarity.Equatorial012
-import Thomson.Stationarity.Equatorial021
-import Thomson.Stationarity.Equatorial102
-import Thomson.Stationarity.Equatorial120
-import Thomson.Stationarity.Equatorial201
-import Thomson.Stationarity.Equatorial210
+module
+
+public import Thomson.Stationarity.Polar012
+public import Thomson.Stationarity.Polar021
+public import Thomson.Stationarity.Polar102
+public import Thomson.Stationarity.Polar120
+public import Thomson.Stationarity.Polar201
+public import Thomson.Stationarity.Polar210
+public import Thomson.Stationarity.Equatorial012
+public import Thomson.Stationarity.Equatorial021
+public import Thomson.Stationarity.Equatorial102
+public import Thomson.Stationarity.Equatorial120
+public import Thomson.Stationarity.Equatorial201
+public import Thomson.Stationarity.Equatorial210
+
+@[expose] public section
+
 
 /-!
 # Vanishing of the gradient at each normalized triangular bipyramid

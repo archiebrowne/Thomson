@@ -1,0 +1,12 @@
+{
+  "exit_code": 0,
+  "wall_seconds": 6.6376147079863586,
+  "peak_rss_bytes": 1803288576,
+  "audited_leaves": 100,
+  "source_bytes": 43939,
+  "compiled_sizes": {
+    "Pilot000Bridge.olean.server": 47464,
+    "Pilot000Bridge.olean.private": 388064,
+    "Pilot000Bridge.olean": 147392
+  }
+}

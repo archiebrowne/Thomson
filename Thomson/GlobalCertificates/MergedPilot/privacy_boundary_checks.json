@@ -1,0 +1,35 @@
+{
+  "Public": {
+    "exit_code": 0,
+    "seconds": 2.819901875045616,
+    "output": "'Thomson.Five.GlobalCertificates.MergedPilot.Assembled.checked' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n"
+  },
+  "Boundary": {
+    "exit_code": 0,
+    "seconds": 2.7246755830128677,
+    "output": "'Thomson.Five.GlobalCertificates.MergedBoundarySmoke.checked' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+  },
+  "HiddenNumeric": {
+    "exit_code": 1,
+    "seconds": 2.73815754102543,
+    "output": "/var/folders/8n/1lsng3052fb68wxmq2r34tw80000gn/T/thomson_merged_privacy_z7qnpz7b/HiddenNumeric.lean:3:7: error(lean.unknownIdentifier): Unknown identifier `Thomson.Five.GlobalCertificates.MergedPilot.GradientCore.Leaf2920973.exists_checked`\n"
+  },
+  "HiddenIntermediate": {
+    "exit_code": 1,
+    "seconds": 2.781283040996641,
+    "output": "/var/folders/8n/1lsng3052fb68wxmq2r34tw80000gn/T/thomson_merged_privacy_z7qnpz7b/HiddenIntermediate.lean:3:7: error(lean.unknownIdentifier): Unknown identifier `Thomson.Five.GlobalCertificates.MergedPilot.ContractionBridge.before_2920413`\n"
+  },
+  "BadBoundary": {
+    "exit_code": 1,
+    "seconds": 2.79569724999601,
+    "output": "/var/folders/8n/1lsng3052fb68wxmq2r34tw80000gn/T/thomson_merged_privacy_z7qnpz7b/BadBoundary.lean:21:2: error: Type mismatch\n  MergedPilot.Assembled.checked\nhas type\n  SortedStationaryLeaf MergedPilot.Assembled.box.toBox\nbut is expected to have type\n  SortedStationaryLeaf boundaryBox_2920413.toBox\n/var/folders/8n/1lsng3052fb68wxmq2r34tw80000gn/T/thomson_merged_privacy_z7qnpz7b/BadBoundary.lean:28:2: error: Type mismatch\n  node_2920413\nhas type\n  SortedStationaryLeaf boundaryBox_2920413.toBox\nbut is expected to have type\n  SortedStationaryLeaf box.toBox\n'Thomson.Five.GlobalCertificates.MergedBoundarySmoke.checked' depends on axioms: [propext,\n sorryAx,\n Classical.choice,\n Quot.sound]\n"
+  },
+  "hidden_core_artifacts": [
+    "Core.olean.server",
+    "Core.ir",
+    "Core.ir.sig",
+    "Core.olean",
+    "Core.olean.private"
+  ],
+  "restored": true
+}

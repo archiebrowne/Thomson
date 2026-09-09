@@ -1,0 +1,121 @@
+{
+  "format": "THOMSON_KERNEL_PAIR_BATCH_V1",
+  "binary": "/private/tmp/probe_global_cover_symmetry_vertex_24.bin",
+  "binary_sha256": "6626a818d355868776501e252bbdafb97029a5a9ebe31122f3509e3e359020a4",
+  "module": "Thomson.GlobalCertificates.PairBatches.Smoke000",
+  "namespace": "Thomson.Five.GlobalCertificates.PairBatches.Smoke000",
+  "bridge_module": "Thomson.GlobalCertificates.PairBatches.Smoke000Bridge",
+  "bridge_namespace": "Thomson.Five.GlobalCertificates.PairBatches.Smoke000Bridge",
+  "source": "Thomson/GlobalCertificates/PairBatches/Smoke000.lean",
+  "source_sha256": "3a30724fc48a34150dd7d4028eb73c83b6a4d34b8d0081858bfb477e184795a9",
+  "source_bytes": 20136,
+  "bridge_source": "Thomson/GlobalCertificates/PairBatches/Smoke000Bridge.lean",
+  "bridge_sha256": "e3bae81fc08cc0dd028c3f271061ee6a6a4f626be39e3fddf52f331de222cec9",
+  "bridge_source_bytes": 1431,
+  "reference_topology_sha256": "65dfe5f05c0cab641b03d13ff573dc6bfa3f1d0fef0ed66dcd91cede0438a8ce",
+  "bits": 40,
+  "count": 2,
+  "node_ids": [
+    10,
+    14
+  ],
+  "leaves": [
+    {
+      "node": 10,
+      "leaf": 3,
+      "depth": 5,
+      "operations": 229,
+      "choice": 0,
+      "exact_margin_scaled": "5234470285229",
+      "box_after_scaled": [
+        1597497212928,
+        1718471491584,
+        824578146304,
+        983450779648,
+        0,
+        535953670144,
+        824578146304,
+        983450779648,
+        0,
+        535953670144,
+        824578146304,
+        983450779648,
+        0,
+        535953670144
+      ],
+      "packing_bits": [
+        44,
+        46,
+        46
+      ]
+    },
+    {
+      "node": 14,
+      "leaf": 3,
+      "depth": 7,
+      "operations": 229,
+      "choice": 0,
+      "exact_margin_scaled": "743010167740",
+      "box_after_scaled": [
+        1597497212928,
+        1908377124864,
+        0,
+        824578146304,
+        824578146304,
+        1213466148864,
+        680734031872,
+        1101475741696,
+        0,
+        865938767872,
+        680734031872,
+        1101475741696,
+        0,
+        865938767872
+      ],
+      "packing_bits": [
+        45,
+        45,
+        45
+      ]
+    }
+  ],
+  "generation_seconds": 0.5634430840145797,
+  "heartbeats": "default",
+  "compiler_threads": 1,
+  "compiler_memory_limit_mib": 2048,
+  "kernel_status": "passed",
+  "static_sources": {
+    "Thomson/FixedIntervalChecker.lean": "0ebfa40825496c38266ff88ac50ce744e5e3d6372644dc7b9cf9c4081b640f6b",
+    "Thomson/GlobalCertificates/PairTemplate.lean": "c51e276251cc0341fa9209495b59cd3e6b1f47f75add76764aabf2afa757c41c",
+    "Thomson/GlobalCertificates/PackedRanges.lean": "11c1a5edc4585cd4c0eaa2a05a0e37665d48ce994042be88ccb1c42d1e859a7a"
+  },
+  "numeric_compile": {
+    "exit_code": 0,
+    "wall_seconds": 3.2150780410156585,
+    "peak_rss_bytes": 700170240,
+    "audit_count": 2,
+    "axiom_sets": [
+      [
+        "propext"
+      ]
+    ],
+    "sizes": {
+      "Smoke000.olean.server": 10056,
+      "Smoke000.olean.private": 49704,
+      "Smoke000.olean": 12208
+    },
+    "compiler_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j",
+      "1",
+      "-M",
+      "2048",
+      "-o",
+      "/Users/archiebrowne/source/Thomson/.lake/build/lib/lean/Thomson/GlobalCertificates/PairBatches/Smoke000.olean",
+      "/Users/archiebrowne/source/Thomson/Thomson/GlobalCertificates/PairBatches/Smoke000.lean"
+    ],
+    "compiler_log": "Thomson/GlobalCertificates/PairBatches/Smoke000.log"
+  }
+}

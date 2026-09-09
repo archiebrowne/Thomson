@@ -1,0 +1,300 @@
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf10.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf14.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf17.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf18.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf21.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf22.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf26.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf27.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf28.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf32.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf34.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf36.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf37.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf38.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf42.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf44.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf46.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf47.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf48.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf50.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf52.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf54.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf57.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf58.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf59.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf60.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf62.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf67.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf68.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf72.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf74.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf75.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf76.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf80.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf82.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf83.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf84.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf88.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf90.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf91.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf92.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf96.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf98.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf99.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf100.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf102.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf104.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf107.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf108.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf109.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf110.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf113.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf114.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf118.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf122.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf124.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf127.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf128.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf129.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf130.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf133.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf134.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf139.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf140.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf141.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf142.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf144.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf145.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf146.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf150.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf154.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf156.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf157.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf158.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf160.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf161.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf163.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf164.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf166.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf170.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf172.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf175.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf176.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf177.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf178.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf180.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf181.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf185.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf186.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf187.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf188.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf190.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf194.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf199.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf200.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf202.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf203.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf205.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf206.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'Thomson.Five.GlobalCertificates.PairBatches.Pilot000Bridge.Leaf212.leaf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

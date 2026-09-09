@@ -123,6 +123,10 @@ def bounds(box):
 from pathlib import Path
 BASE=Path(__file__).resolve().parents[1]
 OUT=BASE/'Thomson'/'HessianCertificates'
+def write_module(path, lines):
+    from migrate_modules import migrate_source
+    path.write_text(migrate_source('\n'.join(lines)))
+
 def qlit(x):
     x=F(x)
     return str(x.numerator) if x.denominator==1 else f"({x.numerator} / {x.denominator})"
@@ -140,7 +144,7 @@ def gen_nodes():
         for j in range(i,7):
             lines += ['', f'theorem hessian_expr_{i}{j} : Expr.hessianExpr energyExpr {i} {j} = e{H[i][j]} := by', '  with_unfolding_all rfl']
     lines+=['', 'end Thomson.Five.HessianCertificates','']
-    (OUT/'Expressions.lean').write_text('\n'.join(lines))
+    write_module(OUT/'Expressions.lean', lines)
 
 def used_nodes():
     used=set()
@@ -176,7 +180,7 @@ def gen_bounds(kind,perm):
                 lines += [f'  exact Interval.{o} {refs}', '    '+' '.join('(by norm_num)' for _ in range(count))]
             lines += ['']
         lines += [f'end Thomson.Five.HessianCertificates.{name}', '']
-        (dest/f'Bounds{chunk:02}.lean').write_text('\n'.join(lines));prev=mod
+        write_module(dest/f'Bounds{chunk:02}.lean', lines);prev=mod
     return prev
 
 def gen_pivots(kind,perm):
@@ -212,13 +216,13 @@ def gen_pivots(kind,perm):
             a=new
         assert a[0][0][0]>0,(kind,perm,s,a[0][0])
         lines += [f'theorem pivot{s} (q : Chart) (hq : Bounds_{bn} q) : 0 < A{s} q 0 0 :=',f'  Interval.pos (m{s}_00 q hq) (by norm_num)', '', f'end Thomson.Five.HessianCertificates.{name}', '']
-        (dest/f'Pivots{s}.lean').write_text('\n'.join(lines));prev=f'Thomson.HessianCertificates.{name}.Pivots{s}'
+        write_module(dest/f'Pivots{s}.lean', lines);prev=f'Thomson.HessianCertificates.{name}.Pivots{s}'
     lines=[f'import {prev}', '', 'noncomputable section',f'namespace Thomson.Five.HessianCertificates.{name}', '', '/-- The Hessian is strictly positive throughout this entire rational box. -/',f'theorem positive (q : Chart) (hq : Bounds_{bn} q) :', '    PositivePivots (energyExpr.hessian q) := by','  have h : PositivePivots (A0 q) :=', '    '+''.join(f'⟨pivot{s} q hq, ' for s in range(7))+'True.intro'+'⟩'*7]
     if order!=list(range(7)):
         lines += ['  exact positivePivots_of_reindex (energyExpr.hessian q)', '    (energyExpr.hessian_symmetric q) order h']
     else:lines += ['  exact h']
     lines += ['',f'end Thomson.Five.HessianCertificates.{name}', '']
-    (dest/'Positive.lean').write_text('\n'.join(lines))
+    write_module(dest/'Positive.lean', lines)
 
 if __name__ == '__main__':
     gen_nodes()

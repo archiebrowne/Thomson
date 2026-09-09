@@ -1,5 +1,10 @@
-import Thomson.LocalCalculus
-import Mathlib.LinearAlgebra.Matrix.Symmetric
+module
+
+public import Thomson.LocalCalculus
+public import Mathlib.LinearAlgebra.Matrix.Symmetric
+
+@[expose] public section
+
 
 /-!
 # Verified scalar differentiation of arithmetic expressions

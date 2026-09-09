@@ -1,4 +1,9 @@
-import Thomson.TBP
+module
+
+public import Thomson.TBP
+
+@[expose] public section
+
 
 /-!
 # Seven real coordinates and polynomial Coulomb pair expressions

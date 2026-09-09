@@ -1,4 +1,9 @@
-import Thomson.HessianCertificates.Polar012.Pivots6
+module
+
+public import Thomson.HessianCertificates.Polar012.Pivots6
+
+@[expose] public section
+
 
 noncomputable section
 namespace Thomson.Five.HessianCertificates.Polar012

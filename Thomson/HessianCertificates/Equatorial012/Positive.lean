@@ -1,4 +1,9 @@
-import Thomson.HessianCertificates.Equatorial012.Pivots6
+module
+
+public import Thomson.HessianCertificates.Equatorial012.Pivots6
+
+@[expose] public section
+
 
 noncomputable section
 namespace Thomson.Five.HessianCertificates.Equatorial012

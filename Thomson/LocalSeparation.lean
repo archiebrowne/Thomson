@@ -1,4 +1,9 @@
-import Thomson.LocalRegions
+module
+
+public import Thomson.LocalRegions
+
+@[expose] public section
+
 
 /-! # Separation throughout the local TBP boxes
 

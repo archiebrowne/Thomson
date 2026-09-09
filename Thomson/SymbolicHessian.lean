@@ -1,4 +1,9 @@
-import Thomson.EnergyExpression
+module
+
+public import Thomson.EnergyExpression
+
+@[expose] public section
+
 
 /-! # Verified simplified expressions for gradient and Hessian entries
 

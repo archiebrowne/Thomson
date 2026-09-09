@@ -1,5 +1,10 @@
-import Thomson.HessianCertificates.Expressions
-import Thomson.HessianCertificates.Boxes
+module
+
+public import Thomson.HessianCertificates.Expressions
+public import Thomson.HessianCertificates.Boxes
+
+@[expose] public section
+
 
 /-! Generated rational enclosures; every rounding inequality is checked by Lean. -/
 

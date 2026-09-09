@@ -1,5 +1,10 @@
-import Mathlib.Analysis.InnerProductSpace.PiL2
-import Mathlib.Order.Interval.Finset.Fin
+module
+
+public import Mathlib.Analysis.InnerProductSpace.PiL2
+public import Mathlib.Order.Interval.Finset.Fin
+
+@[expose] public section
+
 
 /-!
 # Thomson's problem for five points

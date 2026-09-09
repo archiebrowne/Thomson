@@ -1,0 +1,122 @@
+module
+
+public import Thomson.GlobalCertificates.VertexTemplate
+
+@[expose] public section
+
+
+/-! Packed fixed-denominator interval data. The decoder is total and makes no
+assumptions about the untrusted packed natural number. Arithmetic certificates
+are checked against the decoded ranges themselves. -/
+
+namespace Thomson.Five.GlobalCertificates.PackedRanges
+open Thomson.Five.FixedIntervalChecker
+open Thomson.Five.GlobalCertificates.VertexTemplate
+
+noncomputable def decodeInt (bits packed index : Nat) : Int :=
+  Int.ofNat ((packed / 2 ^ (bits * index)) % 2 ^ bits) - Int.ofNat (2 ^ (bits - 1))
+
+noncomputable def decodeBlock (bits packed : Nat) : RangeBlock :=
+  ⟨
+    ⟨decodeInt bits packed 0, decodeInt bits packed 1⟩,
+    ⟨decodeInt bits packed 2, decodeInt bits packed 3⟩,
+    ⟨decodeInt bits packed 4, decodeInt bits packed 5⟩,
+    ⟨decodeInt bits packed 6, decodeInt bits packed 7⟩,
+    ⟨decodeInt bits packed 8, decodeInt bits packed 9⟩,
+    ⟨decodeInt bits packed 10, decodeInt bits packed 11⟩,
+    ⟨decodeInt bits packed 12, decodeInt bits packed 13⟩,
+    ⟨decodeInt bits packed 14, decodeInt bits packed 15⟩,
+    ⟨decodeInt bits packed 16, decodeInt bits packed 17⟩,
+    ⟨decodeInt bits packed 18, decodeInt bits packed 19⟩,
+    ⟨decodeInt bits packed 20, decodeInt bits packed 21⟩,
+    ⟨decodeInt bits packed 22, decodeInt bits packed 23⟩,
+    ⟨decodeInt bits packed 24, decodeInt bits packed 25⟩,
+    ⟨decodeInt bits packed 26, decodeInt bits packed 27⟩,
+    ⟨decodeInt bits packed 28, decodeInt bits packed 29⟩,
+    ⟨decodeInt bits packed 30, decodeInt bits packed 31⟩,
+    ⟨decodeInt bits packed 32, decodeInt bits packed 33⟩,
+    ⟨decodeInt bits packed 34, decodeInt bits packed 35⟩,
+    ⟨decodeInt bits packed 36, decodeInt bits packed 37⟩,
+    ⟨decodeInt bits packed 38, decodeInt bits packed 39⟩,
+    ⟨decodeInt bits packed 40, decodeInt bits packed 41⟩,
+    ⟨decodeInt bits packed 42, decodeInt bits packed 43⟩,
+    ⟨decodeInt bits packed 44, decodeInt bits packed 45⟩,
+    ⟨decodeInt bits packed 46, decodeInt bits packed 47⟩,
+    ⟨decodeInt bits packed 48, decodeInt bits packed 49⟩,
+    ⟨decodeInt bits packed 50, decodeInt bits packed 51⟩,
+    ⟨decodeInt bits packed 52, decodeInt bits packed 53⟩,
+    ⟨decodeInt bits packed 54, decodeInt bits packed 55⟩,
+    ⟨decodeInt bits packed 56, decodeInt bits packed 57⟩,
+    ⟨decodeInt bits packed 58, decodeInt bits packed 59⟩,
+    ⟨decodeInt bits packed 60, decodeInt bits packed 61⟩,
+    ⟨decodeInt bits packed 62, decodeInt bits packed 63⟩,
+    ⟨decodeInt bits packed 64, decodeInt bits packed 65⟩,
+    ⟨decodeInt bits packed 66, decodeInt bits packed 67⟩,
+    ⟨decodeInt bits packed 68, decodeInt bits packed 69⟩,
+    ⟨decodeInt bits packed 70, decodeInt bits packed 71⟩,
+    ⟨decodeInt bits packed 72, decodeInt bits packed 73⟩,
+    ⟨decodeInt bits packed 74, decodeInt bits packed 75⟩,
+    ⟨decodeInt bits packed 76, decodeInt bits packed 77⟩,
+    ⟨decodeInt bits packed 78, decodeInt bits packed 79⟩,
+    ⟨decodeInt bits packed 80, decodeInt bits packed 81⟩,
+    ⟨decodeInt bits packed 82, decodeInt bits packed 83⟩,
+    ⟨decodeInt bits packed 84, decodeInt bits packed 85⟩,
+    ⟨decodeInt bits packed 86, decodeInt bits packed 87⟩,
+    ⟨decodeInt bits packed 88, decodeInt bits packed 89⟩,
+    ⟨decodeInt bits packed 90, decodeInt bits packed 91⟩,
+    ⟨decodeInt bits packed 92, decodeInt bits packed 93⟩,
+    ⟨decodeInt bits packed 94, decodeInt bits packed 95⟩,
+    ⟨decodeInt bits packed 96, decodeInt bits packed 97⟩,
+    ⟨decodeInt bits packed 98, decodeInt bits packed 99⟩,
+    ⟨decodeInt bits packed 100, decodeInt bits packed 101⟩,
+    ⟨decodeInt bits packed 102, decodeInt bits packed 103⟩,
+    ⟨decodeInt bits packed 104, decodeInt bits packed 105⟩,
+    ⟨decodeInt bits packed 106, decodeInt bits packed 107⟩,
+    ⟨decodeInt bits packed 108, decodeInt bits packed 109⟩,
+    ⟨decodeInt bits packed 110, decodeInt bits packed 111⟩,
+    ⟨decodeInt bits packed 112, decodeInt bits packed 113⟩,
+    ⟨decodeInt bits packed 114, decodeInt bits packed 115⟩,
+    ⟨decodeInt bits packed 116, decodeInt bits packed 117⟩,
+    ⟨decodeInt bits packed 118, decodeInt bits packed 119⟩,
+    ⟨decodeInt bits packed 120, decodeInt bits packed 121⟩,
+    ⟨decodeInt bits packed 122, decodeInt bits packed 123⟩,
+    ⟨decodeInt bits packed 124, decodeInt bits packed 125⟩,
+    ⟨decodeInt bits packed 126, decodeInt bits packed 127⟩,
+    ⟨decodeInt bits packed 128, decodeInt bits packed 129⟩,
+    ⟨decodeInt bits packed 130, decodeInt bits packed 131⟩,
+    ⟨decodeInt bits packed 132, decodeInt bits packed 133⟩,
+    ⟨decodeInt bits packed 134, decodeInt bits packed 135⟩,
+    ⟨decodeInt bits packed 136, decodeInt bits packed 137⟩,
+    ⟨decodeInt bits packed 138, decodeInt bits packed 139⟩,
+    ⟨decodeInt bits packed 140, decodeInt bits packed 141⟩,
+    ⟨decodeInt bits packed 142, decodeInt bits packed 143⟩,
+    ⟨decodeInt bits packed 144, decodeInt bits packed 145⟩,
+    ⟨decodeInt bits packed 146, decodeInt bits packed 147⟩,
+    ⟨decodeInt bits packed 148, decodeInt bits packed 149⟩,
+    ⟨decodeInt bits packed 150, decodeInt bits packed 151⟩,
+    ⟨decodeInt bits packed 152, decodeInt bits packed 153⟩,
+    ⟨decodeInt bits packed 154, decodeInt bits packed 155⟩,
+    ⟨decodeInt bits packed 156, decodeInt bits packed 157⟩,
+    ⟨decodeInt bits packed 158, decodeInt bits packed 159⟩,
+    ⟨decodeInt bits packed 160, decodeInt bits packed 161⟩,
+    ⟨decodeInt bits packed 162, decodeInt bits packed 163⟩,
+    ⟨decodeInt bits packed 164, decodeInt bits packed 165⟩,
+    ⟨decodeInt bits packed 166, decodeInt bits packed 167⟩,
+    ⟨decodeInt bits packed 168, decodeInt bits packed 169⟩,
+    ⟨decodeInt bits packed 170, decodeInt bits packed 171⟩,
+    ⟨decodeInt bits packed 172, decodeInt bits packed 173⟩,
+    ⟨decodeInt bits packed 174, decodeInt bits packed 175⟩,
+    ⟨decodeInt bits packed 176, decodeInt bits packed 177⟩,
+    ⟨decodeInt bits packed 178, decodeInt bits packed 179⟩,
+    ⟨decodeInt bits packed 180, decodeInt bits packed 181⟩,
+    ⟨decodeInt bits packed 182, decodeInt bits packed 183⟩,
+    ⟨decodeInt bits packed 184, decodeInt bits packed 185⟩,
+    ⟨decodeInt bits packed 186, decodeInt bits packed 187⟩,
+    ⟨decodeInt bits packed 188, decodeInt bits packed 189⟩,
+    ⟨decodeInt bits packed 190, decodeInt bits packed 191⟩,
+    ⟨decodeInt bits packed 192, decodeInt bits packed 193⟩,
+    ⟨decodeInt bits packed 194, decodeInt bits packed 195⟩,
+    ⟨decodeInt bits packed 196, decodeInt bits packed 197⟩,
+    ⟨decodeInt bits packed 198, decodeInt bits packed 199⟩⟩
+
+end Thomson.Five.GlobalCertificates.PackedRanges

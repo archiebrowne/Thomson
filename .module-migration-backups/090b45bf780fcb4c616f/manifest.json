@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "root": "/Users/archiebrowne/source/Thomson",
+  "files": [
+    {
+      "path": "Thomson/GlobalCertificates/NearCertificates.lean",
+      "mode": 420,
+      "before_sha256": "5613fcf72d4adeeab7ecf51d4e1c36843e66738ee489c095edbb8296a14b97ea",
+      "after_sha256": "01c63356096d4e1233beed577c8a28fb17168f25c5ee9cfd2ee308e0754b6866"
+    },
+    {
+      "path": "Thomson/IntervalNewton.lean",
+      "mode": 420,
+      "before_sha256": "79942c9af6188e1c2fb08fec127fc23bb3c313c05f23807c559c63d716b90ded",
+      "after_sha256": "ef28c4a515a9633a7d70000816854245271435e1a51ab75a1401cf26f506bab8"
+    },
+    {
+      "path": "Thomson/StationaryCertificates.lean",
+      "mode": 420,
+      "before_sha256": "7311a7e7092ea28062fdffea5d40a262d1427574dbaaf2b5c7a29e2fa952eb05",
+      "after_sha256": "7b753ddd097325a719de8765ed61090dba9875bfe29adb93780b56e69e346826"
+    }
+  ]
+}

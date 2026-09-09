@@ -1,0 +1,258 @@
+{
+  "version": 1,
+  "root": "/Users/archiebrowne/source/Thomson",
+  "files": [
+    {
+      "path": "Thomson/CancelledExpressions.lean",
+      "mode": 420,
+      "before_sha256": "ab3fa3dfb19a93eb80c79db011e30edb199bb9cc15cd6a730a704ff43db46b12",
+      "after_sha256": "2fde4b1f5cebbb8e87a308ddfcbdc41166efb08bfa9d42096f9fb7cdb23b8870"
+    },
+    {
+      "path": "Thomson/Certificates.lean",
+      "mode": 420,
+      "before_sha256": "42d9b2cc0bc37dcb4b1aa9dfb3e69f9f7c45eb6c3e1281ba9cb5c057e137a44e",
+      "after_sha256": "1d9a20187579ef2c696ec7ce69c122361b7f99dd7dfc8651adf8e03eb6f5865c"
+    },
+    {
+      "path": "Thomson/ChartSymmetry.lean",
+      "mode": 420,
+      "before_sha256": "144d3e973f9fb8327596cde5dfb71f0dd3e2d6acb0e9b7a2ebf8594bff11a660",
+      "after_sha256": "f30ebddb812d3a81efc1667e046964be796b2e88d84defc8a72772ac779fb5dd"
+    },
+    {
+      "path": "Thomson/CompactExpressions.lean",
+      "mode": 420,
+      "before_sha256": "8b0cea3a993e241807d7c5665cc79e1d720c7d63c73a1ebc62c0859c6bfb0705",
+      "after_sha256": "6241d1649b93fc08492f6d4cf089c96cd3aab9a943ad74fb4c9042ad7b31532f"
+    },
+    {
+      "path": "Thomson/CompactHessian.lean",
+      "mode": 420,
+      "before_sha256": "bfe6145f7cec5780ba65b3734e44bf738af1f1d9a8507dd4a7e1c62c038162a6",
+      "after_sha256": "6b4a1a66ae60bf9d8f377fda787ae61fa8336463e64d144eaf347873424957a4"
+    },
+    {
+      "path": "Thomson/DiagonalHessian.lean",
+      "mode": 420,
+      "before_sha256": "dfab02f703a5218baabf29409d5aa418761c17493e092704787b6ce672ce2aee",
+      "after_sha256": "582b4edf03932b58a7a3a7ac5a019724131b834a01b3e5bee8b46181ad955632"
+    },
+    {
+      "path": "Thomson/EnergyExpression.lean",
+      "mode": 420,
+      "before_sha256": "708a093e7cf39a62decb99d0cd1711be284aee135084d2a3d8f9cbdd3e3948c9",
+      "after_sha256": "01efc5ffa0d443248f16fb1f9dbbe926f14a06996233bb1ab236869dabc22792"
+    },
+    {
+      "path": "Thomson/FixedIntervalBounds.lean",
+      "mode": 420,
+      "before_sha256": "63b849b0c8a9077fa7732940510d016b4c97b1de0272a1c1bafa908d7b1a85d1",
+      "after_sha256": "8374c3de71ab4f444e4b629a36546cad6932485f2f66bc6d94fe81c04f9ca6fd"
+    },
+    {
+      "path": "Thomson/FourPointBound.lean",
+      "mode": 420,
+      "before_sha256": "541d1b7b93b6e69d887d38e842a1d457b9d486d6532607710589c88ea8854023",
+      "after_sha256": "3f95636ec1ab9548fb901a29b9b7a3dbe517568a6d537c3ce7b209d46aa0e9f7"
+    },
+    {
+      "path": "Thomson/GlobalCertificates/VertexCornerChunk0.lean",
+      "mode": 420,
+      "before_sha256": "081e2f009d6532d848bcb6d716886c69fcd4d5075c67dfeea00e6f04efa5f0db",
+      "after_sha256": "6bed1288164912b2b20b093ca152c5a50b54813b0cf115708b4f7311f2fbf3ee"
+    },
+    {
+      "path": "Thomson/GlobalCertificates/VertexCornerChunk1.lean",
+      "mode": 420,
+      "before_sha256": "9231437ee2d753672704cf7d1b84ae756616b0d490c87ca11cb7c8f331d14692",
+      "after_sha256": "4e79e48f5598839e487381cadef151817ce672ceafc5fb7a37627c55b0d512ac"
+    },
+    {
+      "path": "Thomson/GlobalCertificates/VertexCornerChunk2.lean",
+      "mode": 420,
+      "before_sha256": "3e34e8cb7c2fd88157810350fb4195cf24e868ab71c336706b859bedd1310e60",
+      "after_sha256": "993e58513004f372cdd8dcde3a26e5a47ba435bc5f3bae4b6a5b6c56719b6e24"
+    },
+    {
+      "path": "Thomson/GlobalCertificates/VertexCornerChunk3.lean",
+      "mode": 420,
+      "before_sha256": "a0ad88095880ab4facac4b0d8db28affebddd3fae79a9871741167f3647f156a",
+      "after_sha256": "ff9215e8f05649ca0ee3b07ae8f107e44d3a1b9ac0e8a63fbdfcdfce650548e3"
+    },
+    {
+      "path": "Thomson/GlobalCertificates/VertexCornerChunk4.lean",
+      "mode": 420,
+      "before_sha256": "a9a367c88e4b729d7965e655869bbbc2db1af411a80c401afc9f8cf3e1b014df",
+      "after_sha256": "8378b6cb5e7f098775a4c8cc8d1908b2ff4c23feaa0dc2650876322b6110e39a"
+    },
+    {
+      "path": "Thomson/GlobalCertificates/VertexCornerChunk5.lean",
+      "mode": 420,
+      "before_sha256": "9a726713bdaf566d686f3152c61bca26b335f44a37509dcffa9e78b4d46d1510",
+      "after_sha256": "c3ab4652edc6a9dfd7d3e4cabdfbd0c4b0f36e5585203539ed6a5569dee6028a"
+    },
+    {
+      "path": "Thomson/GlobalCertificates/VertexCornerChunk6.lean",
+      "mode": 420,
+      "before_sha256": "ee93c18009ca048c3fbfc59f05b7694b20b8cb538196cc8aabe0a37c3d9261fb",
+      "after_sha256": "abfe5b54ef791543b6a9358ea3ca1741911a3022c0d1a6dd939ae0f640124509"
+    },
+    {
+      "path": "Thomson/GlobalCertificates/VertexCornerChunk7.lean",
+      "mode": 420,
+      "before_sha256": "f05e482fbf80fe9c86d0e5b7f4124480db626877eaf31538afba36340d1c6aee",
+      "after_sha256": "da36241bd2cb737d41d8f6f9613de6f457e62c4a407cd4121c5bf47ccda7b9a9"
+    },
+    {
+      "path": "Thomson/GlobalCertificates/VertexCornerFactors.lean",
+      "mode": 420,
+      "before_sha256": "e56817c0722f58bc42629cd3e9b1bfbf4957cc80f9ee2a19a7557880174aa80b",
+      "after_sha256": "4e4440a11f5c21409698b242a7bf3b58bc57b46e15c259e9b5919b68534f959a"
+    },
+    {
+      "path": "Thomson/GlobalCertificates/VertexCorners.lean",
+      "mode": 420,
+      "before_sha256": "e3a60f5cff64b97d77a2348a1623c80ec693b6e4cc08be3d8e214b4d8a3e2caa",
+      "after_sha256": "761d2491abd73fe7c96594ef2bbc1b90e3863f644bf185287df0ac336d12bcd3"
+    },
+    {
+      "path": "Thomson/GlobalCertificates/VertexHessianLink.lean",
+      "mode": 420,
+      "before_sha256": "575e60436d5e0454380bf4aa8df51d07093555364aae213ee9ec3fc39d9b54c4",
+      "after_sha256": "bbc20da03edcdb958610dc5a9e0c9cad769e7841c8f80aeb00c94b67102a1a2e"
+    },
+    {
+      "path": "Thomson/GlobalCertificates/VertexInputs.lean",
+      "mode": 420,
+      "before_sha256": "15c2bbf3926a5a073fb7d63cf0d67738e781c2bbb111c50c19a4062254a11e1c",
+      "after_sha256": "a2896e48d087573129a98b7c56e493a148721a1c5ec19f9c229ad22544769644"
+    },
+    {
+      "path": "Thomson/GlobalCertificates/VertexLeaf.lean",
+      "mode": 420,
+      "before_sha256": "ba4b83552d8c5ce6d867313cf24900f688467f41b88000d60a0570b0d5d71f9b",
+      "after_sha256": "78bd7b3e1fde4af644ed2295d7a4c580c31e195a5a804c71c4a5682b3d44c7cc"
+    },
+    {
+      "path": "Thomson/GlobalCertificates/VertexSemantics.lean",
+      "mode": 420,
+      "before_sha256": "4d8c3789b742eee7352e4b05ed735eb671adeb60d8a64183a810822ec32238f0",
+      "after_sha256": "9ed41988e7fa60a95839edafdcb82ef58789eb24d002014ddd3ef7d178a4347e"
+    },
+    {
+      "path": "Thomson/GlobalCertificates/VertexSoundness.lean",
+      "mode": 420,
+      "before_sha256": "1c557df3e85a5556215ab6ee03436a95d6b15b16f61a923db9ebad024d84113b",
+      "after_sha256": "3ad14810cb578b7fc60ceecfc7134b4ed0db85f41f6f424033a33aee3fccde3d"
+    },
+    {
+      "path": "Thomson/GlobalCoverSupport.lean",
+      "mode": 420,
+      "before_sha256": "0e0cc2a1ede3fa8bc9a74658a9e1a4d5c00f4cbed117f597a4a63df32d725535",
+      "after_sha256": "ffadd6d23e510a1a34e996ae05c1b553f48b514081dd386d0cf8c46bf943650d"
+    },
+    {
+      "path": "Thomson/GlobalEnergyBounds.lean",
+      "mode": 420,
+      "before_sha256": "78dff4f4b5c96dae988f487b0489a913547d60acfd41a0e03e32dfb6f4215cb2",
+      "after_sha256": "f5d53ec63043d525f36da05759caa536943511d2876c4fd49c6ba7f3806ffcd9"
+    },
+    {
+      "path": "Thomson/GlobalMinimizer.lean",
+      "mode": 420,
+      "before_sha256": "6e016934ba64ce935b02b06e9c3279d0b55bcde4d04b02ed4da91c3db26c1033",
+      "after_sha256": "4ad34296ec9c7603856bc801b63f62ae9d9546e3ec6e0fb5a98df6d28bac3226"
+    },
+    {
+      "path": "Thomson/IntervalBounds.lean",
+      "mode": 420,
+      "before_sha256": "8f8f77800766015f479a309c3205d95d165109d25d5e9b74dda2875445c28cc1",
+      "after_sha256": "bece6c9037adfbb29f803dd2aa2d392629de71dc0b47508e04b4013949a25709"
+    },
+    {
+      "path": "Thomson/IntervalChecker.lean",
+      "mode": 420,
+      "before_sha256": "1d7dff3c978d22c5aed73352a2564846ecbc52328ce7f1b7af6d2907f8b64510",
+      "after_sha256": "cc267d8e63f1385b194a74cca0fa66bb6ad174a7b652b1bed37f68401608f0d4"
+    },
+    {
+      "path": "Thomson/Jet.lean",
+      "mode": 420,
+      "before_sha256": "5da5aaefb431d13e9b8813b7deddc18a5e41c9eca87974d55feaa93eab9f33aa",
+      "after_sha256": "e907882ba1e83068d62e1b8a9d1a4534a188482a33df4599f71d014c3a4d37b7"
+    },
+    {
+      "path": "Thomson/LocalCalculus.lean",
+      "mode": 420,
+      "before_sha256": "ac0ec1c0600c3d68f7cb1c4e6cf9f23752c1a67a14a28bcc797c2ea3e5be042f",
+      "after_sha256": "2b867d4966c03049fab7ba78c71941b192be69947c9f75f685392f722f7a4e35"
+    },
+    {
+      "path": "Thomson/LocalRegions.lean",
+      "mode": 420,
+      "before_sha256": "7eeff3578c79260e678e04ecd6a208d0aae9e9b700978259c406bb5ddbaef93b",
+      "after_sha256": "589af59dcfe4a8b2e37b385e45f6c378520153292c34c5c48042dc7e91059494"
+    },
+    {
+      "path": "Thomson/Normalization.lean",
+      "mode": 420,
+      "before_sha256": "1bcfaa97fe233710bae89dadbd1ede6f5752feaf56b57a22e30b0de171ddf2cf",
+      "after_sha256": "e278b24cc331150a948808b9428152b0860d955a00b8bef74bdab4611358c4e1"
+    },
+    {
+      "path": "Thomson/Problem.lean",
+      "mode": 420,
+      "before_sha256": "8ea783801c9dec5a4dedd408b93647eba512f7b8b7e90fb71a0cdae55cae96a8",
+      "after_sha256": "fad4d87019e42f2e0578631915023ad141d5f25991ff2dd5555d23b67eca4b3c"
+    },
+    {
+      "path": "Thomson/Search.lean",
+      "mode": 420,
+      "before_sha256": "ebbdb8a676522bcfaf20da37d92c5da29ffc96492ff54cdd8660feb30f37ac26",
+      "after_sha256": "53d2719efe6279575e6c6dadf63f40fe0537133dedcb6ed29412daf85fac8333"
+    },
+    {
+      "path": "Thomson/SearchBounds.lean",
+      "mode": 420,
+      "before_sha256": "7fbc6358a8374463c39e6ecfa8482df08340108f56874b50da999d341014773d",
+      "after_sha256": "4ebd0d82207a1e73e31d50099f6e2df0c4928357604e36e0ab91495f8030b707"
+    },
+    {
+      "path": "Thomson/SortedSearch.lean",
+      "mode": 420,
+      "before_sha256": "719b2f24335d2bfbdf86fee2ddfcb5d727b5b4d945854084ab8e6c5363449373",
+      "after_sha256": "c1f48b9f3e5d56204e1e39571aad94f4a23202e907b66c7f2f8cf20bb39d8139"
+    },
+    {
+      "path": "Thomson/StationarySearch.lean",
+      "mode": 420,
+      "before_sha256": "c4c8364443ba5aa7d24e128a2e13db8ad137b7574032702c76a9dedddc168a3b",
+      "after_sha256": "a2fbb5799543ff7e8499835cbfec1c3b09ebeae96c8ae207b2daeed1185b1e19"
+    },
+    {
+      "path": "Thomson/Stereographic.lean",
+      "mode": 420,
+      "before_sha256": "f34d0248d883d70966eb815f1a765b35a0eab8d10364bb54dd8ad7f8aa2ac994",
+      "after_sha256": "3ee8213f8caa4982d74a2b7e3316f7fa9a760535e946e9ea2aa095c737c7d9f9"
+    },
+    {
+      "path": "Thomson/SymbolicHessian.lean",
+      "mode": 420,
+      "before_sha256": "ea2315e6b4c33456646de4e44bcc1607d9fd6b9a5f59b11d45f59c0eb827d762",
+      "after_sha256": "44efb6ead8a3dde3e2f1f09126d7478b402b0fd1ae4a520d5961fda73d43bd9f"
+    },
+    {
+      "path": "Thomson/TBP.lean",
+      "mode": 420,
+      "before_sha256": "268cc5df70f9e0730dcdb33ad86e6a651a0f6e1680c031c7ac89ea71afd8364a",
+      "after_sha256": "57dce1d5963f77daa39d699c6ec7019563b02a6304635f4406f16667eb98291a"
+    },
+    {
+      "path": "Thomson/VertexInterpolation.lean",
+      "mode": 420,
+      "before_sha256": "f303e37c42d5efa93456018210548ea590f1ab7df30b8aa1450d3ab9a3618507",
+      "after_sha256": "6077f5af61009d43079750d6f2e546c6b1441df6590cec73ceaac74e62efddbb"
+    }
+  ]
+}

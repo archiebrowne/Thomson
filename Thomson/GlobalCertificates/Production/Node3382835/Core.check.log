@@ -1,0 +1,6 @@
+'Thomson.Five.GlobalCertificates.Production.Node3382835.VertexCore.Leaf3383288.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3382835.VertexCore.Leaf3383290.exists_checked' does not depend on any axioms
+'Thomson.Five.GlobalCertificates.Production.Node3382835.GradientCore.Leaf3383285.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3382835.GradientCore.Leaf3383287.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3382835.PairCore.Leaf3383281.exists_checked' depends on axioms: [propext]
+'Thomson.Five.GlobalCertificates.Production.Node3382835.PairCore.Leaf3383289.exists_checked' depends on axioms: [propext]

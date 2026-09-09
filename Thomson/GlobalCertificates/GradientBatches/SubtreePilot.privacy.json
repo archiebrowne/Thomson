@@ -1,0 +1,24 @@
+{
+  "numeric_module": "Thomson.GlobalCertificates.GradientBatches.SubtreePilot",
+  "bridge_module": "Thomson.GlobalCertificates.GradientBatches.SubtreePilotBridge",
+  "results": [
+    {
+      "label": "normal_downstream",
+      "exit_code": 0,
+      "wall_seconds": 6.593740959011484,
+      "peak_rss_bytes": 1871609856,
+      "standard_axiom_leaf_audits": 2,
+      "audited_leaves": 2,
+      "stdout": "PASS: numeric module and all private witnesses are absent downstream\n'Thomson.Five.GlobalCertificates.GradientBatches.SubtreePilotBridge.Leaf2920973.leaf' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Thomson.Five.GlobalCertificates.GradientBatches.SubtreePilotBridge.Leaf2920975.leaf' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n"
+    },
+    {
+      "label": "downstream_without_any_numeric_compiled_artifacts",
+      "exit_code": 0,
+      "wall_seconds": 5.967456832993776,
+      "peak_rss_bytes": 1871609856,
+      "standard_axiom_leaf_audits": 2,
+      "audited_leaves": 2,
+      "stdout": "PASS: numeric module and all private witnesses are absent downstream\n'Thomson.Five.GlobalCertificates.GradientBatches.SubtreePilotBridge.Leaf2920973.leaf' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'Thomson.Five.GlobalCertificates.GradientBatches.SubtreePilotBridge.Leaf2920975.leaf' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n"
+    }
+  ]
+}

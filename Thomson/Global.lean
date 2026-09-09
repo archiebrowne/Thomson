@@ -1,4 +1,9 @@
-import Thomson.Local
+module
+
+public import Thomson.Local
+
+@[expose] public section
+
 
 /-!
 # Global minimality

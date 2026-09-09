@@ -1,4 +1,9 @@
-import Thomson.Formalization
+module
+
+public import Thomson.Formalization
+
+@[expose] public section
+
 
 /-!
 # Comparator solution

@@ -1,0 +1,237 @@
+{
+  "scope": "Completed untrusted integer-arithmetic sanity audit of search hints; this report is not a Lean certificate and does not establish global_cover.",
+  "audit_complete": true,
+  "recorded_utc": "2026-09-09T13:13:52.778473+00:00",
+  "tree": {
+    "archive": "data/global-cover/search.bin.gz",
+    "decompressed_sha256": "6626a818d355868776501e252bbdafb97029a5a9ebe31122f3509e3e359020a4",
+    "decompressed_bytes": 262532145,
+    "nodes": 3384265,
+    "leaves": 1692133
+  },
+  "energy_and_sign_leaves": {
+    "complete": true,
+    "bits": 40,
+    "scale": "1099511627776",
+    "checked": 1682016,
+    "passed": 1682016,
+    "failed": 0,
+    "integer_interval_operations": 2074604197,
+    "by_kind": {
+      "pair_energy": {
+        "kind": 3,
+        "checked": 202121,
+        "passed": 202121,
+        "failed": 0
+      },
+      "midpoint_energy": {
+        "kind": 4,
+        "checked": 6,
+        "passed": 6,
+        "failed": 0
+      },
+      "gradient_sign": {
+        "kind": 6,
+        "checked": 244629,
+        "passed": 244629,
+        "failed": 0
+      },
+      "vertex_energy": {
+        "kind": 8,
+        "checked": 1235260,
+        "passed": 1235260,
+        "failed": 0
+      }
+    },
+    "minimum_exact_margins": {
+      "pair_energy": {
+        "node": 2651325,
+        "depth": 24,
+        "numerator": "85416",
+        "denominator": "1099511627776"
+      },
+      "vertex_energy": {
+        "node": 1470401,
+        "depth": 83,
+        "numerator": "1081",
+        "denominator": "1099511627776"
+      },
+      "gradient_sign": {
+        "node": 2920812,
+        "depth": 91,
+        "numerator": "11539",
+        "denominator": "1099511627776"
+      },
+      "midpoint_energy": {
+        "node": 2384835,
+        "depth": 20,
+        "numerator": "9214915728",
+        "denominator": "1099511627776"
+      }
+    },
+    "workers": 2,
+    "worker_peak_rss_bytes": [
+      30605312,
+      30646272
+    ],
+    "elapsed_seconds": 1479.519104582956
+  },
+  "near_leaves": {
+    "bits": 40,
+    "checked": 2441,
+    "passed": 2441,
+    "failed": 0,
+    "center_counts": {
+      "9": 583,
+      "8": 1040,
+      "4": 818
+    }
+  },
+  "infeasible_leaves": {
+    "bits": 48,
+    "checked": 7676,
+    "passed": 7676,
+    "failed": 0,
+    "direct_marked_norm": 7366,
+    "marked_norm_after_sorting": 296,
+    "empty_after_additional_radius_replay": [
+      {
+        "node": 1197225,
+        "rounds": 2,
+        "actions": 8,
+        "kind": "empty"
+      },
+      {
+        "node": 2796549,
+        "rounds": 2,
+        "actions": 9,
+        "kind": "empty"
+      },
+      {
+        "node": 2796567,
+        "rounds": 2,
+        "actions": 9,
+        "kind": "empty"
+      },
+      {
+        "node": 2796573,
+        "rounds": 2,
+        "actions": 8,
+        "kind": "empty"
+      },
+      {
+        "node": 2796581,
+        "rounds": 2,
+        "actions": 9,
+        "kind": "empty"
+      },
+      {
+        "node": 2796583,
+        "rounds": 2,
+        "actions": 8,
+        "kind": "empty"
+      },
+      {
+        "node": 2797849,
+        "rounds": 2,
+        "actions": 8,
+        "kind": "empty"
+      },
+      {
+        "node": 3197539,
+        "rounds": 2,
+        "actions": 8,
+        "kind": "empty"
+      },
+      {
+        "node": 3201773,
+        "rounds": 2,
+        "actions": 8,
+        "kind": "empty"
+      },
+      {
+        "node": 3201783,
+        "rounds": 2,
+        "actions": 9,
+        "kind": "empty"
+      },
+      {
+        "node": 3212553,
+        "rounds": 2,
+        "actions": 8,
+        "kind": "empty"
+      },
+      {
+        "node": 3212745,
+        "rounds": 2,
+        "actions": 8,
+        "kind": "empty"
+      },
+      {
+        "node": 3213001,
+        "rounds": 2,
+        "actions": 8,
+        "kind": "empty"
+      },
+      {
+        "node": 3213967,
+        "rounds": 2,
+        "actions": 9,
+        "kind": "empty"
+      }
+    ]
+  },
+  "contractions": {
+    "bits": 48,
+    "nodes": 3384265,
+    "attempted": 439479,
+    "successful": 439479,
+    "rounds": 449727,
+    "actions": 728442,
+    "direct_containment": 2944786,
+    "failed": 0,
+    "elapsed_seconds": 90.73577704199124
+  },
+  "midpoint_leaves_rechecked_as_vertex": {
+    "bits": 40,
+    "passed": 6,
+    "failed": 0,
+    "results": [
+      {
+        "node": 1209909,
+        "vertex_passed": true,
+        "exact_margin_scaled": "76290263716"
+      },
+      {
+        "node": 2316855,
+        "vertex_passed": true,
+        "exact_margin_scaled": "111140957773"
+      },
+      {
+        "node": 2329005,
+        "vertex_passed": true,
+        "exact_margin_scaled": "111237021002"
+      },
+      {
+        "node": 2329075,
+        "vertex_passed": true,
+        "exact_margin_scaled": "108215111766"
+      },
+      {
+        "node": 2384835,
+        "vertex_passed": true,
+        "exact_margin_scaled": "201711636085"
+      },
+      {
+        "node": 2790785,
+        "vertex_passed": true,
+        "exact_margin_scaled": "117839947538"
+      }
+    ]
+  },
+  "sanity_checker_sources": {
+    "scripts/check_global_energy_scan.py": "6a0a4924e70b2e30ed0139f20150d8f32d79505e2535e467353f730a383e0ead",
+    "scripts/check_global_leaf.py": "540ba8cd6d06d8edc5df74d9dfc53a0baff7cccf4a11a335dd31e19335421b91"
+  },
+  "reproduce_energy_and_sign_scan": "python3 scripts/check_global_energy_scan.py /tmp/probe_global_cover_symmetry_vertex_24.bin --workers 2 --batch-size 256 --bits 40"
+}

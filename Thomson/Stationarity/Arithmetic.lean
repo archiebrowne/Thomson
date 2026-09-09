@@ -1,5 +1,10 @@
-import Thomson.EnergyExpression
-import Thomson.LocalRegions
+module
+
+public import Thomson.EnergyExpression
+public import Thomson.LocalRegions
+
+@[expose] public section
+
 
 /-!
 # Exact stationarity of the twelve TBP charts

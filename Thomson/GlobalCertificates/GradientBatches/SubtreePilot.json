@@ -1,0 +1,156 @@
+{
+  "format": "THOMSON_KERNEL_GRADIENT_BATCH_V1",
+  "binary": "/private/tmp/probe_global_cover_symmetry_vertex_24.bin",
+  "binary_sha256": "6626a818d355868776501e252bbdafb97029a5a9ebe31122f3509e3e359020a4",
+  "module": "Thomson.GlobalCertificates.GradientBatches.SubtreePilot",
+  "namespace": "Thomson.Five.GlobalCertificates.GradientBatches.SubtreePilot",
+  "bridge_module": "Thomson.GlobalCertificates.GradientBatches.SubtreePilotBridge",
+  "bridge_namespace": "Thomson.Five.GlobalCertificates.GradientBatches.SubtreePilotBridge",
+  "source": "Thomson/GlobalCertificates/GradientBatches/SubtreePilot.lean",
+  "source_sha256": "03180348cbea5acfde01486ef341c06d1d7e288b6dc49aa0dfe6c754834fe776",
+  "source_bytes": 19790,
+  "bridge_source": "Thomson/GlobalCertificates/GradientBatches/SubtreePilotBridge.lean",
+  "bridge_sha256": "99e0e784ebc4950dabf7bb6d045c3dac64b8a64e62e51785b65e93584795844c",
+  "bridge_source_bytes": 1584,
+  "reference_topology_sha256": "58c374fbc03eab01d7423cf8888185f1410a0c20be14044aa309678ec2e4216c",
+  "bits": 40,
+  "count": 2,
+  "node_ids": [
+    2920973,
+    2920975
+  ],
+  "leaves": [
+    {
+      "node": 2920973,
+      "leaf": 6,
+      "depth": 87,
+      "operations": 298,
+      "choice": 0,
+      "exact_margin_scaled": "73937428",
+      "box_after_scaled": [
+        1099536859136,
+        1099563663360,
+        -549919719424,
+        -549529649152,
+        952364695552,
+        952538300416,
+        -549724684288,
+        -549529649152,
+        -952344313856,
+        -952171036672,
+        -390070272,
+        -292552704,
+        0,
+        164298752
+      ],
+      "packing_bits": [
+        44,
+        43,
+        43
+      ],
+      "public_theorem": "Leaf2920973.exists_checked",
+      "real_theorem": "Thomson.Five.GlobalCertificates.GradientBatches.SubtreePilotBridge.Leaf2920973.leaf"
+    },
+    {
+      "node": 2920975,
+      "leaf": 6,
+      "depth": 87,
+      "operations": 298,
+      "choice": 0,
+      "exact_margin_scaled": "102820857",
+      "box_after_scaled": [
+        1099536859136,
+        1099563663360,
+        -549919719424,
+        -549529649152,
+        952364695552,
+        952538300416,
+        -549724684288,
+        -549529649152,
+        -952517525504,
+        -952344248320,
+        -390070272,
+        -292552704,
+        0,
+        164298752
+      ],
+      "packing_bits": [
+        44,
+        43,
+        43
+      ],
+      "public_theorem": "Leaf2920975.exists_checked",
+      "real_theorem": "Thomson.Five.GlobalCertificates.GradientBatches.SubtreePilotBridge.Leaf2920975.leaf"
+    }
+  ],
+  "generation_seconds": 6.140263999986928,
+  "heartbeats": "default",
+  "compiler_threads": 1,
+  "compiler_memory_limit_mib": 2048,
+  "kernel_status": "passed",
+  "static_sources": {
+    "Thomson/FixedIntervalChecker.lean": "0ebfa40825496c38266ff88ac50ce744e5e3d6372644dc7b9cf9c4081b640f6b",
+    "Thomson/GlobalCertificates/GradientTemplate.lean": "4c3cd9549948dad580edf9a671a4476cc8c8300c929dee1d05a22912a4c199b4",
+    "Thomson/GlobalCertificates/PackedRanges.lean": "11c1a5edc4585cd4c0eaa2a05a0e37665d48ce994042be88ccb1c42d1e859a7a"
+  },
+  "numeric_compile": {
+    "exit_code": 0,
+    "wall_seconds": 3.0973827079869807,
+    "peak_rss_bytes": 700432384,
+    "audit_count": 2,
+    "axiom_sets": [
+      [
+        "propext"
+      ]
+    ],
+    "sizes": {
+      "SubtreePilot.olean": 13192,
+      "SubtreePilot.olean.private": 62360,
+      "SubtreePilot.olean.server": 10632
+    },
+    "compiler_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j",
+      "1",
+      "-M",
+      "2048",
+      "-o",
+      "/Users/archiebrowne/source/Thomson/.lake/build/lib/lean/Thomson/GlobalCertificates/GradientBatches/SubtreePilot.olean",
+      "/Users/archiebrowne/source/Thomson/Thomson/GlobalCertificates/GradientBatches/SubtreePilot.lean"
+    ],
+    "compiler_log": "Thomson/GlobalCertificates/GradientBatches/SubtreePilot.log"
+  },
+  "bridge_compile": {
+    "exit_code": 0,
+    "wall_seconds": 5.734686916985083,
+    "peak_rss_bytes": 1771765760,
+    "audit_count": 2,
+    "axiom_sets": [
+      [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    ],
+    "sizes": {
+      "SubtreePilotBridge.olean.private": 35408,
+      "SubtreePilotBridge.olean.server": 1936,
+      "SubtreePilotBridge.olean": 10568
+    },
+    "compiler_command": [
+      "lake",
+      "env",
+      "lean",
+      "-j",
+      "1",
+      "-M",
+      "2048",
+      "-o",
+      "/Users/archiebrowne/source/Thomson/.lake/build/lib/lean/Thomson/GlobalCertificates/GradientBatches/SubtreePilotBridge.olean",
+      "/Users/archiebrowne/source/Thomson/Thomson/GlobalCertificates/GradientBatches/SubtreePilotBridge.lean"
+    ],
+    "compiler_log": "Thomson/GlobalCertificates/GradientBatches/SubtreePilotBridge.log"
+  }
+}

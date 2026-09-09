@@ -1,0 +1,19 @@
+{
+  "warning": "Generated witnesses; compilation and the real bridge are required",
+  "root": 2920413,
+  "families": {
+    "Contraction": {
+      "nodes": 131,
+      "actual": 16,
+      "rounds": 16,
+      "actions": 20
+    },
+    "Rejection": {
+      "leaves": 19,
+      "sorted_rounds": 3
+    },
+    "Near": {
+      "leaves": 14
+    }
+  }
+}

@@ -1,5 +1,10 @@
-import Thomson.HessianCertificates.Equatorial120.Bounds01
-import Thomson.HessianCertificates.Boxes
+module
+
+public import Thomson.HessianCertificates.Equatorial120.Bounds01
+public import Thomson.HessianCertificates.Boxes
+
+@[expose] public section
+
 
 /-! Generated rational enclosures; every rounding inequality is checked by Lean. -/
 

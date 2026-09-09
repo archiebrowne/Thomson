@@ -141,7 +141,11 @@ def imports_of(source: str, filename: str) -> list[str]:
         match = IMPORT_LINE.fullmatch(header_line)
         if not match:
             return imports
-        for name in match.group(1).split():
+        names = match.group(1).split()
+        # Lean's module system permits `import all Foo` to expose private declarations.
+        if names and names[0] == "all":
+            names = names[1:]
+        for name in names:
             if not MODULE_NAME.fullmatch(name):
                 raise CheckFailure(f"Unsupported import syntax at {filename}:{line_number}: {name!r}")
             imports.append(name)

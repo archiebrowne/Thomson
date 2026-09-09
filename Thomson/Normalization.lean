@@ -1,5 +1,10 @@
-import Thomson.Stereographic
-import Mathlib.Analysis.InnerProductSpace.Projection.Reflection
+module
+
+public import Thomson.Stereographic
+public import Mathlib.Analysis.InnerProductSpace.Projection.Reflection
+
+@[expose] public section
+
 
 /-!
 # A bounded stereographic search chart

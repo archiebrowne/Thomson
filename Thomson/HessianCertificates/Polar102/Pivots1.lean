@@ -1,5 +1,10 @@
-import Thomson.HessianCertificates.Polar102.Pivots0
-import Thomson.MatrixBounds
+module
+
+public import Thomson.HessianCertificates.Polar102.Pivots0
+public import Thomson.MatrixBounds
+
+@[expose] public section
+
 
 /-! Scalar Schur-complement certificates checked with exact rational arithmetic. -/
 

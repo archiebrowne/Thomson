@@ -1,5 +1,10 @@
-import Mathlib.Analysis.Real.Sqrt
-import Mathlib.Data.Rat.Cast.Order
+module
+
+public import Mathlib.Analysis.Real.Sqrt
+public import Mathlib.Data.Rat.Cast.Order
+
+@[expose] public section
+
 
 /-!
 # Exact subdivision certificates for the five-point computation

@@ -1,4 +1,9 @@
-import Thomson.Global
+module
+
+public import Thomson.Global
+
+@[expose] public section
+
 
 /-!
 # Five-point Thomson formalization

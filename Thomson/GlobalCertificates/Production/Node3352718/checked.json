@@ -1,0 +1,82 @@
+{
+  "version": 2,
+  "status": "checked",
+  "root": 3352718,
+  "static_sha256": "4c2ac001e4ffd16a97022fae805783184c9fa83c8e28c60d38b2c1c435aee081",
+  "binary_sha256": "6626a818d355868776501e252bbdafb97029a5a9ebe31122f3509e3e359020a4",
+  "actual_leaves": 38,
+  "boundaries": [],
+  "entry_sha256": "711327ef88ffa61a06cc977ee186f2f0b4875a8142f57ad7322fb706b2b679e4",
+  "dependencies": {},
+  "core": {
+    "source_sha256": "b11451ba4e372999983d75d21cfda18d17b21ff660431a624f96335177615f44",
+    "wall_seconds": 5.317662000015844,
+    "memory_limit_mib": 2048,
+    "compiler_threads": 1,
+    "heartbeats": "default",
+    "axiom_reports": [
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.VertexCore.Leaf3352755.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.GradientCore.Leaf3352730.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.GradientCore.Leaf3352731.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.GradientCore.Leaf3352733.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.GradientCore.Leaf3352734.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.GradientCore.Leaf3352739.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.GradientCore.Leaf3352741.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.GradientCore.Leaf3352742.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.GradientCore.Leaf3352744.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.GradientCore.Leaf3352745.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.GradientCore.Leaf3352751.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.GradientCore.Leaf3352752.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.GradientCore.Leaf3352753.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.GradientCore.Leaf3352756.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.GradientCore.Leaf3352759.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.GradientCore.Leaf3352761.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.GradientCore.Leaf3352762.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.GradientCore.Leaf3352763.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.GradientCore.Leaf3352764.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.GradientCore.Leaf3352774.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.GradientCore.Leaf3352780.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.GradientCore.Leaf3352786.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.GradientCore.Leaf3352788.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.GradientCore.Leaf3352789.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.GradientCore.Leaf3352792.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.PairCore.Leaf3352725.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.PairCore.Leaf3352729.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.PairCore.Leaf3352735.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.PairCore.Leaf3352743.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.PairCore.Leaf3352769.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.PairCore.Leaf3352772.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.PairCore.Leaf3352773.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.PairCore.Leaf3352775.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.PairCore.Leaf3352777.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.PairCore.Leaf3352779.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.PairCore.Leaf3352781.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.PairCore.Leaf3352787.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.PairCore.Leaf3352791.exists_checked"
+    ],
+    "log": "Thomson/GlobalCertificates/Production/Node3352718/Core.check.log",
+    "artifacts": {
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3352718/Core.olean": "22ff965a342d819366865aa5a85bb18a56e941b20cb664641964ee86cc0019ef",
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3352718/Core.olean.private": "88caa87446c39f1d64fd4a826667c79b480e39aeb594caa7fe4e53e93918be10",
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3352718/Core.olean.server": "3ced7ed5820bd0c6a0cc825ca335ca32612fbd265667cff2fb005e30febb50d0"
+    }
+  },
+  "real": {
+    "source_sha256": "08630fc2468c8446c7a5cb0b6211cc64951bbc88e41393b40a954a3406b73496",
+    "wall_seconds": 4.792169041000307,
+    "memory_limit_mib": 3072,
+    "compiler_threads": 1,
+    "heartbeats": "default",
+    "axiom_reports": [
+      "Thomson.Five.GlobalCertificates.Production.Node3352718.Assembled.checked"
+    ],
+    "log": "Thomson/GlobalCertificates/Production/Node3352718/Assembled.check.log",
+    "artifacts": {
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3352718/Assembled.olean": "a7d61115c8ceb3eeb8b85e194bbf209511a9bbbbc862765983bddf2245e40870",
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3352718/Assembled.olean.private": "7cdd132f1ec06a4a284a32b654ca98fbbca06de0f1b8bfb0d52527784ae3b74c",
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3352718/Assembled.olean.server": "674ffa1bd66d3cbe974b2b241a7ce1e5f215dfc47edab4e8675bbe42b478c34a"
+    }
+  },
+  "completed_at": 1788960113.031181,
+  "numeric_artifacts_pruned": true
+}

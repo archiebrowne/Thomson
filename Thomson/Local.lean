@@ -1,4 +1,9 @@
-import Thomson.Computational
+module
+
+public import Thomson.Computational
+
+@[expose] public section
+
 
 /-!
 # Local minimality from the arithmetic certificates

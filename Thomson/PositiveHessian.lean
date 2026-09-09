@@ -1,5 +1,10 @@
-import Mathlib.LinearAlgebra.Matrix.Symmetric
-import Mathlib.Tactic
+module
+
+public import Mathlib.LinearAlgebra.Matrix.Symmetric
+public import Mathlib.Tactic
+
+@[expose] public section
+
 
 /-!
 # Positive pivots certify a nonnegative quadratic form

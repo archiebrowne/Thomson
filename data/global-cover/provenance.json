@@ -1,0 +1,7 @@
+{
+  "format": "THOMSON_UNTRUSTED_GLOBAL_SEARCH_V1",
+  "binary_sha256": "6626a818d355868776501e252bbdafb97029a5a9ebe31122f3509e3e359020a4",
+  "binary_bytes": 262532145,
+  "compressed_sha256": "b47d62ba7667f8caba9506e8d6376e3b36d4910682cbf56eeb6dbaca63c45c2b",
+  "warning": "Search hints only. The generated Lean modules must each be checked by Lean."
+}

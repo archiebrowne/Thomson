@@ -1,15 +1,20 @@
-import Thomson.HessianCertificates.Polar012.Positive
-import Thomson.HessianCertificates.Polar021.Positive
-import Thomson.HessianCertificates.Polar102.Positive
-import Thomson.HessianCertificates.Polar120.Positive
-import Thomson.HessianCertificates.Polar201.Positive
-import Thomson.HessianCertificates.Polar210.Positive
-import Thomson.HessianCertificates.Equatorial012.Positive
-import Thomson.HessianCertificates.Equatorial021.Positive
-import Thomson.HessianCertificates.Equatorial102.Positive
-import Thomson.HessianCertificates.Equatorial120.Positive
-import Thomson.HessianCertificates.Equatorial201.Positive
-import Thomson.HessianCertificates.Equatorial210.Positive
+module
+
+public import Thomson.HessianCertificates.Polar012.Positive
+public import Thomson.HessianCertificates.Polar021.Positive
+public import Thomson.HessianCertificates.Polar102.Positive
+public import Thomson.HessianCertificates.Polar120.Positive
+public import Thomson.HessianCertificates.Polar201.Positive
+public import Thomson.HessianCertificates.Polar210.Positive
+public import Thomson.HessianCertificates.Equatorial012.Positive
+public import Thomson.HessianCertificates.Equatorial021.Positive
+public import Thomson.HessianCertificates.Equatorial102.Positive
+public import Thomson.HessianCertificates.Equatorial120.Positive
+public import Thomson.HessianCertificates.Equatorial201.Positive
+public import Thomson.HessianCertificates.Equatorial210.Positive
+
+@[expose] public section
+
 
 /-!
 # Positivity of the Hessian on the twelve local boxes

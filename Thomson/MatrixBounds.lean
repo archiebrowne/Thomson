@@ -1,4 +1,9 @@
-import Thomson.PositiveHessian
+module
+
+public import Thomson.PositiveHessian
+
+@[expose] public section
+
 
 /-!
 # Robust certificates for positive matrices

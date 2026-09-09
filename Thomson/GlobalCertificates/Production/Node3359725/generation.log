@@ -1,0 +1,52 @@
+{
+  "format": "THOMSON_UNTRUSTED_MERGED_GROUP_V1",
+  "root": 3359725,
+  "selection": "/Users/archiebrowne/source/Thomson/Thomson/GlobalCertificates/Production/selections/Node3359725.json",
+  "selection_sha256": "0f0e4e6a6345ed4085847e3c5b8ad9ab50a29b0d84deedee1be36e809219819a",
+  "binary": "/Users/archiebrowne/source/Thomson/.lake/global-cover/search.bin",
+  "binary_sha256": "6626a818d355868776501e252bbdafb97029a5a9ebe31122f3509e3e359020a4",
+  "output_prefix": "Thomson.GlobalCertificates.Production.Node3359725",
+  "module": "Thomson.GlobalCertificates.Production.Node3359725.Assembled",
+  "namespace": "Thomson.Five.GlobalCertificates.Production.Node3359725.Assembled",
+  "core": {
+    "module": "Thomson.GlobalCertificates.Production.Node3359725.Core",
+    "source": "Thomson/GlobalCertificates/Production/Node3359725/Core.lean",
+    "source_sha256": "2950659b754725423e7b217156a4ae9ddcc4a9b4546ea1e828d3ebf582f7852a",
+    "source_bytes": 948900
+  },
+  "assembled": {
+    "module": "Thomson.GlobalCertificates.Production.Node3359725.Assembled",
+    "source": "Thomson/GlobalCertificates/Production/Node3359725/Assembled.lean",
+    "source_sha256": "ecf5124dc591977954f83d9ec20d0be7baa5a138e9199fa8104dede029ca39ba",
+    "source_bytes": 282588
+  },
+  "core_source": "Thomson/GlobalCertificates/Production/Node3359725/Core.lean",
+  "assembled_source": "Thomson/GlobalCertificates/Production/Node3359725/Assembled.lean",
+  "core_module": "Thomson.GlobalCertificates.Production.Node3359725.Core",
+  "assembled_module": "Thomson.GlobalCertificates.Production.Node3359725.Assembled",
+  "boundary_modules": [],
+  "nodes": 159,
+  "leaf_kinds": {
+    "0": 79,
+    "3": 32,
+    "6": 48
+  },
+  "families": {
+    "contraction": {
+      "nodes": 159,
+      "actual": 23,
+      "rounds": 23,
+      "actions": 30
+    }
+  },
+  "reference_topology_sha256": {
+    "gradient": "58c374fbc03eab01d7423cf8888185f1410a0c20be14044aa309678ec2e4216c",
+    "pair": "65dfe5f05c0cab641b03d13ff573dc6bfa3f1d0fef0ed66dcd91cede0438a8ce"
+  },
+  "generation_seconds": 0.14491958305006847,
+  "kernel_check_required": true,
+  "heartbeats": "default",
+  "compiler_threads": 1,
+  "core_memory_limit_mib": 2048,
+  "assembled_memory_limit_mib": 3072
+}
