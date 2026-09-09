@@ -4,8 +4,8 @@ import Thomson.Formalization
 # Comparator solution
 
 The definitions and target agree with `challenge.lean`. The challenge itself is not imported:
-its placeholder cannot be used to discharge this theorem. The only admitted proof dependencies
-are the four explicitly identified computational obligations in `Thomson/Computational.lean`.
+its placeholder cannot be used to discharge this theorem. The only admitted proof dependency
+is `Computational.global_cover` in `Thomson/Computational.lean`.
 -/
 
 namespace Thomson.Five

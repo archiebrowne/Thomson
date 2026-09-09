@@ -26,17 +26,23 @@ the pinned Mathlib revision. Do not use `lake build Mathlib` as a replacement fo
 
 The source audit checks that:
 
-- Active proof admissions occur only in `Thomson/Computational.lean`; the separate
-  `challenge.lean` may contain its intentional target placeholder.
+- Exactly one active proof admission occurs in `Thomson/Computational.lean`, in `global_cover`.
+  The separate `challenge.lean` contains exactly one intentional `tbp_minimizes` placeholder.
+  The other three computational declarations and every helper module must be admission-free.
 - Active sources contain no `admit`, `axiom`, `sorryAx`, or `native_decide` tokens outside
   comments and strings. This is a focused regression guard, not a general trust auditor.
 - The challenge imports only Mathlib or Lean modules.
 - The challenge definitions match `Thomson/Problem.lean`, ignoring comments and whitespace.
+  The proof's explicit auxiliary definition `tbpEnergy` may be omitted from the challenge.
+- The theorem signatures in `challenge.lean` and `Solution.lean` match exactly, ignoring
+  comments and whitespace.
 - No proof module imports the challenge, and the local import graph has no cycles.
 - No source file or module list changes during the validation run.
 
 Legacy sources preserved under `archive/` are outside the active module set. Hidden dependency
 directories are also excluded. Compiled local files are written under `.lake/build/lib/lean`.
+Generated certificate submodules are discovered and checked with the same rules as handwritten
+sources. Their small size keeps individual proofs within the default heartbeat limits.
 
 For the source and cache audit without compilation, use:
 
@@ -44,6 +50,6 @@ For the source and cache audit without compilation, use:
 python3 scripts/check_project.py --structure-only
 ```
 
-A successful run checks the project **with the listed computational admissions**. It does not
-prove the four remaining computational obligations. The global search certificate has not been
-generated, and the original paper's Java run is not imported as a Lean proof.
+A successful full run checks the three local obligations and the surrounding reduction, with
+**only `global_cover` admitted**. It does not complete the global search. That certificate has
+not been generated, and the original paper's Java run is not imported as a Lean proof.

@@ -1,655 +1,82 @@
-import Thomson.EnergyExpression
-import Thomson.LocalRegions
+import Thomson.Stationarity.Polar012
+import Thomson.Stationarity.Polar021
+import Thomson.Stationarity.Polar102
+import Thomson.Stationarity.Polar120
+import Thomson.Stationarity.Polar201
+import Thomson.Stationarity.Polar210
+import Thomson.Stationarity.Equatorial012
+import Thomson.Stationarity.Equatorial021
+import Thomson.Stationarity.Equatorial102
+import Thomson.Stationarity.Equatorial120
+import Thomson.Stationarity.Equatorial201
+import Thomson.Stationarity.Equatorial210
 
 /-!
-# Exact stationarity of the twelve TBP charts
+# Vanishing of the gradient at each normalized triangular bipyramid
 
-Each scalar identity below is checked by exact rational and radical algebra. Splitting the
-coordinates into individual declarations keeps every calculation within the default heartbeat
-limit. No interval enclosure, numerical oracle, or additional axiom is used.
+The imported certificates prove the seven coordinates for each of the twelve exact charts.
+The only remaining step is the finite enumeration of the possible relabellings. Each certificate
+uses ordinary kernel-checked exact arithmetic at the default heartbeat limit.
 -/
 
 noncomputable section
 namespace Thomson.Five
-open Jet
 
-private lemma stationarity_sqrt_three_sq : Real.sqrt 3 ^ 2 = 3 :=
-  Real.sq_sqrt (by norm_num)
-
-private lemma stationarity_false_012_0 :
-    energyExpr.gradient ![1, -1 / 2, -Real.sqrt 3 / 2, 0, 0, -1 / 2, Real.sqrt 3 / 2] 0 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_012_1 :
-    energyExpr.gradient ![1, -1 / 2, -Real.sqrt 3 / 2, 0, 0, -1 / 2, Real.sqrt 3 / 2] 1 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_012_2 :
-    energyExpr.gradient ![1, -1 / 2, -Real.sqrt 3 / 2, 0, 0, -1 / 2, Real.sqrt 3 / 2] 2 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_012_3 :
-    energyExpr.gradient ![1, -1 / 2, -Real.sqrt 3 / 2, 0, 0, -1 / 2, Real.sqrt 3 / 2] 3 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_012_4 :
-    energyExpr.gradient ![1, -1 / 2, -Real.sqrt 3 / 2, 0, 0, -1 / 2, Real.sqrt 3 / 2] 4 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_012_5 :
-    energyExpr.gradient ![1, -1 / 2, -Real.sqrt 3 / 2, 0, 0, -1 / 2, Real.sqrt 3 / 2] 5 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_012_6 :
-    energyExpr.gradient ![1, -1 / 2, -Real.sqrt 3 / 2, 0, 0, -1 / 2, Real.sqrt 3 / 2] 6 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_012 (i : Fin 7) :
-    energyExpr.gradient ![1, -1 / 2, -Real.sqrt 3 / 2, 0, 0, -1 / 2, Real.sqrt 3 / 2] i = 0 := by
-  fin_cases i
-  · exact stationarity_false_012_0
-  · exact stationarity_false_012_1
-  · exact stationarity_false_012_2
-  · exact stationarity_false_012_3
-  · exact stationarity_false_012_4
-  · exact stationarity_false_012_5
-  · exact stationarity_false_012_6
-
-private lemma stationarity_false_021_0 :
-    energyExpr.gradient ![1, -1 / 2, -Real.sqrt 3 / 2, -1 / 2, Real.sqrt 3 / 2, 0, 0] 0 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_021_1 :
-    energyExpr.gradient ![1, -1 / 2, -Real.sqrt 3 / 2, -1 / 2, Real.sqrt 3 / 2, 0, 0] 1 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_021_2 :
-    energyExpr.gradient ![1, -1 / 2, -Real.sqrt 3 / 2, -1 / 2, Real.sqrt 3 / 2, 0, 0] 2 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_021_3 :
-    energyExpr.gradient ![1, -1 / 2, -Real.sqrt 3 / 2, -1 / 2, Real.sqrt 3 / 2, 0, 0] 3 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_021_4 :
-    energyExpr.gradient ![1, -1 / 2, -Real.sqrt 3 / 2, -1 / 2, Real.sqrt 3 / 2, 0, 0] 4 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_021_5 :
-    energyExpr.gradient ![1, -1 / 2, -Real.sqrt 3 / 2, -1 / 2, Real.sqrt 3 / 2, 0, 0] 5 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_021_6 :
-    energyExpr.gradient ![1, -1 / 2, -Real.sqrt 3 / 2, -1 / 2, Real.sqrt 3 / 2, 0, 0] 6 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_021 (i : Fin 7) :
-    energyExpr.gradient ![1, -1 / 2, -Real.sqrt 3 / 2, -1 / 2, Real.sqrt 3 / 2, 0, 0] i = 0 := by
-  fin_cases i
-  · exact stationarity_false_021_0
-  · exact stationarity_false_021_1
-  · exact stationarity_false_021_2
-  · exact stationarity_false_021_3
-  · exact stationarity_false_021_4
-  · exact stationarity_false_021_5
-  · exact stationarity_false_021_6
-
-private lemma stationarity_false_102_0 :
-    energyExpr.gradient ![1, 0, 0, -1 / 2, -Real.sqrt 3 / 2, -1 / 2, Real.sqrt 3 / 2] 0 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_102_1 :
-    energyExpr.gradient ![1, 0, 0, -1 / 2, -Real.sqrt 3 / 2, -1 / 2, Real.sqrt 3 / 2] 1 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_102_2 :
-    energyExpr.gradient ![1, 0, 0, -1 / 2, -Real.sqrt 3 / 2, -1 / 2, Real.sqrt 3 / 2] 2 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_102_3 :
-    energyExpr.gradient ![1, 0, 0, -1 / 2, -Real.sqrt 3 / 2, -1 / 2, Real.sqrt 3 / 2] 3 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_102_4 :
-    energyExpr.gradient ![1, 0, 0, -1 / 2, -Real.sqrt 3 / 2, -1 / 2, Real.sqrt 3 / 2] 4 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_102_5 :
-    energyExpr.gradient ![1, 0, 0, -1 / 2, -Real.sqrt 3 / 2, -1 / 2, Real.sqrt 3 / 2] 5 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_102_6 :
-    energyExpr.gradient ![1, 0, 0, -1 / 2, -Real.sqrt 3 / 2, -1 / 2, Real.sqrt 3 / 2] 6 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_102 (i : Fin 7) :
-    energyExpr.gradient ![1, 0, 0, -1 / 2, -Real.sqrt 3 / 2, -1 / 2, Real.sqrt 3 / 2] i = 0 := by
-  fin_cases i
-  · exact stationarity_false_102_0
-  · exact stationarity_false_102_1
-  · exact stationarity_false_102_2
-  · exact stationarity_false_102_3
-  · exact stationarity_false_102_4
-  · exact stationarity_false_102_5
-  · exact stationarity_false_102_6
-
-private lemma stationarity_false_120_0 :
-    energyExpr.gradient ![1, 0, 0, -1 / 2, Real.sqrt 3 / 2, -1 / 2, -Real.sqrt 3 / 2] 0 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_120_1 :
-    energyExpr.gradient ![1, 0, 0, -1 / 2, Real.sqrt 3 / 2, -1 / 2, -Real.sqrt 3 / 2] 1 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_120_2 :
-    energyExpr.gradient ![1, 0, 0, -1 / 2, Real.sqrt 3 / 2, -1 / 2, -Real.sqrt 3 / 2] 2 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_120_3 :
-    energyExpr.gradient ![1, 0, 0, -1 / 2, Real.sqrt 3 / 2, -1 / 2, -Real.sqrt 3 / 2] 3 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_120_4 :
-    energyExpr.gradient ![1, 0, 0, -1 / 2, Real.sqrt 3 / 2, -1 / 2, -Real.sqrt 3 / 2] 4 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_120_5 :
-    energyExpr.gradient ![1, 0, 0, -1 / 2, Real.sqrt 3 / 2, -1 / 2, -Real.sqrt 3 / 2] 5 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_120_6 :
-    energyExpr.gradient ![1, 0, 0, -1 / 2, Real.sqrt 3 / 2, -1 / 2, -Real.sqrt 3 / 2] 6 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_120 (i : Fin 7) :
-    energyExpr.gradient ![1, 0, 0, -1 / 2, Real.sqrt 3 / 2, -1 / 2, -Real.sqrt 3 / 2] i = 0 := by
-  fin_cases i
-  · exact stationarity_false_120_0
-  · exact stationarity_false_120_1
-  · exact stationarity_false_120_2
-  · exact stationarity_false_120_3
-  · exact stationarity_false_120_4
-  · exact stationarity_false_120_5
-  · exact stationarity_false_120_6
-
-private lemma stationarity_false_201_0 :
-    energyExpr.gradient ![1, -1 / 2, Real.sqrt 3 / 2, -1 / 2, -Real.sqrt 3 / 2, 0, 0] 0 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_201_1 :
-    energyExpr.gradient ![1, -1 / 2, Real.sqrt 3 / 2, -1 / 2, -Real.sqrt 3 / 2, 0, 0] 1 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_201_2 :
-    energyExpr.gradient ![1, -1 / 2, Real.sqrt 3 / 2, -1 / 2, -Real.sqrt 3 / 2, 0, 0] 2 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_201_3 :
-    energyExpr.gradient ![1, -1 / 2, Real.sqrt 3 / 2, -1 / 2, -Real.sqrt 3 / 2, 0, 0] 3 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_201_4 :
-    energyExpr.gradient ![1, -1 / 2, Real.sqrt 3 / 2, -1 / 2, -Real.sqrt 3 / 2, 0, 0] 4 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_201_5 :
-    energyExpr.gradient ![1, -1 / 2, Real.sqrt 3 / 2, -1 / 2, -Real.sqrt 3 / 2, 0, 0] 5 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_201_6 :
-    energyExpr.gradient ![1, -1 / 2, Real.sqrt 3 / 2, -1 / 2, -Real.sqrt 3 / 2, 0, 0] 6 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_201 (i : Fin 7) :
-    energyExpr.gradient ![1, -1 / 2, Real.sqrt 3 / 2, -1 / 2, -Real.sqrt 3 / 2, 0, 0] i = 0 := by
-  fin_cases i
-  · exact stationarity_false_201_0
-  · exact stationarity_false_201_1
-  · exact stationarity_false_201_2
-  · exact stationarity_false_201_3
-  · exact stationarity_false_201_4
-  · exact stationarity_false_201_5
-  · exact stationarity_false_201_6
-
-private lemma stationarity_false_210_0 :
-    energyExpr.gradient ![1, -1 / 2, Real.sqrt 3 / 2, 0, 0, -1 / 2, -Real.sqrt 3 / 2] 0 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_210_1 :
-    energyExpr.gradient ![1, -1 / 2, Real.sqrt 3 / 2, 0, 0, -1 / 2, -Real.sqrt 3 / 2] 1 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_210_2 :
-    energyExpr.gradient ![1, -1 / 2, Real.sqrt 3 / 2, 0, 0, -1 / 2, -Real.sqrt 3 / 2] 2 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_210_3 :
-    energyExpr.gradient ![1, -1 / 2, Real.sqrt 3 / 2, 0, 0, -1 / 2, -Real.sqrt 3 / 2] 3 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_210_4 :
-    energyExpr.gradient ![1, -1 / 2, Real.sqrt 3 / 2, 0, 0, -1 / 2, -Real.sqrt 3 / 2] 4 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_210_5 :
-    energyExpr.gradient ![1, -1 / 2, Real.sqrt 3 / 2, 0, 0, -1 / 2, -Real.sqrt 3 / 2] 5 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_210_6 :
-    energyExpr.gradient ![1, -1 / 2, Real.sqrt 3 / 2, 0, 0, -1 / 2, -Real.sqrt 3 / 2] 6 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_false_210 (i : Fin 7) :
-    energyExpr.gradient ![1, -1 / 2, Real.sqrt 3 / 2, 0, 0, -1 / 2, -Real.sqrt 3 / 2] i = 0 := by
-  fin_cases i
-  · exact stationarity_false_210_0
-  · exact stationarity_false_210_1
-  · exact stationarity_false_210_2
-  · exact stationarity_false_210_3
-  · exact stationarity_false_210_4
-  · exact stationarity_false_210_5
-  · exact stationarity_false_210_6
-
-private lemma stationarity_true_012_0 :
-    energyExpr.gradient ![1, 0, -Real.sqrt 3 / 3, -1, 0, 0, Real.sqrt 3 / 3] 0 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_012_1 :
-    energyExpr.gradient ![1, 0, -Real.sqrt 3 / 3, -1, 0, 0, Real.sqrt 3 / 3] 1 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_012_2 :
-    energyExpr.gradient ![1, 0, -Real.sqrt 3 / 3, -1, 0, 0, Real.sqrt 3 / 3] 2 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_012_3 :
-    energyExpr.gradient ![1, 0, -Real.sqrt 3 / 3, -1, 0, 0, Real.sqrt 3 / 3] 3 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_012_4 :
-    energyExpr.gradient ![1, 0, -Real.sqrt 3 / 3, -1, 0, 0, Real.sqrt 3 / 3] 4 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_012_5 :
-    energyExpr.gradient ![1, 0, -Real.sqrt 3 / 3, -1, 0, 0, Real.sqrt 3 / 3] 5 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_012_6 :
-    energyExpr.gradient ![1, 0, -Real.sqrt 3 / 3, -1, 0, 0, Real.sqrt 3 / 3] 6 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_012 (i : Fin 7) :
-    energyExpr.gradient ![1, 0, -Real.sqrt 3 / 3, -1, 0, 0, Real.sqrt 3 / 3] i = 0 := by
-  fin_cases i
-  · exact stationarity_true_012_0
-  · exact stationarity_true_012_1
-  · exact stationarity_true_012_2
-  · exact stationarity_true_012_3
-  · exact stationarity_true_012_4
-  · exact stationarity_true_012_5
-  · exact stationarity_true_012_6
-
-private lemma stationarity_true_021_0 :
-    energyExpr.gradient ![1, 0, -Real.sqrt 3 / 3, 0, Real.sqrt 3 / 3, -1, 0] 0 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_021_1 :
-    energyExpr.gradient ![1, 0, -Real.sqrt 3 / 3, 0, Real.sqrt 3 / 3, -1, 0] 1 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_021_2 :
-    energyExpr.gradient ![1, 0, -Real.sqrt 3 / 3, 0, Real.sqrt 3 / 3, -1, 0] 2 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_021_3 :
-    energyExpr.gradient ![1, 0, -Real.sqrt 3 / 3, 0, Real.sqrt 3 / 3, -1, 0] 3 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_021_4 :
-    energyExpr.gradient ![1, 0, -Real.sqrt 3 / 3, 0, Real.sqrt 3 / 3, -1, 0] 4 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_021_5 :
-    energyExpr.gradient ![1, 0, -Real.sqrt 3 / 3, 0, Real.sqrt 3 / 3, -1, 0] 5 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_021_6 :
-    energyExpr.gradient ![1, 0, -Real.sqrt 3 / 3, 0, Real.sqrt 3 / 3, -1, 0] 6 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_021 (i : Fin 7) :
-    energyExpr.gradient ![1, 0, -Real.sqrt 3 / 3, 0, Real.sqrt 3 / 3, -1, 0] i = 0 := by
-  fin_cases i
-  · exact stationarity_true_021_0
-  · exact stationarity_true_021_1
-  · exact stationarity_true_021_2
-  · exact stationarity_true_021_3
-  · exact stationarity_true_021_4
-  · exact stationarity_true_021_5
-  · exact stationarity_true_021_6
-
-private lemma stationarity_true_102_0 :
-    energyExpr.gradient ![1, -1, 0, 0, -Real.sqrt 3 / 3, 0, Real.sqrt 3 / 3] 0 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_102_1 :
-    energyExpr.gradient ![1, -1, 0, 0, -Real.sqrt 3 / 3, 0, Real.sqrt 3 / 3] 1 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_102_2 :
-    energyExpr.gradient ![1, -1, 0, 0, -Real.sqrt 3 / 3, 0, Real.sqrt 3 / 3] 2 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_102_3 :
-    energyExpr.gradient ![1, -1, 0, 0, -Real.sqrt 3 / 3, 0, Real.sqrt 3 / 3] 3 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_102_4 :
-    energyExpr.gradient ![1, -1, 0, 0, -Real.sqrt 3 / 3, 0, Real.sqrt 3 / 3] 4 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_102_5 :
-    energyExpr.gradient ![1, -1, 0, 0, -Real.sqrt 3 / 3, 0, Real.sqrt 3 / 3] 5 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_102_6 :
-    energyExpr.gradient ![1, -1, 0, 0, -Real.sqrt 3 / 3, 0, Real.sqrt 3 / 3] 6 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_102 (i : Fin 7) :
-    energyExpr.gradient ![1, -1, 0, 0, -Real.sqrt 3 / 3, 0, Real.sqrt 3 / 3] i = 0 := by
-  fin_cases i
-  · exact stationarity_true_102_0
-  · exact stationarity_true_102_1
-  · exact stationarity_true_102_2
-  · exact stationarity_true_102_3
-  · exact stationarity_true_102_4
-  · exact stationarity_true_102_5
-  · exact stationarity_true_102_6
-
-private lemma stationarity_true_120_0 :
-    energyExpr.gradient ![1, -1, 0, 0, Real.sqrt 3 / 3, 0, -Real.sqrt 3 / 3] 0 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_120_1 :
-    energyExpr.gradient ![1, -1, 0, 0, Real.sqrt 3 / 3, 0, -Real.sqrt 3 / 3] 1 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_120_2 :
-    energyExpr.gradient ![1, -1, 0, 0, Real.sqrt 3 / 3, 0, -Real.sqrt 3 / 3] 2 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_120_3 :
-    energyExpr.gradient ![1, -1, 0, 0, Real.sqrt 3 / 3, 0, -Real.sqrt 3 / 3] 3 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_120_4 :
-    energyExpr.gradient ![1, -1, 0, 0, Real.sqrt 3 / 3, 0, -Real.sqrt 3 / 3] 4 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_120_5 :
-    energyExpr.gradient ![1, -1, 0, 0, Real.sqrt 3 / 3, 0, -Real.sqrt 3 / 3] 5 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_120_6 :
-    energyExpr.gradient ![1, -1, 0, 0, Real.sqrt 3 / 3, 0, -Real.sqrt 3 / 3] 6 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_120 (i : Fin 7) :
-    energyExpr.gradient ![1, -1, 0, 0, Real.sqrt 3 / 3, 0, -Real.sqrt 3 / 3] i = 0 := by
-  fin_cases i
-  · exact stationarity_true_120_0
-  · exact stationarity_true_120_1
-  · exact stationarity_true_120_2
-  · exact stationarity_true_120_3
-  · exact stationarity_true_120_4
-  · exact stationarity_true_120_5
-  · exact stationarity_true_120_6
-
-private lemma stationarity_true_201_0 :
-    energyExpr.gradient ![1, 0, Real.sqrt 3 / 3, 0, -Real.sqrt 3 / 3, -1, 0] 0 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_201_1 :
-    energyExpr.gradient ![1, 0, Real.sqrt 3 / 3, 0, -Real.sqrt 3 / 3, -1, 0] 1 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_201_2 :
-    energyExpr.gradient ![1, 0, Real.sqrt 3 / 3, 0, -Real.sqrt 3 / 3, -1, 0] 2 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_201_3 :
-    energyExpr.gradient ![1, 0, Real.sqrt 3 / 3, 0, -Real.sqrt 3 / 3, -1, 0] 3 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_201_4 :
-    energyExpr.gradient ![1, 0, Real.sqrt 3 / 3, 0, -Real.sqrt 3 / 3, -1, 0] 4 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_201_5 :
-    energyExpr.gradient ![1, 0, Real.sqrt 3 / 3, 0, -Real.sqrt 3 / 3, -1, 0] 5 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_201_6 :
-    energyExpr.gradient ![1, 0, Real.sqrt 3 / 3, 0, -Real.sqrt 3 / 3, -1, 0] 6 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_201 (i : Fin 7) :
-    energyExpr.gradient ![1, 0, Real.sqrt 3 / 3, 0, -Real.sqrt 3 / 3, -1, 0] i = 0 := by
-  fin_cases i
-  · exact stationarity_true_201_0
-  · exact stationarity_true_201_1
-  · exact stationarity_true_201_2
-  · exact stationarity_true_201_3
-  · exact stationarity_true_201_4
-  · exact stationarity_true_201_5
-  · exact stationarity_true_201_6
-
-private lemma stationarity_true_210_0 :
-    energyExpr.gradient ![1, 0, Real.sqrt 3 / 3, -1, 0, 0, -Real.sqrt 3 / 3] 0 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_210_1 :
-    energyExpr.gradient ![1, 0, Real.sqrt 3 / 3, -1, 0, 0, -Real.sqrt 3 / 3] 1 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_210_2 :
-    energyExpr.gradient ![1, 0, Real.sqrt 3 / 3, -1, 0, 0, -Real.sqrt 3 / 3] 2 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_210_3 :
-    energyExpr.gradient ![1, 0, Real.sqrt 3 / 3, -1, 0, 0, -Real.sqrt 3 / 3] 3 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_210_4 :
-    energyExpr.gradient ![1, 0, Real.sqrt 3 / 3, -1, 0, 0, -Real.sqrt 3 / 3] 4 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_210_5 :
-    energyExpr.gradient ![1, 0, Real.sqrt 3 / 3, -1, 0, 0, -Real.sqrt 3 / 3] 5 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_210_6 :
-    energyExpr.gradient ![1, 0, Real.sqrt 3 / 3, -1, 0, 0, -Real.sqrt 3 / 3] 6 = 0 := by
-  norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
-    xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
-    stationarity_sqrt_three_sq] <;> ring
-
-private lemma stationarity_true_210 (i : Fin 7) :
-    energyExpr.gradient ![1, 0, Real.sqrt 3 / 3, -1, 0, 0, -Real.sqrt 3 / 3] i = 0 := by
-  fin_cases i
-  · exact stationarity_true_210_0
-  · exact stationarity_true_210_1
-  · exact stationarity_true_210_2
-  · exact stationarity_true_210_3
-  · exact stationarity_true_210_4
-  · exact stationarity_true_210_5
-  · exact stationarity_true_210_6
+private lemma stationarity_permutation_cases (σ : Equiv.Perm (Fin 3)) :
+    (σ 0 = 0 ∧ σ 1 = 1 ∧ σ 2 = 2) ∨
+    (σ 0 = 0 ∧ σ 1 = 2 ∧ σ 2 = 1) ∨
+    (σ 0 = 1 ∧ σ 1 = 0 ∧ σ 2 = 2) ∨
+    (σ 0 = 1 ∧ σ 1 = 2 ∧ σ 2 = 0) ∨
+    (σ 0 = 2 ∧ σ 1 = 0 ∧ σ 2 = 1) ∨
+    (σ 0 = 2 ∧ σ 1 = 1 ∧ σ 2 = 0) := by
+  have h01 : σ 0 ≠ σ 1 := σ.injective.ne (by decide)
+  have h02 : σ 0 ≠ σ 2 := σ.injective.ne (by decide)
+  have h12 : σ 1 ≠ σ 2 := σ.injective.ne (by decide)
+  generalize h0 : σ 0 = a
+  generalize h1 : σ 1 = b
+  generalize h2 : σ 2 = d
+  fin_cases a <;> fin_cases b <;> fin_cases d <;> simp_all
+
+/-- Exact stationarity of all twelve normalized TBP centers. -/
+theorem center_gradient_zero_proved (c : Center) (i : Fin 7) :
+    energyExpr.gradient (center c) i = 0 := by
+  rcases c with ⟨kind, σ⟩
+  rcases stationarity_permutation_cases σ with h | h | h | h | h | h
+  · rcases h with ⟨h0, h1, h2⟩
+    cases kind
+    · simpa [center, centerPlanar, h0, h1, h2] using
+        stationarity_false_012 i
+    · simpa [center, centerPlanar, h0, h1, h2] using
+        stationarity_true_012 i
+  · rcases h with ⟨h0, h1, h2⟩
+    cases kind
+    · simpa [center, centerPlanar, h0, h1, h2] using
+        stationarity_false_021 i
+    · simpa [center, centerPlanar, h0, h1, h2] using
+        stationarity_true_021 i
+  · rcases h with ⟨h0, h1, h2⟩
+    cases kind
+    · simpa [center, centerPlanar, h0, h1, h2] using
+        stationarity_false_102 i
+    · simpa [center, centerPlanar, h0, h1, h2] using
+        stationarity_true_102 i
+  · rcases h with ⟨h0, h1, h2⟩
+    cases kind
+    · simpa [center, centerPlanar, h0, h1, h2] using
+        stationarity_false_120 i
+    · simpa [center, centerPlanar, h0, h1, h2] using
+        stationarity_true_120 i
+  · rcases h with ⟨h0, h1, h2⟩
+    cases kind
+    · simpa [center, centerPlanar, h0, h1, h2] using
+        stationarity_false_201 i
+    · simpa [center, centerPlanar, h0, h1, h2] using
+        stationarity_true_201 i
+  · rcases h with ⟨h0, h1, h2⟩
+    cases kind
+    · simpa [center, centerPlanar, h0, h1, h2] using
+        stationarity_false_210 i
+    · simpa [center, centerPlanar, h0, h1, h2] using
+        stationarity_true_210 i
 
 end Thomson.Five

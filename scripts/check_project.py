@@ -23,13 +23,21 @@ ROOT = Path(__file__).resolve().parents[1]
 BUILD = ROOT / ".lake" / "build" / "lib" / "lean"
 MATHLIB = ROOT / ".lake" / "packages" / "mathlib"
 MATHLIB_BUILD = MATHLIB / ".lake" / "build" / "lib" / "lean"
-ALLOWED_SORRY_FILES = {"challenge.lean", "Thomson/Computational.lean"}
+EXPECTED_ADMISSIONS = {
+    "challenge.lean": "tbp_minimizes",
+    "Thomson/Computational.lean": "global_cover",
+}
 REQUIRED_MODULES = {"challenge", "Solution", "Thomson.Problem", "Thomson.Computational"}
 IGNORED_DIRS = {"archive", "__pycache__", "node_modules"}
 MODULE_NAME = re.compile(r"[A-Za-z_][A-Za-z_0-9']*(?:\.[A-Za-z_][A-Za-z_0-9']*)*\Z")
 IMPORT_LINE = re.compile(r"^[ \t]*(?:(?:public|private|meta)[ \t]+)*import[ \t]+([^\n]+)", re.M)
 SORRY_TOKEN = re.compile(r"(?<![\w'])sorry(?![\w'])")
 FORBIDDEN_TOKEN = re.compile(r"(?<![\w'])(?:admit|axiom|sorryAx|native_decide)(?![\w'])")
+DECLARATION_LINE = re.compile(
+    r"^[ \t]*(?:(?:private|protected|noncomputable|unsafe)[ \t]+)*"
+    r"(?:theorem|lemma|def|abbrev|instance|example)\b(?:[ \t]+([A-Za-z_][A-Za-z_0-9'.]*))?",
+    re.M,
+)
 
 
 class CheckFailure(Exception):
@@ -193,7 +201,7 @@ def audit_sources(sources: dict[str, Path], texts: dict[str, str]) -> tuple[dict
              for module, path in sources.items()}
     unexpected = []
     forbidden = []
-    admitted_count = 0
+    admissions = {relative: [] for relative in EXPECTED_ADMISSIONS}
     for module, path in sources.items():
         relative = path.relative_to(ROOT).as_posix()
         try:
@@ -202,10 +210,12 @@ def audit_sources(sources: dict[str, Path], texts: dict[str, str]) -> tuple[dict
             raise CheckFailure(f"{relative}: {error}") from error
         for match in SORRY_TOKEN.finditer(code):
             line = code.count("\n", 0, match.start()) + 1
-            if relative not in ALLOWED_SORRY_FILES:
+            declarations = list(DECLARATION_LINE.finditer(code, 0, match.start()))
+            declaration = declarations[-1].group(1) if declarations else None
+            if EXPECTED_ADMISSIONS.get(relative) != declaration:
                 unexpected.append(f"{relative}:{line}")
-            elif module != "challenge":
-                admitted_count += 1
+            else:
+                admissions[relative].append(line)
         for match in FORBIDDEN_TOKEN.finditer(code):
             line = code.count("\n", 0, match.start()) + 1
             forbidden.append(f"{relative}:{line}: {match.group()}")
@@ -215,7 +225,16 @@ def audit_sources(sources: dict[str, Path], texts: dict[str, str]) -> tuple[dict
             if (dependency == "Thomson" or dependency.startswith("Thomson.")) and dependency not in sources:
                 raise CheckFailure(f"Missing local source for {module}'s import {dependency}")
     if unexpected:
-        raise CheckFailure("Admissions outside the computational file/challenge:\n  " + "\n  ".join(unexpected))
+        raise CheckFailure(
+            "Admissions outside global_cover or the challenge's tbp_minimizes placeholder:\n  "
+            + "\n  ".join(unexpected)
+        )
+    for relative, declaration in EXPECTED_ADMISSIONS.items():
+        if len(admissions[relative]) != 1:
+            raise CheckFailure(
+                f"Expected exactly one admission in {relative}'s {declaration}; "
+                f"found {len(admissions[relative])}. Update this audit when that placeholder is discharged."
+            )
     if forbidden:
         raise CheckFailure("Unexpected proof-trust tokens in active sources:\n  " + "\n  ".join(forbidden))
 
@@ -236,6 +255,16 @@ def audit_sources(sources: dict[str, Path], texts: dict[str, str]) -> tuple[dict
         raise CheckFailure("Thomson/Problem.lean must end with `end Thomson.Five`.")
     challenge_prefix = challenge[:target.start()]
     problem_prefix = problem[:namespace_end.start()]
+    # tbpEnergy names the evaluated candidate energy for the solution's lemmas;
+    # it is not used in the comparator target. The challenge deliberately omits
+    # it. Permit just this explicit auxiliary definition while comparing every
+    # definition of the mathematical objects that occur in the target.
+    auxiliary_energy = re.compile(
+        r"\bdef\s+tbpEnergy\s*:\s*ℝ\s*:=\s*1\s*/\s*2\s*\+\s*3\s*\*\s*"
+        r"Real\.sqrt\s+2\s*\+\s*Real\.sqrt\s+3\b"
+    )
+    challenge_prefix = auxiliary_energy.sub("", challenge_prefix)
+    problem_prefix = auxiliary_energy.sub("", problem_prefix)
     compact = lambda code: re.sub(r"\s+", "", code)
     if compact(challenge_prefix) != compact(problem_prefix):
         difference = "\n".join(difflib.unified_diff(
@@ -245,7 +274,16 @@ def audit_sources(sources: dict[str, Path], texts: dict[str, str]) -> tuple[dict
         ))
         raise CheckFailure("Challenge definitions differ from the trusted problem definitions:\n" + difference)
 
-    return graph, admitted_count
+    solution = erase_comments(texts["Solution"])
+    solution_target = re.search(r"\btheorem\s+tbp_minimizes\b", solution)
+    if not solution_target:
+        raise CheckFailure("Solution.lean has no theorem named tbp_minimizes.")
+    challenge_signature = challenge[target.start():].split(":=", 1)[0]
+    solution_signature = solution[solution_target.start():].split(":=", 1)[0]
+    if compact(challenge_signature) != compact(solution_signature):
+        raise CheckFailure("The theorem signatures in challenge.lean and Solution.lean differ.")
+
+    return graph, len(admissions["Thomson/Computational.lean"])
 
 
 def check_mathlib_cache(graph: dict[str, list[str]]) -> int:
@@ -324,8 +362,8 @@ def main() -> int:
     graph, admitted_count = audit_sources(sources, texts)
     order = topological_order(graph)
     cached_count = check_mathlib_cache(graph)
-    print(f"Structure passed: {len(sources)} local modules, acyclic imports, matching challenge definitions.", flush=True)
-    print(f"Admissions: {admitted_count} in Thomson/Computational.lean; challenge placeholder isolated.", flush=True)
+    print(f"Structure passed: {len(sources)} local modules, acyclic imports, matching comparator definitions and target.", flush=True)
+    print(f"Admissions: {admitted_count} in global_cover; challenge placeholder isolated.", flush=True)
     print(f"Cache passed: {cached_count} imported Mathlib modules have compiled oleans.", flush=True)
     ensure_unchanged(sources, texts)
     if args.structure_only:
@@ -349,7 +387,7 @@ def main() -> int:
             raise CheckFailure(f"Lean failed for {relative} (exit {result.returncode}); no later module was compiled.")
     ensure_unchanged(sources, texts)
     print(f"Passed: {len(order)} local modules checked sequentially; no Mathlib source build was run.", flush=True)
-    print("This validates the formalization with its declared computational admissions; it does not discharge them.", flush=True)
+    print("The three local obligations are proved; final minimality still depends on the admitted global_cover.", flush=True)
     return 0
 
 

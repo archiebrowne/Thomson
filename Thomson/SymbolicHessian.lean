@@ -83,7 +83,7 @@ def gradientExpr : Expr n → Fin n → Expr n
     (gradientExpr a i).eval q = a.gradient q i := by
   induction a generalizing i with
   | rat a => simp [gradientExpr, gradient, eval]
-  | var k => simp [gradientExpr, gradient, eval, apply_ite]
+  | var k => by_cases hki : k = i <;> simp [gradientExpr, gradient, eval, hki]
   | add a b ha hb => simp [gradientExpr, gradient, ha, hb]
   | neg a ha => simp [gradientExpr, gradient, ha]
   | mul a b ha hb => simp [gradientExpr, gradient, ha, hb]

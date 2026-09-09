@@ -36,6 +36,45 @@ theorem neg {a b l u : ℚ} {x : ℝ} (hx : Within a b x)
   have hu' : -(a : ℝ) ≤ u := by exact_mod_cast hu
   constructor <;> linarith [hx.1, hx.2]
 
+theorem sub {a b c d l u : ℚ} {x y : ℝ}
+    (hx : Within a b x) (hy : Within c d y)
+    (hl : l ≤ a - d) (hu : b - c ≤ u) : Within l u (x - y) := by
+  have hl' : (l : ℝ) ≤ a - d := by exact_mod_cast hl
+  have hu' : (b : ℝ) - c ≤ u := by exact_mod_cast hu
+  constructor <;> linarith [hx.1, hx.2, hy.1, hy.2]
+
+theorem sq {a b l u : ℚ} {x : ℝ} (hx : Within a b x)
+    (hl : l ≤ 0 ∨ (0 ≤ a ∧ l ≤ a ^ 2) ∨ (b ≤ 0 ∧ l ≤ b ^ 2))
+    (hua : a ^ 2 ≤ u) (hub : b ^ 2 ≤ u) : Within l u (x ^ 2) := by
+  have hua' : (a : ℝ) ^ 2 ≤ u := by exact_mod_cast hua
+  have hub' : (b : ℝ) ^ 2 ≤ u := by exact_mod_cast hub
+  constructor
+  · rcases hl with hl | ⟨ha, hl⟩ | ⟨hb, hl⟩
+    · exact le_trans (by exact_mod_cast hl) (sq_nonneg x)
+    · have ha' : (0 : ℝ) ≤ a := by exact_mod_cast ha
+      have hl' : (l : ℝ) ≤ (a : ℝ) ^ 2 := by exact_mod_cast hl
+      nlinarith [hx.1]
+    · have hb' : (b : ℝ) ≤ 0 := by exact_mod_cast hb
+      have hl' : (l : ℝ) ≤ (b : ℝ) ^ 2 := by exact_mod_cast hl
+      nlinarith [hx.2]
+  · rcases le_total 0 x with hx0 | hx0
+    · nlinarith [hx.2]
+    · nlinarith [hx.1]
+
+theorem pow {a b l u : ℚ} {x : ℝ} (hx : Within a b x) (n : ℕ)
+    (ha : 0 ≤ a) (hl : l ≤ a ^ n) (hu : b ^ n ≤ u) : Within l u (x ^ n) := by
+  have ha' : (0 : ℝ) ≤ a := by exact_mod_cast ha
+  have hl' : (l : ℝ) ≤ (a : ℝ) ^ n := by exact_mod_cast hl
+  have hu' : (b : ℝ) ^ n ≤ u := by exact_mod_cast hu
+  exact ⟨hl'.trans (pow_le_pow_left₀ ha' hx.1 n),
+    (pow_le_pow_left₀ (ha'.trans hx.1) hx.2 n).trans hu'⟩
+
+theorem pow_odd {a b l u : ℚ} {x : ℝ} (hx : Within a b x) (n : ℕ)
+    (hn : Odd n) (hl : l ≤ a ^ n) (hu : b ^ n ≤ u) : Within l u (x ^ n) := by
+  have hl' : (l : ℝ) ≤ (a : ℝ) ^ n := by exact_mod_cast hl
+  have hu' : (b : ℝ) ^ n ≤ u := by exact_mod_cast hu
+  exact ⟨hl'.trans (hn.pow_le_pow.mpr hx.1), (hn.pow_le_pow.mpr hx.2).trans hu'⟩
+
 private theorem scalar_mul_upper {a b x c u : ℝ} (hx : a ≤ x ∧ x ≤ b)
     (ha : a * c ≤ u) (hb : b * c ≤ u) : x * c ≤ u := by
   rcases le_total 0 c with hc | hc

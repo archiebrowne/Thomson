@@ -28,6 +28,9 @@ private lemma stationarity_sqrt_three_inv_fourth : (Real.sqrt 3)⁻¹ ^ 4 = 1 / 
   rw [inv_pow, stationarity_sqrt_three_fourth]
   norm_num
 
+private lemma stationarity_sqrt_three_ne_zero : Real.sqrt 3 ≠ 0 :=
+  ne_of_gt (Real.sqrt_pos.mpr (by norm_num))
+
 macro "stationarity_compute" : tactic => `(tactic| (
   norm_num [energyExpr, pairExpr, poleExpr, denomExpr, separationExpr,
     xExpr, yExpr, Expr.gradient, Expr.eval, ← pow_two, div_pow,
@@ -35,6 +38,7 @@ macro "stationarity_compute" : tactic => `(tactic| (
   all_goals ring_nf
   all_goals norm_num [inv_pow, stationarity_sqrt_three_sq, stationarity_sqrt_three_fourth,
     stationarity_sqrt_three_inv_sq, stationarity_sqrt_three_inv_fourth]
+  all_goals field_simp [stationarity_sqrt_three_ne_zero]
   all_goals ring))
 
 end Thomson.Five

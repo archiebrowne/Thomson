@@ -13,6 +13,28 @@ open scoped BigOperators
 
 namespace Thomson.Five
 
+/-- Positive scalar Schur pivots give strict positivity in every nonzero direction. -/
+theorem quadratic_pos_of_positivePivots {n : ℕ}
+    (A : Matrix (Fin n) (Fin n) ℝ) (hA : A.IsSymm) (hp : PositivePivots A)
+    (v : Fin n → ℝ) (hv : v ≠ 0) : 0 < quadratic A v := by
+  induction n with
+  | zero => exact (hv (Subsingleton.elim _ _)).elim
+  | succ n ih =>
+    rw [quadratic_schur hA (ne_of_gt hp.1)]
+    by_cases htail : (fun i : Fin n ↦ v i.succ) = 0
+    · have hhead : v 0 ≠ 0 := by
+        intro hzero
+        apply hv
+        funext i
+        refine Fin.cases hzero (fun j ↦ ?_) i
+        exact congrFun htail j
+      have hentry (i : Fin n) : v i.succ = 0 := congrFun htail i
+      simp only [hentry, mul_zero, Finset.sum_const_zero, zero_div, add_zero,
+        quadratic]
+      exact mul_pos hp.1 (sq_pos_of_ne_zero hhead)
+    · exact add_pos_of_nonneg_of_pos (mul_nonneg hp.1.le (sq_nonneg _))
+        (ih (schur A) (schur_symmetric hA) hp.2 _ htail)
+
 /-- Strict positivity of the quadratic form supplies every scalar Schur pivot. -/
 theorem positivePivots_of_quadratic_pos {n : ℕ} (A : Matrix (Fin n) (Fin n) ℝ)
     (hA : A.IsSymm) (hp : ∀ v : Fin n → ℝ, v ≠ 0 → 0 < quadratic A v) :
@@ -39,6 +61,37 @@ theorem positivePivots_of_quadratic_pos {n : ℕ} (A : Matrix (Fin n) (Fin n) �
     have h := hp w hw
     rw [quadratic_schur hA (ne_of_gt hfirst)] at h
     simpa [w, neg_div] using h
+
+/-- Changing the order of the coordinate axes preserves quadratic forms. -/
+theorem quadratic_reindex {n : ℕ} (A : Matrix (Fin n) (Fin n) ℝ)
+    (σ : Equiv.Perm (Fin n)) (v : Fin n → ℝ) :
+    quadratic (fun i j ↦ A (σ i) (σ j)) (fun i ↦ v (σ i)) = quadratic A v := by
+  unfold quadratic
+  calc
+    _ = ∑ i, ∑ j, A (σ i) j * v (σ i) * v j := by
+      apply Finset.sum_congr rfl
+      intro i _
+      exact Equiv.sum_comp σ (fun j ↦ A (σ i) j * v (σ i) * v j)
+    _ = _ := Equiv.sum_comp σ (fun i ↦ ∑ j, A i j * v i * v j)
+
+/-- A certificate in any coordinate order certifies the original scalar pivots. -/
+theorem positivePivots_of_reindex {n : ℕ} (A : Matrix (Fin n) (Fin n) ℝ)
+    (hA : A.IsSymm) (σ : Equiv.Perm (Fin n))
+    (hp : PositivePivots (fun i j ↦ A (σ i) (σ j))) : PositivePivots A := by
+  apply positivePivots_of_quadratic_pos A hA
+  intro v hv
+  have hs : Matrix.IsSymm (fun i j ↦ A (σ i) (σ j)) := by
+    apply Matrix.IsSymm.ext
+    intro i j
+    exact hA.apply _ _
+  have hn : (fun i ↦ v (σ i)) ≠ 0 := by
+    intro heq
+    apply hv
+    funext i
+    have hi := congrFun heq (σ.symm i)
+    simpa using hi
+  have h := quadratic_pos_of_positivePivots _ hs hp _ hn
+  rwa [quadratic_reindex] at h
 
 /-- An entrywise matrix error gives a dimension times error bound on quadratic forms. -/
 theorem quadratic_error_bound {n : ℕ} (A C : Matrix (Fin n) (Fin n) ℝ)

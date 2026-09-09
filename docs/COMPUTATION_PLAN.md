@@ -2,9 +2,10 @@
 
 The target is minimality of the triangular bipyramid for five distinct points
 on the unit sphere, with Coulomb energy summed over the ten unordered pairs.
-The computational obligations are deliberately left unproved. This document
-explains the intended certificate strategy and the mathematical reductions
-surrounding it; it does not report a completed interval search.
+Local pair separation, exact stationarity, and the generated local Hessian
+certificates are proved. The global finite cover is the only remaining
+computational obligation. This document records the checked local certificate
+design and the future global search; it does not report a completed global search.
 
 ## What the proved reductions provide
 
@@ -130,17 +131,17 @@ formalisation does not establish a run-time bound for the future search.
 
 ## The local finite inequalities
 
-The local proof needs three kinds of finite input.
+The local proof uses three kinds of finite input.
 
 1. **Regularity.** Every local finite-point pair has positive squared planar
-   separation. This supplies positive denominators and positive square-root
-   arguments. A conservative explicit lower bound is preferable to a bare
-   nonzero assertion, because the same bound can support interval evaluation.
+   separation. `LocalSeparation.lean` proves this from separation of the center
+   coordinates and the radius bound. This supplies positive denominators and
+   positive square-root arguments.
 2. **Stationarity.** Each of the seven gradient components is exactly zero
-   at every centre. These are finite algebraic identities. They need exact
-   symbolic reduction after clearing nonzero denominators and reducing
-   square-root identities. An interval containing zero does not establish
-   that the enclosed expression is exactly zero.
+   at every centre. `Stationarity.lean` assembles 84 exact algebraic identities,
+   checked in small modules under `Stationarity/`. Rational normalization,
+   radical identities, and clearing nonzero denominators prove each equality.
+   The certificate uses no numerical oracle and no interval assertion of equality.
 3. **Positive Hessian pivots.** At every point of each local box, all seven
    successive scalar Schur-complement pivots of the symmetric Hessian are
    strictly positive. The generic square-completion argument converts these
@@ -153,6 +154,24 @@ variables. It avoids trying to interval-prove a nonnegative quadratic form
 at the zero direction, where the value and the available margin are both
 zero. The Schur complements introduce divisions only by previously positive
 pivots; positivity must be used in that order when clearing denominators.
+
+[`scripts/generate_local_hessian.py`](../scripts/generate_local_hessian.py) emits
+shared arithmetic expressions for the verified Hessian and outward 40-bit dyadic
+enclosures for their values. `SymbolicHessian.lean`
+proves the expression transformation sound. `IntervalBounds.lean` supplies the
+ordinary Lean proofs for each rational interval operation, including positive
+reciprocals and square roots. The certificates then propagate intervals through
+the seven Schur complements. The generator proposes the data; Lean's kernel
+checks the expression identities and every rounding inequality. `LocalHessian.lean`
+assembles the checked certificates into the original local pivot theorem.
+
+The checked bounds cover all twelve entire boxes of radius `1/4096`, without
+local subdivision. Two polar chart cases first reorder coordinates as
+`[0,1,2,5,6,3,4]` to reduce interval overestimation. `MatrixBounds.lean` proves that
+positive definiteness, and hence positive pivots, transfers through that
+permutation. This preserves the original `local_positive_pivots` statement.
+The source is split into small certificate modules, and the proof checks retain
+the default heartbeat limits and the 3 GB compiler allocation cap.
 
 The paper's lower eigenvalue bound `1/10` applies to its chosen polar chart.
 Do not transfer that same bound to the equatorial chart merely by geometric
@@ -200,13 +219,15 @@ The standalone `challenge.lean` repeats only the trusted mathematical
 definitions and the target theorem with its intentional comparator
 placeholder. It imports only Mathlib and is excluded from proof imports.
 `Solution.lean` proves the matching statement using `Thomson/Problem.lean`
-and the formalisation. The two definition lists must remain identical in
-meaning; changing one requires updating and rechecking the other.
+and the formalisation. The shared mathematical definitions and theorem signatures
+are compared by the validation script. The proof additionally defines `tbpEnergy`
+as the exact candidate energy; this auxiliary constant is absent from the target
+and may be omitted from the challenge.
 
-All outstanding computational assertions belong in
-`Thomson/Computational.lean`. The comparator placeholder is a separate,
-intentional exception. A final admission audit should also inspect obsolete
-files so that old unrelated holes are not mistaken for part of the delivered
-proof. A successful Lean build with computational `sorry`s confirms the
-surrounding reduction and interfaces; the final minimality theorem still
-depends on those admitted certificates until they are supplied.
+The final admission policy permits only `global_cover` in
+`Thomson/Computational.lean`, plus the separate intentional comparator placeholder.
+The validator rejects any admission in a local certificate or helper module.
+Archived exploratory notes are excluded from the active proof. A successful
+full validation checks the three local obligations and surrounding reduction;
+the final minimality theorem still depends on the global certificate until
+that remaining admission is discharged.
