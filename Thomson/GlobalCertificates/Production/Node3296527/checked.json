@@ -1,0 +1,62 @@
+{
+  "version": 2,
+  "status": "checked",
+  "root": 3296527,
+  "static_sha256": "4c2ac001e4ffd16a97022fae805783184c9fa83c8e28c60d38b2c1c435aee081",
+  "binary_sha256": "6626a818d355868776501e252bbdafb97029a5a9ebe31122f3509e3e359020a4",
+  "actual_leaves": 18,
+  "boundaries": [],
+  "entry_sha256": "616bf3fc68556f284ce830fd5137a5986e5fba45b983cb00432a0fdc1365ce26",
+  "dependencies": {},
+  "core": {
+    "source_sha256": "48e7c94beb94973e3d71878a0387d6e6baf5a937233a01fbeeeac34425fdec7d",
+    "wall_seconds": 12.865267832996324,
+    "memory_limit_mib": 2048,
+    "compiler_threads": 1,
+    "heartbeats": "default",
+    "axiom_reports": [
+      "Thomson.Five.GlobalCertificates.Production.Node3296527.VertexCore.Leaf3297159.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3296527.VertexCore.Leaf3297163.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3296527.VertexCore.Leaf3297164.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3296527.VertexCore.Leaf3297165.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3296527.VertexCore.Leaf3297166.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3296527.VertexCore.Leaf3297167.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3296527.VertexCore.Leaf3297171.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3296527.VertexCore.Leaf3297173.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3296527.VertexCore.Leaf3297174.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3296527.VertexCore.Leaf3297175.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3296527.VertexCore.Leaf3297177.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3296527.VertexCore.Leaf3297178.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3296527.VertexCore.Leaf3297180.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3296527.VertexCore.Leaf3297181.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3296527.VertexCore.Leaf3297183.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3296527.VertexCore.Leaf3297184.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3296527.VertexCore.Leaf3297185.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3296527.VertexCore.Leaf3297186.exists_checked"
+    ],
+    "log": "Thomson/GlobalCertificates/Production/Node3296527/Core.check.log",
+    "artifacts": {
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3296527/Core.olean": "d279484efd84ad63410ceae73ccd57fc2ad14fc30176c16577ffe7d0de9657df",
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3296527/Core.olean.private": "ef9cdc6eb68513bf8a45665bed1095a8c7943bd544c811248fbd19e7f10a9e7c",
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3296527/Core.olean.server": "73c22845c223979e62eab829f44f215d5b6a8274f787ea629c587f7dff53c95f"
+    }
+  },
+  "real": {
+    "source_sha256": "4c7896e73b7a1bcdf1accac37198bc215db6d35f69c656aa501e41b6bdf1f53d",
+    "wall_seconds": 14.468519582995214,
+    "memory_limit_mib": 3072,
+    "compiler_threads": 1,
+    "heartbeats": "default",
+    "axiom_reports": [
+      "Thomson.Five.GlobalCertificates.Production.Node3296527.Assembled.checked"
+    ],
+    "log": "Thomson/GlobalCertificates/Production/Node3296527/Assembled.check.log",
+    "artifacts": {
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3296527/Assembled.olean": "3f65addf0308934a44ca8d8b4dc1bb3076d60bbae491499972fee2bf47f20099",
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3296527/Assembled.olean.private": "30b65ff7ecb28f9cc834d117408072cae4161ebb469cc16cb5e72dc92e6e2578",
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3296527/Assembled.olean.server": "4571ccd639b89c3edd67d900b1d94437625701ab57f3e9cf260d42ae9e4b4550"
+    }
+  },
+  "completed_at": 1788962242.310932,
+  "numeric_artifacts_pruned": true
+}

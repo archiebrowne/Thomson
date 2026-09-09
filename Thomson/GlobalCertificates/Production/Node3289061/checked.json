@@ -1,0 +1,48 @@
+{
+  "version": 2,
+  "status": "checked",
+  "root": 3289061,
+  "static_sha256": "4c2ac001e4ffd16a97022fae805783184c9fa83c8e28c60d38b2c1c435aee081",
+  "binary_sha256": "6626a818d355868776501e252bbdafb97029a5a9ebe31122f3509e3e359020a4",
+  "actual_leaves": 4,
+  "boundaries": [],
+  "entry_sha256": "d2094a9bec77fad3ce08c303242034ab7f6ff6126c92b0c2eaf253594463d262",
+  "dependencies": {},
+  "core": {
+    "source_sha256": "ae6cc7cde7675c2d3df3ed5bea5d0ccf671740de7524d1a8d88fd6e4aa33d54b",
+    "wall_seconds": 2.411677208961919,
+    "memory_limit_mib": 2048,
+    "compiler_threads": 1,
+    "heartbeats": "default",
+    "axiom_reports": [
+      "Thomson.Five.GlobalCertificates.Production.Node3289061.VertexCore.Leaf3289429.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3289061.VertexCore.Leaf3289430.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3289061.VertexCore.Leaf3289431.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3289061.VertexCore.Leaf3289432.exists_checked"
+    ],
+    "log": "Thomson/GlobalCertificates/Production/Node3289061/Core.check.log",
+    "artifacts": {
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3289061/Core.olean": "91cfa9f8231d4a4499e8ea5c8a52265421188ca8b0040a4fe9b53e7825c0ff74",
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3289061/Core.olean.private": "9a9824aad28fed91bcc5f22aaf51730f2764b6169efe06def1c515b1d8aff063",
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3289061/Core.olean.server": "fce89d3d8d883edde2550a04a7bc42a7890e25a21c8af9c34b82fc6d534e272d"
+    }
+  },
+  "real": {
+    "source_sha256": "b9d643aa94f610268af79a4832000dc761179603bbd82d68b15551df265a6707",
+    "wall_seconds": 5.146907458954956,
+    "memory_limit_mib": 3072,
+    "compiler_threads": 1,
+    "heartbeats": "default",
+    "axiom_reports": [
+      "Thomson.Five.GlobalCertificates.Production.Node3289061.Assembled.checked"
+    ],
+    "log": "Thomson/GlobalCertificates/Production/Node3289061/Assembled.check.log",
+    "artifacts": {
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3289061/Assembled.olean": "558f37deeb942696897136adf22813856efa076f37788f44b643fc6e97a8f6f3",
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3289061/Assembled.olean.private": "b20839e0fff348117cdad5effe3bb199027b61f4f4c04305f9b0dca4dac1c81e",
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3289061/Assembled.olean.server": "997f17083575d72a13b0c4acae254ff595c6af552ec69a51fe74512d8d9ab104"
+    }
+  },
+  "completed_at": 1788962608.968798,
+  "numeric_artifacts_pruned": true
+}

@@ -1,0 +1,730 @@
+{
+  "format": "THOMSON_UNTRUSTED_MERGED_GROUP_V1",
+  "root": 3340995,
+  "selection": "/Users/archiebrowne/source/Thomson/Thomson/GlobalCertificates/Production/selections/Node3340995.json",
+  "selection_sha256": "5b784d8c02e0b14c3bba697151acebf591b4d492732948b63a5eeabc5d006b73",
+  "binary": "/Users/archiebrowne/source/Thomson/.lake/global-cover/search.bin",
+  "binary_sha256": "6626a818d355868776501e252bbdafb97029a5a9ebe31122f3509e3e359020a4",
+  "output_prefix": "Thomson.GlobalCertificates.Production.Node3340995",
+  "module": "Thomson.GlobalCertificates.Production.Node3340995.Assembled",
+  "namespace": "Thomson.Five.GlobalCertificates.Production.Node3340995.Assembled",
+  "core": {
+    "module": "Thomson.GlobalCertificates.Production.Node3340995.Core",
+    "source": "Thomson/GlobalCertificates/Production/Node3340995/Core.lean",
+    "source_sha256": "c850fe1a01a6b11ed168ac6543d22b521ec3f30055a9c96c6cdb6828322add26",
+    "source_bytes": 253692
+  },
+  "assembled": {
+    "module": "Thomson.GlobalCertificates.Production.Node3340995.Assembled",
+    "source": "Thomson/GlobalCertificates/Production/Node3340995/Assembled.lean",
+    "source_sha256": "a79f1c8ee20ac5c2d9a673b64fca34159bdf2fd21a1650cf674d38d60943f622",
+    "source_bytes": 68262
+  },
+  "core_source": "Thomson/GlobalCertificates/Production/Node3340995/Core.lean",
+  "assembled_source": "Thomson/GlobalCertificates/Production/Node3340995/Assembled.lean",
+  "core_module": "Thomson.GlobalCertificates.Production.Node3340995.Core",
+  "assembled_module": "Thomson.GlobalCertificates.Production.Node3340995.Assembled",
+  "numeric_imports": {
+    "Thomson.GlobalCertificates.VertexFinal": true,
+    "Thomson.GlobalCertificates.PackedRanges": false,
+    "Thomson.GlobalCertificates.VertexDecision": false,
+    "Thomson.GlobalCertificates.GradientTemplate": true,
+    "Thomson.GlobalCertificates.PairTemplate": true,
+    "Thomson.ContractionCertificates.VertexConversion": true
+  },
+  "real_imports": {
+    "Thomson.GlobalCertificates.Production.Node3340995.Core": false,
+    "Thomson.GlobalCertificates.VertexLeaf": false,
+    "Thomson.GlobalCertificates.GradientSoundness": false,
+    "Thomson.GlobalCertificates.PairSoundness": false,
+    "Thomson.ContractionCertificates.VertexBridge": false,
+    "Thomson.GlobalCertificates.TreeSoundness": true
+  },
+  "boundary_modules": [],
+  "nodes": 37,
+  "leaf_kinds": {
+    "0": 18,
+    "3": 17,
+    "6": 1,
+    "8": 1
+  },
+  "families": {
+    "contraction": {
+      "nodes": 37,
+      "actual": 2,
+      "rounds": 2,
+      "actions": 2
+    }
+  },
+  "leaves": {
+    "vertex": [
+      {
+        "node": 3341658,
+        "leaf": 8,
+        "depth": 25,
+        "exact_margin_scaled": "63310967046",
+        "operations": 1583,
+        "box_after_scaled": [
+          1198122926080,
+          1597497278464,
+          -599061495808,
+          -399374286848,
+          199687143424,
+          399374352384,
+          -399374352384,
+          -199687143424,
+          -1198122991616,
+          -1098279354368,
+          -99843637248,
+          0,
+          -465844502528,
+          -372675575808
+        ],
+        "packing_bits": [
+          44,
+          45,
+          44,
+          45,
+          45,
+          46,
+          46,
+          44,
+          44,
+          44,
+          43,
+          43,
+          43,
+          43,
+          44,
+          44
+        ],
+        "grouped_kernel_decisions": true,
+        "vertex_lower_scaled": 7426635520579,
+        "errors_scaled": [
+          78450960947,
+          29215387195,
+          68967753071,
+          10542361543,
+          17172838915,
+          10618493213,
+          29358173976
+        ],
+        "public_theorem": "Leaf3341658.exists_checked",
+        "original_leaf_reason": 8
+      }
+    ],
+    "gradient": [
+      {
+        "node": 3341641,
+        "leaf": 6,
+        "depth": 20,
+        "operations": 298,
+        "choice": 2,
+        "exact_margin_scaled": "23565162956",
+        "box_after_scaled": [
+          1198122926080,
+          1597497278464,
+          -798748639232,
+          -399374286848,
+          0,
+          199687208960,
+          -399374352384,
+          0,
+          -1198122991616,
+          -998435782656,
+          -199687208960,
+          0,
+          -559013363712,
+          -372675575808
+        ],
+        "packing_bits": [
+          45,
+          46,
+          45
+        ],
+        "original_leaf_reason": 6
+      }
+    ],
+    "pair": [
+      {
+        "node": 3341629,
+        "leaf": 3,
+        "depth": 18,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "312773001791",
+        "box_after_scaled": [
+          1198122926080,
+          1597497278464,
+          -798748639232,
+          -399374286848,
+          0,
+          399374352384,
+          -399374352384,
+          0,
+          -998435848192,
+          -798748639232,
+          -399374352384,
+          0,
+          -745351151616,
+          -559013363712
+        ],
+        "packing_bits": [
+          44,
+          43,
+          45
+        ],
+        "original_leaf_reason": 3
+      },
+      {
+        "node": 3341631,
+        "leaf": 3,
+        "depth": 19,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "139737460688",
+        "box_after_scaled": [
+          1198122926080,
+          1597497278464,
+          -798748639232,
+          -399374286848,
+          0,
+          399374352384,
+          -399374352384,
+          -199687143424,
+          -998435848192,
+          -798748639232,
+          -399374352384,
+          -199687143424,
+          -559013363712,
+          -372675575808
+        ],
+        "packing_bits": [
+          44,
+          43,
+          44
+        ],
+        "original_leaf_reason": 3
+      },
+      {
+        "node": 3341634,
+        "leaf": 3,
+        "depth": 20,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "117394288661",
+        "box_after_scaled": [
+          1198122926080,
+          1597497278464,
+          -798748639232,
+          -399374286848,
+          0,
+          399374352384,
+          -199687208960,
+          0,
+          -998435848192,
+          -798748639232,
+          -199687208960,
+          0,
+          -559013363712,
+          -372675575808
+        ],
+        "packing_bits": [
+          44,
+          43,
+          44
+        ],
+        "original_leaf_reason": 3
+      },
+      {
+        "node": 3341635,
+        "leaf": 3,
+        "depth": 21,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "59217886172",
+        "box_after_scaled": [
+          1198122926080,
+          1597497278464,
+          -798748639232,
+          -399374286848,
+          0,
+          399374352384,
+          -399374352384,
+          -199687143424,
+          -998435848192,
+          -898592210944,
+          -199687208960,
+          0,
+          -559013363712,
+          -372675575808
+        ],
+        "packing_bits": [
+          44,
+          43,
+          44
+        ],
+        "original_leaf_reason": 3
+      },
+      {
+        "node": 3341636,
+        "leaf": 3,
+        "depth": 21,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "125700167955",
+        "box_after_scaled": [
+          1198122926080,
+          1597497278464,
+          -798748639232,
+          -399374286848,
+          0,
+          399374352384,
+          -399374352384,
+          -199687143424,
+          -898592276480,
+          -798748639232,
+          -199687208960,
+          0,
+          -559013363712,
+          -372675575808
+        ],
+        "packing_bits": [
+          44,
+          43,
+          44
+        ],
+        "original_leaf_reason": 3
+      },
+      {
+        "node": 3341637,
+        "leaf": 3,
+        "depth": 18,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "172003001993",
+        "box_after_scaled": [
+          1198122926080,
+          1597497278464,
+          -798748639232,
+          -399374286848,
+          0,
+          399374352384,
+          -399374352384,
+          0,
+          -1198122991616,
+          -998435782656,
+          -399374352384,
+          0,
+          -745351151616,
+          -559013363712
+        ],
+        "packing_bits": [
+          44,
+          43,
+          44
+        ],
+        "original_leaf_reason": 3
+      },
+      {
+        "node": 3341645,
+        "leaf": 3,
+        "depth": 22,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "139407855738",
+        "box_after_scaled": [
+          1198122926080,
+          1597497278464,
+          -798748639232,
+          -399374286848,
+          199687143424,
+          399374352384,
+          -199687208960,
+          0,
+          -1198122991616,
+          -998435782656,
+          -199687208960,
+          0,
+          -559013363712,
+          -465844436992
+        ],
+        "packing_bits": [
+          44,
+          43,
+          44
+        ],
+        "original_leaf_reason": 3
+      },
+      {
+        "node": 3341647,
+        "leaf": 3,
+        "depth": 23,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "1153812369",
+        "box_after_scaled": [
+          1198122926080,
+          1597497278464,
+          -798748639232,
+          -599061430272,
+          199687143424,
+          399374352384,
+          -199687208960,
+          0,
+          -1198122991616,
+          -998435782656,
+          -199687208960,
+          0,
+          -465844502528,
+          -372675575808
+        ],
+        "packing_bits": [
+          44,
+          43,
+          43
+        ],
+        "original_leaf_reason": 3
+      },
+      {
+        "node": 3341649,
+        "leaf": 3,
+        "depth": 24,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "60618044925",
+        "box_after_scaled": [
+          1198122926080,
+          1597497278464,
+          -599061495808,
+          -399374286848,
+          199687143424,
+          399374352384,
+          -199687208960,
+          0,
+          -1198122991616,
+          -1098279354368,
+          -199687208960,
+          0,
+          -465844502528,
+          -372675575808
+        ],
+        "packing_bits": [
+          44,
+          43,
+          43
+        ],
+        "original_leaf_reason": 3
+      },
+      {
+        "node": 3341650,
+        "leaf": 3,
+        "depth": 24,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "112397625362",
+        "box_after_scaled": [
+          1198122926080,
+          1597497278464,
+          -599061495808,
+          -399374286848,
+          199687143424,
+          399374352384,
+          -199687208960,
+          0,
+          -1098279419904,
+          -998435782656,
+          -199687208960,
+          0,
+          -465844502528,
+          -372675575808
+        ],
+        "packing_bits": [
+          44,
+          43,
+          44
+        ],
+        "original_leaf_reason": 3
+      },
+      {
+        "node": 3341651,
+        "leaf": 3,
+        "depth": 22,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "43435879370",
+        "box_after_scaled": [
+          1198122926080,
+          1597497278464,
+          -798748639232,
+          -399374286848,
+          199687143424,
+          399374352384,
+          -399374352384,
+          -199687143424,
+          -1198122991616,
+          -998435782656,
+          -199687208960,
+          0,
+          -559013363712,
+          -465844436992
+        ],
+        "packing_bits": [
+          44,
+          43,
+          44
+        ],
+        "original_leaf_reason": 3
+      },
+      {
+        "node": 3341656,
+        "leaf": 3,
+        "depth": 24,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "21493637360",
+        "box_after_scaled": [
+          1198122926080,
+          1597497278464,
+          -599061495808,
+          -399374286848,
+          199687143424,
+          399374352384,
+          -399374352384,
+          -199687143424,
+          -1098279419904,
+          -998435782656,
+          -199687208960,
+          0,
+          -465844502528,
+          -372675575808
+        ],
+        "packing_bits": [
+          44,
+          43,
+          43
+        ],
+        "original_leaf_reason": 3
+      },
+      {
+        "node": 3341657,
+        "leaf": 3,
+        "depth": 25,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "34270812946",
+        "box_after_scaled": [
+          1198122926080,
+          1597497278464,
+          -599061495808,
+          -399374286848,
+          199687143424,
+          399374352384,
+          -399374352384,
+          -199687143424,
+          -1198122991616,
+          -1098279354368,
+          -199687208960,
+          -99843571712,
+          -465844502528,
+          -372675575808
+        ],
+        "packing_bits": [
+          44,
+          43,
+          43
+        ],
+        "original_leaf_reason": 3
+      },
+      {
+        "node": 3341659,
+        "leaf": 3,
+        "depth": 24,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "8858520893",
+        "box_after_scaled": [
+          1198122926080,
+          1597497278464,
+          -798748639232,
+          -599061430272,
+          199687143424,
+          399374352384,
+          -399374352384,
+          -199687143424,
+          -1198122991616,
+          -1098279354368,
+          -199687208960,
+          0,
+          -465844502528,
+          -372675575808
+        ],
+        "packing_bits": [
+          44,
+          43,
+          43
+        ],
+        "original_leaf_reason": 3
+      },
+      {
+        "node": 3341660,
+        "leaf": 3,
+        "depth": 24,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "37157688520",
+        "box_after_scaled": [
+          1198122926080,
+          1597497278464,
+          -798748639232,
+          -599061430272,
+          199687143424,
+          399374352384,
+          -399374352384,
+          -199687143424,
+          -1098279419904,
+          -998435782656,
+          -199687208960,
+          0,
+          -465844502528,
+          -372675575808
+        ],
+        "packing_bits": [
+          44,
+          43,
+          43
+        ],
+        "original_leaf_reason": 3
+      },
+      {
+        "node": 3341661,
+        "leaf": 3,
+        "depth": 20,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "50234335222",
+        "box_after_scaled": [
+          1198122926080,
+          1597497278464,
+          -798748639232,
+          -399374286848,
+          0,
+          199687208960,
+          -399374352384,
+          -199687143424,
+          -1198122991616,
+          -998435782656,
+          -399374352384,
+          -199687143424,
+          -559013363712,
+          -372675575808
+        ],
+        "packing_bits": [
+          44,
+          43,
+          44
+        ],
+        "original_leaf_reason": 3
+      },
+      {
+        "node": 3341662,
+        "leaf": 3,
+        "depth": 20,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "544805171",
+        "box_after_scaled": [
+          1198122926080,
+          1597497278464,
+          -798748639232,
+          -399374286848,
+          199687143424,
+          399374352384,
+          -399374352384,
+          -199687143424,
+          -1198122991616,
+          -998435782656,
+          -399374352384,
+          -199687143424,
+          -559013363712,
+          -372675575808
+        ],
+        "packing_bits": [
+          44,
+          43,
+          44
+        ],
+        "original_leaf_reason": 3
+      }
+    ]
+  },
+  "reference_topology_sha256": {
+    "vertex": "09629aa6d88e3007946041ee5bb5e7fe743b3242efca3b1b8ea02df65fe0eb34",
+    "gradient": "58c374fbc03eab01d7423cf8888185f1410a0c20be14044aa309678ec2e4216c",
+    "pair": "65dfe5f05c0cab641b03d13ff573dc6bfa3f1d0fef0ed66dcd91cede0438a8ce"
+  },
+  "public_numeric_certificates": [
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.VertexCore.Leaf3341658.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.GradientCore.Leaf3341641.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.PairCore.Leaf3341629.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.PairCore.Leaf3341631.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.PairCore.Leaf3341634.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.PairCore.Leaf3341635.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.PairCore.Leaf3341636.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.PairCore.Leaf3341637.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.PairCore.Leaf3341645.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.PairCore.Leaf3341647.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.PairCore.Leaf3341649.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.PairCore.Leaf3341650.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.PairCore.Leaf3341651.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.PairCore.Leaf3341656.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.PairCore.Leaf3341657.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.PairCore.Leaf3341659.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.PairCore.Leaf3341660.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.PairCore.Leaf3341661.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.PairCore.Leaf3341662.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3340995",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341627",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341628",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341629",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341630",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341631",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341632",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341633",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341634",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341635",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341636",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341637",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341638",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341639",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341640",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341641",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341642",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341643",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341644",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341645",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341646",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341647",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341648",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341649",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341650",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341651",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341652",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341653",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341654",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341655",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341656",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341657",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341658",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341659",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341660",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341661",
+    "Thomson.Five.GlobalCertificates.Production.Node3340995.ContractionCore.exists_checked_3341662"
+  ],
+  "generation_seconds": 0.04640049999579787,
+  "kernel_check_required": true,
+  "heartbeats": "default",
+  "compiler_threads": 1,
+  "core_memory_limit_mib": 2048,
+  "assembled_memory_limit_mib": 3072
+}

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "status": "checking",
+  "status": "checked",
   "root": 3349266,
   "static_sha256": "4c2ac001e4ffd16a97022fae805783184c9fa83c8e28c60d38b2c1c435aee081",
   "binary_sha256": "6626a818d355868776501e252bbdafb97029a5a9ebe31122f3509e3e359020a4",
@@ -113,5 +113,23 @@
       ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3349266/Core.olean.private": "869bc1f0d6061572fbb6ffee4cfb1feb2ffa8351e16ff8d39b635c3c8e5b3dbc",
       ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3349266/Core.olean.server": "cde133bb87cdaf5616ad0fffe6a8179fc7017e61f997215bd44185ecff238404"
     }
-  }
+  },
+  "real": {
+    "source_sha256": "7a3240d11b213a3590e1b3d9d4d767d8641f0a8d0bffc4b96cdc3ff548f1d600",
+    "wall_seconds": 11.341966375010088,
+    "memory_limit_mib": 3072,
+    "compiler_threads": 1,
+    "heartbeats": "default",
+    "axiom_reports": [
+      "Thomson.Five.GlobalCertificates.Production.Node3349266.Assembled.checked"
+    ],
+    "log": "Thomson/GlobalCertificates/Production/Node3349266/Assembled.check.log",
+    "artifacts": {
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3349266/Assembled.olean": "3ee619ef1b8f283d86a8f92f03621c56751db29f342bead60825ab4ebe928ae6",
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3349266/Assembled.olean.private": "5fd80ec41a710f35c9499b5fc366c7887d2e7aa0754f08b17f2356ffdb4373fe",
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3349266/Assembled.olean.server": "508eb16d029deac5d60b0c4ab5cfbdbd0f66b7730bfe1ca61e0d1e58c1447003"
+    }
+  },
+  "completed_at": 1788960234.408709,
+  "numeric_artifacts_pruned": true
 }

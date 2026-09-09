@@ -1,0 +1,82 @@
+{
+  "version": 2,
+  "status": "checked",
+  "root": 3343995,
+  "static_sha256": "4c2ac001e4ffd16a97022fae805783184c9fa83c8e28c60d38b2c1c435aee081",
+  "binary_sha256": "6626a818d355868776501e252bbdafb97029a5a9ebe31122f3509e3e359020a4",
+  "actual_leaves": 38,
+  "boundaries": [],
+  "entry_sha256": "08f2cf296c669a54f441f878d26a29c2968e23cfa836daf39955604dab91c396",
+  "dependencies": {},
+  "core": {
+    "source_sha256": "2290db26641764cf59e71d3227958d4d545bd3deb8c39cffaba26c61f118c50e",
+    "wall_seconds": 20.40723412501393,
+    "memory_limit_mib": 2048,
+    "compiler_threads": 1,
+    "heartbeats": "default",
+    "axiom_reports": [
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344240.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344241.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344242.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344245.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344246.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344247.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344249.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344250.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344255.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344257.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344258.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344259.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344261.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344262.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344267.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344268.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344270.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344271.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344272.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344273.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344274.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344277.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344278.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344280.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344281.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344282.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344285.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344288.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344289.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344290.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344295.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344296.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344297.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344299.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344300.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344302.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344303.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.VertexCore.Leaf3344304.exists_checked"
+    ],
+    "log": "Thomson/GlobalCertificates/Production/Node3343995/Core.check.log",
+    "artifacts": {
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3343995/Core.olean": "07637d79aeb6b8f683422a66c510da008e8affc1f2a65e64b3c3f9f4b7df889b",
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3343995/Core.olean.private": "2100c063997046c35cef6284f0200fb40f4f28e89896a163472c945287515888",
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3343995/Core.olean.server": "01b1d2cd9ad8231f63af380f2176829b800d1821338f2d046265d9bf6004058b"
+    }
+  },
+  "real": {
+    "source_sha256": "86ebe9b11d8b2c2893731bdc86cde0fa970bccfc14e4697969fa216abd8560b3",
+    "wall_seconds": 6.7031600420014,
+    "memory_limit_mib": 3072,
+    "compiler_threads": 1,
+    "heartbeats": "default",
+    "axiom_reports": [
+      "Thomson.Five.GlobalCertificates.Production.Node3343995.Assembled.checked"
+    ],
+    "log": "Thomson/GlobalCertificates/Production/Node3343995/Assembled.check.log",
+    "artifacts": {
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3343995/Assembled.olean": "3d9e13be894c9b3c351b8b0226462e03190da6436f585ade55fae8302f72b311",
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3343995/Assembled.olean.private": "4f5ac5ef8d9a7a130dac35ecc1b023c4ee520ac092c910c246857aed854990bf",
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3343995/Assembled.olean.server": "a3c05a48e95328a77f2686d64e3d2984a5f83d7e6a65715eaf806349f153f4e5"
+    }
+  },
+  "completed_at": 1788960433.2537549,
+  "numeric_artifacts_pruned": true
+}

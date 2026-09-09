@@ -1,0 +1,330 @@
+{
+  "format": "THOMSON_UNTRUSTED_MERGED_GROUP_V1",
+  "root": 3306985,
+  "selection": "/Users/archiebrowne/source/Thomson/Thomson/GlobalCertificates/Production/selections/Node3306985.json",
+  "selection_sha256": "3b57d83999b01b71c57b439a101f67e4b3b41a8746eb81d07a2a067ad513e711",
+  "binary": "/Users/archiebrowne/source/Thomson/.lake/global-cover/search.bin",
+  "binary_sha256": "6626a818d355868776501e252bbdafb97029a5a9ebe31122f3509e3e359020a4",
+  "output_prefix": "Thomson.GlobalCertificates.Production.Node3306985",
+  "module": "Thomson.GlobalCertificates.Production.Node3306985.Assembled",
+  "namespace": "Thomson.Five.GlobalCertificates.Production.Node3306985.Assembled",
+  "core": {
+    "module": "Thomson.GlobalCertificates.Production.Node3306985.Core",
+    "source": "Thomson/GlobalCertificates/Production/Node3306985/Core.lean",
+    "source_sha256": "e2ded0ca7f083d19006d6482657c39bfad994aed804c697e842cb7f5a4ece262",
+    "source_bytes": 95933
+  },
+  "assembled": {
+    "module": "Thomson.GlobalCertificates.Production.Node3306985.Assembled",
+    "source": "Thomson/GlobalCertificates/Production/Node3306985/Assembled.lean",
+    "source_sha256": "c921b31322d5bde917e23be784d151beb33dc928d791ccb9f60c35e4bb22d962",
+    "source_bytes": 28146
+  },
+  "core_source": "Thomson/GlobalCertificates/Production/Node3306985/Core.lean",
+  "assembled_source": "Thomson/GlobalCertificates/Production/Node3306985/Assembled.lean",
+  "core_module": "Thomson.GlobalCertificates.Production.Node3306985.Core",
+  "assembled_module": "Thomson.GlobalCertificates.Production.Node3306985.Assembled",
+  "numeric_imports": {
+    "Thomson.GlobalCertificates.PairTemplate": true,
+    "Thomson.GlobalCertificates.PackedRanges": false,
+    "Thomson.ContractionCertificates.VertexConversion": true
+  },
+  "real_imports": {
+    "Thomson.GlobalCertificates.Production.Node3306985.Core": false,
+    "Thomson.GlobalCertificates.PairSoundness": false,
+    "Thomson.ContractionCertificates.VertexBridge": false,
+    "Thomson.GlobalCertificates.TreeSoundness": true
+  },
+  "boundary_modules": [],
+  "nodes": 15,
+  "leaf_kinds": {
+    "0": 7,
+    "3": 8
+  },
+  "families": {
+    "contraction": {
+      "nodes": 15,
+      "actual": 4,
+      "rounds": 4,
+      "actions": 4
+    }
+  },
+  "leaves": {
+    "pair": [
+      {
+        "node": 3307548,
+        "leaf": 3,
+        "depth": 17,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "318687969027",
+        "box_after_scaled": [
+          1335561879552,
+          1597497278464,
+          -199687208960,
+          0,
+          399374286848,
+          798748639232,
+          -199687208960,
+          0,
+          -798748639232,
+          -399374286848,
+          -199687208960,
+          0,
+          -798748639232,
+          -399374286848
+        ],
+        "packing_bits": [
+          44,
+          43,
+          45
+        ],
+        "original_leaf_reason": 3
+      },
+      {
+        "node": 3307549,
+        "leaf": 3,
+        "depth": 18,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "17682978398",
+        "box_after_scaled": [
+          1335561879552,
+          1597497278464,
+          -399374352384,
+          -199687143424,
+          399374286848,
+          599061495808,
+          -399374352384,
+          0,
+          -798748639232,
+          -399374286848,
+          -399374352384,
+          0,
+          -798748639232,
+          -399374286848
+        ],
+        "packing_bits": [
+          44,
+          43,
+          45
+        ],
+        "original_leaf_reason": 3
+      },
+      {
+        "node": 3307551,
+        "leaf": 3,
+        "depth": 19,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "5935727828",
+        "box_after_scaled": [
+          1335561879552,
+          1597497278464,
+          -399374352384,
+          -199687143424,
+          599061430272,
+          798748639232,
+          -399374352384,
+          -199687143424,
+          -798748639232,
+          -399374286848,
+          -399374352384,
+          0,
+          -798748639232,
+          -399374286848
+        ],
+        "packing_bits": [
+          44,
+          43,
+          45
+        ],
+        "original_leaf_reason": 3
+      },
+      {
+        "node": 3307552,
+        "leaf": 3,
+        "depth": 19,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "317994498930",
+        "box_after_scaled": [
+          1335561879552,
+          1597497278464,
+          -399374352384,
+          -199687143424,
+          599061430272,
+          798748639232,
+          -199687208960,
+          0,
+          -798748639232,
+          -399374286848,
+          -199687208960,
+          0,
+          -798748639232,
+          -399374286848
+        ],
+        "packing_bits": [
+          44,
+          43,
+          45
+        ],
+        "original_leaf_reason": 3
+      },
+      {
+        "node": 3307554,
+        "leaf": 3,
+        "depth": 17,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "334773821766",
+        "box_after_scaled": [
+          1073626546176,
+          1335561945088,
+          -199687208960,
+          0,
+          399374286848,
+          798748639232,
+          -199687208960,
+          0,
+          -798748639232,
+          -399374286848,
+          -199687208960,
+          0,
+          -798748639232,
+          -399374286848
+        ],
+        "packing_bits": [
+          44,
+          43,
+          45
+        ],
+        "original_leaf_reason": 3
+      },
+      {
+        "node": 3307555,
+        "leaf": 3,
+        "depth": 18,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "27002860638",
+        "box_after_scaled": [
+          1073626546176,
+          1335561945088,
+          -399374352384,
+          -199687143424,
+          399374286848,
+          599061495808,
+          -399374352384,
+          0,
+          -798748639232,
+          -399374286848,
+          -399374352384,
+          0,
+          -798748639232,
+          -399374286848
+        ],
+        "packing_bits": [
+          44,
+          43,
+          45
+        ],
+        "original_leaf_reason": 3
+      },
+      {
+        "node": 3307557,
+        "leaf": 3,
+        "depth": 19,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "15255610068",
+        "box_after_scaled": [
+          1073626546176,
+          1335561945088,
+          -399374352384,
+          -199687143424,
+          599061430272,
+          798748639232,
+          -399374352384,
+          -199687143424,
+          -798748639232,
+          -399374286848,
+          -399374352384,
+          0,
+          -798748639232,
+          -399374286848
+        ],
+        "packing_bits": [
+          44,
+          43,
+          45
+        ],
+        "original_leaf_reason": 3
+      },
+      {
+        "node": 3307558,
+        "leaf": 3,
+        "depth": 19,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "334080351669",
+        "box_after_scaled": [
+          1073626546176,
+          1335561945088,
+          -399374352384,
+          -199687143424,
+          599061430272,
+          798748639232,
+          -199687208960,
+          0,
+          -798748639232,
+          -399374286848,
+          -199687208960,
+          0,
+          -798748639232,
+          -399374286848
+        ],
+        "packing_bits": [
+          44,
+          43,
+          45
+        ],
+        "original_leaf_reason": 3
+      }
+    ]
+  },
+  "reference_topology_sha256": {
+    "pair": "65dfe5f05c0cab641b03d13ff573dc6bfa3f1d0fef0ed66dcd91cede0438a8ce"
+  },
+  "public_numeric_certificates": [
+    "Thomson.Five.GlobalCertificates.Production.Node3306985.PairCore.Leaf3307548.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3306985.PairCore.Leaf3307549.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3306985.PairCore.Leaf3307551.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3306985.PairCore.Leaf3307552.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3306985.PairCore.Leaf3307554.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3306985.PairCore.Leaf3307555.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3306985.PairCore.Leaf3307557.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3306985.PairCore.Leaf3307558.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3306985.ContractionCore.exists_checked_3306985",
+    "Thomson.Five.GlobalCertificates.Production.Node3306985.ContractionCore.exists_checked_3307545",
+    "Thomson.Five.GlobalCertificates.Production.Node3306985.ContractionCore.exists_checked_3307546",
+    "Thomson.Five.GlobalCertificates.Production.Node3306985.ContractionCore.exists_checked_3307547",
+    "Thomson.Five.GlobalCertificates.Production.Node3306985.ContractionCore.exists_checked_3307548",
+    "Thomson.Five.GlobalCertificates.Production.Node3306985.ContractionCore.exists_checked_3307549",
+    "Thomson.Five.GlobalCertificates.Production.Node3306985.ContractionCore.exists_checked_3307550",
+    "Thomson.Five.GlobalCertificates.Production.Node3306985.ContractionCore.exists_checked_3307551",
+    "Thomson.Five.GlobalCertificates.Production.Node3306985.ContractionCore.exists_checked_3307552",
+    "Thomson.Five.GlobalCertificates.Production.Node3306985.ContractionCore.exists_checked_3307553",
+    "Thomson.Five.GlobalCertificates.Production.Node3306985.ContractionCore.exists_checked_3307554",
+    "Thomson.Five.GlobalCertificates.Production.Node3306985.ContractionCore.exists_checked_3307555",
+    "Thomson.Five.GlobalCertificates.Production.Node3306985.ContractionCore.exists_checked_3307556",
+    "Thomson.Five.GlobalCertificates.Production.Node3306985.ContractionCore.exists_checked_3307557",
+    "Thomson.Five.GlobalCertificates.Production.Node3306985.ContractionCore.exists_checked_3307558"
+  ],
+  "generation_seconds": 0.021813208993989974,
+  "kernel_check_required": true,
+  "heartbeats": "default",
+  "compiler_threads": 1,
+  "core_memory_limit_mib": 2048,
+  "assembled_memory_limit_mib": 3072
+}

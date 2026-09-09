@@ -1,0 +1,98 @@
+{
+  "format": "THOMSON_UNTRUSTED_MERGED_GROUP_V1",
+  "root": 3317189,
+  "selection": "/Users/archiebrowne/source/Thomson/Thomson/GlobalCertificates/Production/selections/Node3317189.json",
+  "selection_sha256": "85bfcbfe24c9ad7f889cc8cd828b0d41a074fe0fa2b90eb0ab0647962a120ef9",
+  "binary": "/Users/archiebrowne/source/Thomson/.lake/global-cover/search.bin",
+  "binary_sha256": "6626a818d355868776501e252bbdafb97029a5a9ebe31122f3509e3e359020a4",
+  "output_prefix": "Thomson.GlobalCertificates.Production.Node3317189",
+  "module": "Thomson.GlobalCertificates.Production.Node3317189.Assembled",
+  "namespace": "Thomson.Five.GlobalCertificates.Production.Node3317189.Assembled",
+  "core": {
+    "module": "Thomson.GlobalCertificates.Production.Node3317189.Core",
+    "source": "Thomson/GlobalCertificates/Production/Node3317189/Core.lean",
+    "source_sha256": "e95d34f60a757582c75ab54b08845b819c3a04214544bb0e28541a106da66cc6",
+    "source_bytes": 11570
+  },
+  "assembled": {
+    "module": "Thomson.GlobalCertificates.Production.Node3317189.Assembled",
+    "source": "Thomson/GlobalCertificates/Production/Node3317189/Assembled.lean",
+    "source_sha256": "f274954e8247df53746df38329cb8a376220bf09aa6b44f0999dc1ca5c1b5fb8",
+    "source_bytes": 3607
+  },
+  "core_source": "Thomson/GlobalCertificates/Production/Node3317189/Core.lean",
+  "assembled_source": "Thomson/GlobalCertificates/Production/Node3317189/Assembled.lean",
+  "core_module": "Thomson.GlobalCertificates.Production.Node3317189.Core",
+  "assembled_module": "Thomson.GlobalCertificates.Production.Node3317189.Assembled",
+  "numeric_imports": {
+    "Thomson.GlobalCertificates.PairTemplate": true,
+    "Thomson.GlobalCertificates.PackedRanges": false,
+    "Thomson.ContractionCertificates.VertexConversion": true
+  },
+  "real_imports": {
+    "Thomson.GlobalCertificates.Production.Node3317189.Core": false,
+    "Thomson.GlobalCertificates.PairSoundness": false,
+    "Thomson.ContractionCertificates.VertexBridge": false,
+    "Thomson.GlobalCertificates.TreeSoundness": true
+  },
+  "boundary_modules": [],
+  "nodes": 1,
+  "leaf_kinds": {
+    "3": 1
+  },
+  "families": {
+    "contraction": {
+      "nodes": 1,
+      "actual": 0,
+      "rounds": 0,
+      "actions": 0
+    }
+  },
+  "leaves": {
+    "pair": [
+      {
+        "node": 3317189,
+        "leaf": 3,
+        "depth": 16,
+        "operations": 229,
+        "choice": 3,
+        "exact_margin_scaled": "8688010181",
+        "box_after_scaled": [
+          564800520192,
+          1073626546176,
+          -798748639232,
+          -399374286848,
+          399374286848,
+          798748639232,
+          -399374352384,
+          0,
+          -798748639232,
+          -399374286848,
+          -399374352384,
+          0,
+          -798748639232,
+          -399374286848
+        ],
+        "packing_bits": [
+          44,
+          43,
+          45
+        ],
+        "original_leaf_reason": 3
+      }
+    ]
+  },
+  "reference_topology_sha256": {
+    "pair": "65dfe5f05c0cab641b03d13ff573dc6bfa3f1d0fef0ed66dcd91cede0438a8ce"
+  },
+  "public_numeric_certificates": [
+    "Thomson.Five.GlobalCertificates.Production.Node3317189.PairCore.Leaf3317189.exists_checked",
+    "Thomson.Five.GlobalCertificates.Production.Node3317189.ContractionCore.exists_checked_3317189"
+  ],
+  "generation_seconds": 0.00501620804425329,
+  "kernel_check_required": true,
+  "heartbeats": "default",
+  "compiler_threads": 1,
+  "core_memory_limit_mib": 2048,
+  "assembled_memory_limit_mib": 3072
+}
