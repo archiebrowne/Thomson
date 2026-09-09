@@ -28,3 +28,12 @@ def CoulombPotential : ℝ → ℝ := fun r ↦ 1 / r
 /- A configuration of `n` points has minimal energy with respect to `E`.  -/
 def Configuration.IsMinimal {n : ℕ} (E : ℝ → ℝ) (cf : Configuration n) : Prop :=
   ∀ cf' : Configuration n, cf.Energy E ≤ cf'.Energy E
+
+
+/- the term for i = k will be zero as lond as E 0 = 0. Do we need to change the sum to skip k?-/
+def Configuration.EnergyAt {n : ℕ} (E : ℝ → ℝ) (cf : Configuration n) (k : Fin n) :=
+  ∑ i : Fin n, E ‖cf.points k - cf.points i‖
+
+
+-- lemma: energy_eq_sum_energy_at
+-- lemma: E(P) ≥ E(P, p) + T_E
