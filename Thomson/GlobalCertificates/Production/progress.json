@@ -3,14 +3,13 @@
   "total_groups": 24892,
   "checked_terminal_leaves": 50613,
   "total_actual_leaves": 1692133,
-  "running_roots": [
-    3283273,
-    3282781
-  ],
+  "running_roots": [],
   "failures": [],
   "elapsed_seconds": 3880.068002709013,
-  "memory_reserved_mib": 4096,
+  "memory_reserved_mib": 0,
   "memory_budget_mib": 16384,
   "full_tree_complete": false,
-  "status": "paused"
+  "status": "stopped",
+  "stopped_reason": "User request",
+  "stopped_at": 1788963205.420854
 }
