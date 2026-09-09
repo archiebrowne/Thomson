@@ -37,9 +37,6 @@ def tbp : Configuration :=
     (EuclideanSpace.equiv (Fin 3) ℝ).symm ![-1 / 2, Real.sqrt 3 / 2, 0],
     (EuclideanSpace.equiv (Fin 3) ℝ).symm ![-1 / 2, -Real.sqrt 3 / 2, 0]]
 
-/-- The exact energy of the triangular bipyramid. -/
-def tbpEnergy : ℝ := 1 / 2 + 3 * Real.sqrt 2 + Real.sqrt 3
-
 /-- Thomson's problem for five points and the Coulomb potential.
 
 This is the comparator's intentional challenge placeholder, not a proof dependency.
