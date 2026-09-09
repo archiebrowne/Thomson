@@ -217,6 +217,26 @@ def lean_check(source, mib, budget, expected=None, compiler=None):
                 artifacts={str(p.relative_to(ROOT)): sha(p) for p in artifacts(source) if p.exists()})
 
 
+def numeric_check(source, initial_mib, budget, compiler):
+    """Retry only a reported Lean memory-cap failure, within the same shared budget."""
+    caps = [initial_mib] + [cap for cap in (1536, 2048) if cap > initial_mib]
+    attempts = []
+    for cap in caps:
+        try:
+            result = lean_check(source, cap, budget, compiler=compiler)
+            result['memory_cap_retries'] = attempts
+            return result
+        except RuntimeError:
+            log = source.with_suffix('.check.log')
+            message = log.read_text() if log.exists() else ''
+            if cap == caps[-1] or 'excessive memory consumption detected' not in message:
+                raise
+            saved = source.with_suffix(f'.memory-{cap}.log')
+            shutil.copy2(log, saved)
+            attempts.append(dict(memory_limit_mib=cap, log=str(saved.relative_to(ROOT))))
+    raise AssertionError('No numeric compiler cap was attempted')
+
+
 def entry_digest(entry):
     fields = ('root', 'module', 'namespace', 'local_prefix', 'source', 'boundaries',
               'actual_leaf_count', 'node_count', 'local_node_count', 'level')
@@ -282,7 +302,8 @@ def check_group(entry, manifest_path, manifest, module_map, fingerprint, budget,
     generation_log = local / 'generation.log'
     command = [sys.executable, str(ROOT/'scripts/generate_global_production_group.py'),
                str(selection_path), '--output-prefix', entry['local_prefix'],
-               '--reference-dir', str(ROOT/'data/global-cover')]
+               '--reference-dir', str(ROOT/'data/global-cover'),
+               '--numeric-memory-mib', str(args.numeric_memory_mib)]
     with budget.reserve(256), generation_log.open('w') as stream:
         result = subprocess.run(command, cwd=ROOT, stdout=stream, stderr=subprocess.STDOUT)
     if result.returncode:
@@ -298,7 +319,7 @@ def check_group(entry, manifest_path, manifest, module_map, fingerprint, budget,
                 valid_artifacts(previous.get('core', {}), core)):
             doc['core'] = previous['core']; doc['core_reused'] = True
         else:
-            doc['core'] = lean_check(core, 2048, budget, compiler=compiler)
+            doc['core'] = numeric_check(core, args.numeric_memory_mib, budget, compiler)
         write_json(checkpoint, doc)
         doc['real'] = lean_check(real, 3072, budget, entry['namespace'] + '.checked', compiler)
         doc.update(status='checked', completed_at=time.time())
@@ -306,7 +327,8 @@ def check_group(entry, manifest_path, manifest, module_map, fingerprint, budget,
         if args.prune_numeric_artifacts:
             # The public root module does not expose its private numerical import.
             # This is deliberately limited to exactly this job's regenerable core.
-            for p in artifacts(core):
+            for p in artifacts(core) + [artifacts(core)[0].with_suffix('.ir'),
+                                       artifacts(core)[0].with_suffix('.ir.sig')]:
                 p.unlink(missing_ok=True)
             doc['numeric_artifacts_pruned'] = True
             write_json(checkpoint, doc)

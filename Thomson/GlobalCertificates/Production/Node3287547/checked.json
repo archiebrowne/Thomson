@@ -1,11 +1,61 @@
 {
   "version": 2,
-  "status": "checking",
+  "status": "checked",
   "root": 3287547,
   "static_sha256": "4c2ac001e4ffd16a97022fae805783184c9fa83c8e28c60d38b2c1c435aee081",
   "binary_sha256": "6626a818d355868776501e252bbdafb97029a5a9ebe31122f3509e3e359020a4",
   "actual_leaves": 17,
   "boundaries": [],
   "entry_sha256": "998f677cfbf6fa7d4dd5a8ea099baf3838b0864f78370b16336cecc5c98526c5",
-  "dependencies": {}
+  "dependencies": {},
+  "core": {
+    "source_sha256": "d01e504eec3b7e38adadfdec35a936d0803af053b77cc11c818a7290ccf57b3a",
+    "wall_seconds": 16.560880750010256,
+    "memory_limit_mib": 2048,
+    "compiler_threads": 1,
+    "heartbeats": "default",
+    "axiom_reports": [
+      "Thomson.Five.GlobalCertificates.Production.Node3287547.VertexCore.Leaf3288717.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3287547.VertexCore.Leaf3288720.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3287547.VertexCore.Leaf3288721.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3287547.VertexCore.Leaf3288722.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3287547.VertexCore.Leaf3288723.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3287547.VertexCore.Leaf3288726.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3287547.VertexCore.Leaf3288727.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3287547.VertexCore.Leaf3288728.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3287547.VertexCore.Leaf3288731.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3287547.VertexCore.Leaf3288734.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3287547.VertexCore.Leaf3288735.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3287547.VertexCore.Leaf3288737.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3287547.VertexCore.Leaf3288738.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3287547.VertexCore.Leaf3288739.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3287547.VertexCore.Leaf3288742.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3287547.VertexCore.Leaf3288743.exists_checked",
+      "Thomson.Five.GlobalCertificates.Production.Node3287547.VertexCore.Leaf3288744.exists_checked"
+    ],
+    "log": "Thomson/GlobalCertificates/Production/Node3287547/Core.check.log",
+    "artifacts": {
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3287547/Core.olean": "d80e4678e1bda5fb848f3789b5292f98c00610dc99f52d266cabf07bb45701b9",
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3287547/Core.olean.private": "ff8143e403c02e665c61027a89cda6b94e469af892aed0af98acdc51a8d4880e",
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3287547/Core.olean.server": "222662b1814e874aa0ea2e44a908a8cb7d11bbf250f2b95d7e0c74906fed95bf"
+    }
+  },
+  "real": {
+    "source_sha256": "f7975b375e5d54a50925ddbe395afe0da67f2892b4ece7dd1825242c2b1bfd21",
+    "wall_seconds": 13.67004433402326,
+    "memory_limit_mib": 3072,
+    "compiler_threads": 1,
+    "heartbeats": "default",
+    "axiom_reports": [
+      "Thomson.Five.GlobalCertificates.Production.Node3287547.Assembled.checked"
+    ],
+    "log": "Thomson/GlobalCertificates/Production/Node3287547/Assembled.check.log",
+    "artifacts": {
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3287547/Assembled.olean": "6909cdeda7ea1680ca3c2c0d0f4b52e1b15d4c572ff58a3e11740bc63977c777",
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3287547/Assembled.olean.private": "c0023a9958327b4fb5024f0a55aeb6260fe5c408209c69a4b0a24fb0e9d29a79",
+      ".lake/build/lib/lean/Thomson/GlobalCertificates/Production/Node3287547/Assembled.olean.server": "4382051f3451221c467d94eab994b93e48dfaf31da113f1d5c1263bce9bd0ab1"
+    }
+  },
+  "completed_at": 1788962675.765273,
+  "numeric_artifacts_pruned": true
 }

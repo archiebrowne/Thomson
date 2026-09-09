@@ -1,21 +1,16 @@
 {
-  "checked_groups": 684,
+  "checked_groups": 750,
   "total_groups": 24892,
-  "checked_terminal_leaves": 47201,
+  "checked_terminal_leaves": 50613,
   "total_actual_leaves": 1692133,
   "running_roots": [
-    3290118,
-    3289437,
-    3289438,
-    3289063,
-    3289064,
-    3287507,
-    3287509
+    3283273,
+    3282781
   ],
   "failures": [],
-  "elapsed_seconds": 3473.3888490840327,
-  "memory_reserved_mib": 15360,
+  "elapsed_seconds": 3880.068002709013,
+  "memory_reserved_mib": 4096,
   "memory_budget_mib": 16384,
   "full_tree_complete": false,
-  "status": "running"
+  "status": "paused"
 }

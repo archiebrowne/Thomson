@@ -1,0 +1,50 @@
+{
+  "format": "THOMSON_UNTRUSTED_MERGED_GROUP_V1",
+  "root": 3282753,
+  "selection": "/Users/archiebrowne/source/Thomson/Thomson/GlobalCertificates/Production/selections/Node3282753.json",
+  "selection_sha256": "086ce419cb376934b7376e229a056161f33b0c72caf9188f163f5d1b597ef546",
+  "binary": "/Users/archiebrowne/source/Thomson/.lake/global-cover/search.bin",
+  "binary_sha256": "6626a818d355868776501e252bbdafb97029a5a9ebe31122f3509e3e359020a4",
+  "output_prefix": "Thomson.GlobalCertificates.Production.Node3282753",
+  "module": "Thomson.GlobalCertificates.Production.Node3282753.Assembled",
+  "namespace": "Thomson.Five.GlobalCertificates.Production.Node3282753.Assembled",
+  "core": {
+    "module": "Thomson.GlobalCertificates.Production.Node3282753.Core",
+    "source": "Thomson/GlobalCertificates/Production/Node3282753/Core.lean",
+    "source_sha256": "e3de2f00702bf75a4513f546daaac12330a65f0bef6c018c1855985d47e6f772",
+    "source_bytes": 371218
+  },
+  "assembled": {
+    "module": "Thomson.GlobalCertificates.Production.Node3282753.Assembled",
+    "source": "Thomson/GlobalCertificates/Production/Node3282753/Assembled.lean",
+    "source_sha256": "cdacde1e179f26c0b536638615a2232f5341e43e41954b0c63c0abd16d3d850a",
+    "source_bytes": 27951
+  },
+  "core_source": "Thomson/GlobalCertificates/Production/Node3282753/Core.lean",
+  "assembled_source": "Thomson/GlobalCertificates/Production/Node3282753/Assembled.lean",
+  "core_module": "Thomson.GlobalCertificates.Production.Node3282753.Core",
+  "assembled_module": "Thomson.GlobalCertificates.Production.Node3282753.Assembled",
+  "boundary_modules": [],
+  "nodes": 15,
+  "leaf_kinds": {
+    "0": 7,
+    "8": 8
+  },
+  "families": {
+    "contraction": {
+      "nodes": 15,
+      "actual": 2,
+      "rounds": 2,
+      "actions": 2
+    }
+  },
+  "reference_topology_sha256": {
+    "vertex": "09629aa6d88e3007946041ee5bb5e7fe743b3242efca3b1b8ea02df65fe0eb34"
+  },
+  "generation_seconds": 0.09499433299060911,
+  "kernel_check_required": true,
+  "heartbeats": "default",
+  "compiler_threads": 1,
+  "core_memory_limit_mib": 2048,
+  "assembled_memory_limit_mib": 3072
+}
