@@ -1,5 +1,8 @@
 # Thomson's problem for five points
 
+> [!WARNING]
+> This formalisation still has a remaining `sorry`, in the file [`Thomson/Computational.lean`](Thomson/Computational.lean) and is hence incomplete. 
+
 A Lean formalization of the reduction proving that the triangular bipyramid (TBP) minimizes
 the Coulomb energy of five **distinct** points on the unit sphere in Euclidean three-space.
 The source is Richard Evan Schwartz's *The 5-Electron Case of Thomson's Problem*, supplied as
